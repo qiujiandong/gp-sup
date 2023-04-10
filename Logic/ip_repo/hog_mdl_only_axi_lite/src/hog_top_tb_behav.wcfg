@@ -1,0 +1,1871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="hog_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="hog_top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="13115000001fs"></ZoomEndTime>
+      <Cursor1Time time="1203280000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="476"></NameColumnWidth>
+      <ValueColumnWidth column_width="154"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="461" />
+   <wave_markers>
+      <marker time="2174381000" label="" />
+      <marker time="811581000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/hog_top_tb/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/arest_n" type="logic">
+      <obj_property name="ElementShortName">arest_n</obj_property>
+      <obj_property name="ObjectShortName">arest_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/initial_cell_bram" type="logic">
+      <obj_property name="ElementShortName">initial_cell_bram</obj_property>
+      <obj_property name="ObjectShortName">initial_cell_bram</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/p" type="array">
+      <obj_property name="ElementShortName">p[7:0]</obj_property>
+      <obj_property name="ObjectShortName">p[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/p_valid" type="logic">
+      <obj_property name="ElementShortName">p_valid</obj_property>
+      <obj_property name="ObjectShortName">p_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/finish" type="logic">
+      <obj_property name="ElementShortName">finish</obj_property>
+      <obj_property name="ObjectShortName">finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_addra_0" type="array">
+      <obj_property name="ElementShortName">res_addra_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">res_addra_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_addra_1" type="array">
+      <obj_property name="ElementShortName">res_addra_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">res_addra_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_addra_2" type="array">
+      <obj_property name="ElementShortName">res_addra_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">res_addra_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_addra_3" type="array">
+      <obj_property name="ElementShortName">res_addra_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">res_addra_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_dina_0" type="array">
+      <obj_property name="ElementShortName">res_dina_0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">res_dina_0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_dina_1" type="array">
+      <obj_property name="ElementShortName">res_dina_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">res_dina_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_dina_2" type="array">
+      <obj_property name="ElementShortName">res_dina_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">res_dina_2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/res_dina_3" type="array">
+      <obj_property name="ElementShortName">res_dina_3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">res_dina_3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena_0" type="logic">
+      <obj_property name="ElementShortName">ena_0</obj_property>
+      <obj_property name="ObjectShortName">ena_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena_1" type="logic">
+      <obj_property name="ElementShortName">ena_1</obj_property>
+      <obj_property name="ObjectShortName">ena_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena_2" type="logic">
+      <obj_property name="ElementShortName">ena_2</obj_property>
+      <obj_property name="ObjectShortName">ena_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena_3" type="logic">
+      <obj_property name="ElementShortName">ena_3</obj_property>
+      <obj_property name="ObjectShortName">ena_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea_0" type="logic">
+      <obj_property name="ElementShortName">wea_0</obj_property>
+      <obj_property name="ObjectShortName">wea_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea_1" type="logic">
+      <obj_property name="ElementShortName">wea_1</obj_property>
+      <obj_property name="ObjectShortName">wea_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea_2" type="logic">
+      <obj_property name="ElementShortName">wea_2</obj_property>
+      <obj_property name="ObjectShortName">wea_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea_3" type="logic">
+      <obj_property name="ElementShortName">wea_3</obj_property>
+      <obj_property name="ObjectShortName">wea_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/write_feature_done" type="logic">
+      <obj_property name="ElementShortName">write_feature_done</obj_property>
+      <obj_property name="ObjectShortName">write_feature_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/enb0" type="logic">
+      <obj_property name="ElementShortName">enb0</obj_property>
+      <obj_property name="ObjectShortName">enb0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/enb1" type="logic">
+      <obj_property name="ElementShortName">enb1</obj_property>
+      <obj_property name="ObjectShortName">enb1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/enb2" type="logic">
+      <obj_property name="ElementShortName">enb2</obj_property>
+      <obj_property name="ObjectShortName">enb2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/enb3" type="logic">
+      <obj_property name="ElementShortName">enb3</obj_property>
+      <obj_property name="ObjectShortName">enb3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addrb0" type="array">
+      <obj_property name="ElementShortName">addrb0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addrb1" type="array">
+      <obj_property name="ElementShortName">addrb1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addrb2" type="array">
+      <obj_property name="ElementShortName">addrb2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addrb3" type="array">
+      <obj_property name="ElementShortName">addrb3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/doutb0" type="array">
+      <obj_property name="ElementShortName">doutb0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/doutb1" type="array">
+      <obj_property name="ElementShortName">doutb1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/doutb2" type="array">
+      <obj_property name="ElementShortName">doutb2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/doutb3" type="array">
+      <obj_property name="ElementShortName">doutb3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/rsta_busy" type="logic">
+      <obj_property name="ElementShortName">rsta_busy</obj_property>
+      <obj_property name="ObjectShortName">rsta_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/rstb_busy" type="logic">
+      <obj_property name="ElementShortName">rstb_busy</obj_property>
+      <obj_property name="ObjectShortName">rstb_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/stallreq" type="logic">
+      <obj_property name="ElementShortName">stallreq</obj_property>
+      <obj_property name="ObjectShortName">stallreq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/img0x" type="array">
+      <obj_property name="ElementShortName">img0x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">img0x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/img0y" type="array">
+      <obj_property name="ElementShortName">img0y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">img0y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/t_x" type="array">
+      <obj_property name="ElementShortName">t_x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">t_x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/t_y" type="array">
+      <obj_property name="ElementShortName">t_y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">t_y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/N" type="array">
+      <obj_property name="ElementShortName">N[31:0]</obj_property>
+      <obj_property name="ObjectShortName">N[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea1" type="logic">
+      <obj_property name="ElementShortName">wea1</obj_property>
+      <obj_property name="ObjectShortName">wea1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea2" type="logic">
+      <obj_property name="ElementShortName">wea2</obj_property>
+      <obj_property name="ObjectShortName">wea2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea3" type="logic">
+      <obj_property name="ElementShortName">wea3</obj_property>
+      <obj_property name="ObjectShortName">wea3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea4" type="logic">
+      <obj_property name="ElementShortName">wea4</obj_property>
+      <obj_property name="ObjectShortName">wea4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena1" type="logic">
+      <obj_property name="ElementShortName">ena1</obj_property>
+      <obj_property name="ObjectShortName">ena1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena2" type="logic">
+      <obj_property name="ElementShortName">ena2</obj_property>
+      <obj_property name="ObjectShortName">ena2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena3" type="logic">
+      <obj_property name="ElementShortName">ena3</obj_property>
+      <obj_property name="ObjectShortName">ena3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena4" type="logic">
+      <obj_property name="ElementShortName">ena4</obj_property>
+      <obj_property name="ObjectShortName">ena4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addra1" type="array">
+      <obj_property name="ElementShortName">addra1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addra2" type="array">
+      <obj_property name="ElementShortName">addra2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addra3" type="array">
+      <obj_property name="ElementShortName">addra3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/addra4" type="array">
+      <obj_property name="ElementShortName">addra4[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra4[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/dina1" type="array">
+      <obj_property name="ElementShortName">dina1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dina1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/dina2" type="array">
+      <obj_property name="ElementShortName">dina2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dina2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/dina3" type="array">
+      <obj_property name="ElementShortName">dina3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dina3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/dina4" type="array">
+      <obj_property name="ElementShortName">dina4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dina4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/wea" type="logic">
+      <obj_property name="ElementShortName">wea</obj_property>
+      <obj_property name="ObjectShortName">wea</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/AA1" type="array">
+      <obj_property name="ElementShortName">AA1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">AA1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/AA2" type="array">
+      <obj_property name="ElementShortName">AA2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">AA2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/AA3" type="array">
+      <obj_property name="ElementShortName">AA3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">AA3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/AA4" type="array">
+      <obj_property name="ElementShortName">AA4[12:0]</obj_property>
+      <obj_property name="ObjectShortName">AA4[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/DA1" type="array">
+      <obj_property name="ElementShortName">DA1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DA1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/DA2" type="array">
+      <obj_property name="ElementShortName">DA2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DA2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/DA3" type="array">
+      <obj_property name="ElementShortName">DA3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DA3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/DA4" type="array">
+      <obj_property name="ElementShortName">DA4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DA4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/handle0" type="array">
+      <obj_property name="ElementShortName">handle0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">handle0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/handle1" type="array">
+      <obj_property name="ElementShortName">handle1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">handle1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/k" type="array">
+      <obj_property name="ElementShortName">k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/num" type="array">
+      <obj_property name="ElementShortName">num[31:0]</obj_property>
+      <obj_property name="ObjectShortName">num[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/IMAGE_SIZE" type="array">
+      <obj_property name="ElementShortName">IMAGE_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IMAGE_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/IMAGE_WIDTH" type="array">
+      <obj_property name="ElementShortName">IMAGE_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IMAGE_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/QN" type="array">
+      <obj_property name="ElementShortName">QN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">QN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/TOTAL_BIT_WIDTH" type="array">
+      <obj_property name="ElementShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/P_WIDTH" type="array">
+      <obj_property name="ElementShortName">P_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">P_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/DELAY" type="array">
+      <obj_property name="ElementShortName">DELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/PARAM_TRUNCATE" type="array">
+      <obj_property name="ElementShortName">PARAM_TRUNCATE[34:0]</obj_property>
+      <obj_property name="ObjectShortName">PARAM_TRUNCATE[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/PARAM_GAMA" type="array">
+      <obj_property name="ElementShortName">PARAM_GAMA[34:0]</obj_property>
+      <obj_property name="ObjectShortName">PARAM_GAMA[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/imgx" type="array">
+      <obj_property name="ElementShortName">imgx[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imgx[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/imgy" type="array">
+      <obj_property name="ElementShortName">imgy[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imgy[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/arest_n" type="logic">
+      <obj_property name="ElementShortName">arest_n</obj_property>
+      <obj_property name="ObjectShortName">arest_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/bin_num" type="array">
+      <obj_property name="ElementShortName">bin_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">bin_num[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/bin_num_valid" type="logic">
+      <obj_property name="ElementShortName">bin_num_valid</obj_property>
+      <obj_property name="ObjectShortName">bin_num_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_row" type="array">
+      <obj_property name="ElementShortName">mod_row[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_row[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_col" type="array">
+      <obj_property name="ElementShortName">mod_col[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_col[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/intensity_0" type="array">
+      <obj_property name="ElementShortName">intensity_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/intensity_1" type="array">
+      <obj_property name="ElementShortName">intensity_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/intensity_2" type="array">
+      <obj_property name="ElementShortName">intensity_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/intensity_3" type="array">
+      <obj_property name="ElementShortName">intensity_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/intensity_valid" type="logic">
+      <obj_property name="ElementShortName">intensity_valid</obj_property>
+      <obj_property name="ObjectShortName">intensity_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addra_0" type="array">
+      <obj_property name="ElementShortName">normal_addra_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addra_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addra_1" type="array">
+      <obj_property name="ElementShortName">normal_addra_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addra_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addra_2" type="array">
+      <obj_property name="ElementShortName">normal_addra_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addra_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addra_3" type="array">
+      <obj_property name="ElementShortName">normal_addra_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addra_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/douta_0" type="array">
+      <obj_property name="ElementShortName">douta_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">douta_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/douta_1" type="array">
+      <obj_property name="ElementShortName">douta_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">douta_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/douta_2" type="array">
+      <obj_property name="ElementShortName">douta_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">douta_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/douta_3" type="array">
+      <obj_property name="ElementShortName">douta_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">douta_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addrb_0" type="array">
+      <obj_property name="ElementShortName">normal_addrb_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addrb_1" type="array">
+      <obj_property name="ElementShortName">normal_addrb_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addrb_2" type="array">
+      <obj_property name="ElementShortName">normal_addrb_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/normal_addrb_3" type="array">
+      <obj_property name="ElementShortName">normal_addrb_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/doutb_0" type="array">
+      <obj_property name="ElementShortName">doutb_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/doutb_1" type="array">
+      <obj_property name="ElementShortName">doutb_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/doutb_2" type="array">
+      <obj_property name="ElementShortName">doutb_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/doutb_3" type="array">
+      <obj_property name="ElementShortName">doutb_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/initial_cell_bram" type="logic">
+      <obj_property name="ElementShortName">initial_cell_bram</obj_property>
+      <obj_property name="ObjectShortName">initial_cell_bram</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/histogram_done" type="logic">
+      <obj_property name="ElementShortName">histogram_done</obj_property>
+      <obj_property name="ObjectShortName">histogram_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/wea_0" type="logic">
+      <obj_property name="ElementShortName">wea_0</obj_property>
+      <obj_property name="ObjectShortName">wea_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_0" type="array">
+      <obj_property name="ElementShortName">addra_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dina_0" type="array">
+      <obj_property name="ElementShortName">dina_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/web_0" type="logic">
+      <obj_property name="ElementShortName">web_0</obj_property>
+      <obj_property name="ObjectShortName">web_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addrb_0" type="array">
+      <obj_property name="ElementShortName">addrb_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dinb_0" type="array">
+      <obj_property name="ElementShortName">dinb_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/wea_1" type="logic">
+      <obj_property name="ElementShortName">wea_1</obj_property>
+      <obj_property name="ObjectShortName">wea_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_1" type="array">
+      <obj_property name="ElementShortName">addra_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dina_1" type="array">
+      <obj_property name="ElementShortName">dina_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/web_1" type="logic">
+      <obj_property name="ElementShortName">web_1</obj_property>
+      <obj_property name="ObjectShortName">web_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addrb_1" type="array">
+      <obj_property name="ElementShortName">addrb_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dinb_1" type="array">
+      <obj_property name="ElementShortName">dinb_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/wea_2" type="logic">
+      <obj_property name="ElementShortName">wea_2</obj_property>
+      <obj_property name="ObjectShortName">wea_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_2" type="array">
+      <obj_property name="ElementShortName">addra_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dina_2" type="array">
+      <obj_property name="ElementShortName">dina_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/web_2" type="logic">
+      <obj_property name="ElementShortName">web_2</obj_property>
+      <obj_property name="ObjectShortName">web_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addrb_2" type="array">
+      <obj_property name="ElementShortName">addrb_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dinb_2" type="array">
+      <obj_property name="ElementShortName">dinb_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/wea_3" type="logic">
+      <obj_property name="ElementShortName">wea_3</obj_property>
+      <obj_property name="ObjectShortName">wea_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_3" type="array">
+      <obj_property name="ElementShortName">addra_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dina_3" type="array">
+      <obj_property name="ElementShortName">dina_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/web_3" type="logic">
+      <obj_property name="ElementShortName">web_3</obj_property>
+      <obj_property name="ObjectShortName">web_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addrb_3" type="array">
+      <obj_property name="ElementShortName">addrb_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/dinb_3" type="array">
+      <obj_property name="ElementShortName">dinb_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_0" type="logic">
+      <obj_property name="ElementShortName">addra_valid_0</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_1" type="logic">
+      <obj_property name="ElementShortName">addra_valid_1</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_2" type="logic">
+      <obj_property name="ElementShortName">addra_valid_2</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_3" type="logic">
+      <obj_property name="ElementShortName">addra_valid_3</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_0_r1" type="logic">
+      <obj_property name="ElementShortName">addra_valid_0_r1</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_0_r1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_1_r1" type="logic">
+      <obj_property name="ElementShortName">addra_valid_1_r1</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_1_r1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_2_r1" type="logic">
+      <obj_property name="ElementShortName">addra_valid_2_r1</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_2_r1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addra_valid_3_r1" type="logic">
+      <obj_property name="ElementShortName">addra_valid_3_r1</obj_property>
+      <obj_property name="ObjectShortName">addra_valid_3_r1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr1" type="array">
+      <obj_property name="ElementShortName">addr1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr2" type="array">
+      <obj_property name="ElementShortName">addr2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr3" type="array">
+      <obj_property name="ElementShortName">addr3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr4" type="array">
+      <obj_property name="ElementShortName">addr4[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr4[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr5" type="array">
+      <obj_property name="ElementShortName">addr5[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr5[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr6" type="array">
+      <obj_property name="ElementShortName">addr6[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr6[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr7" type="array">
+      <obj_property name="ElementShortName">addr7[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr7[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr8" type="array">
+      <obj_property name="ElementShortName">addr8[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr8[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr9" type="array">
+      <obj_property name="ElementShortName">addr9[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr9[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr_temp" type="array">
+      <obj_property name="ElementShortName">addr_temp[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_temp[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr1_valid" type="logic">
+      <obj_property name="ElementShortName">addr1_valid</obj_property>
+      <obj_property name="ObjectShortName">addr1_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr2_valid" type="logic">
+      <obj_property name="ElementShortName">addr2_valid</obj_property>
+      <obj_property name="ObjectShortName">addr2_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr3_valid" type="logic">
+      <obj_property name="ElementShortName">addr3_valid</obj_property>
+      <obj_property name="ObjectShortName">addr3_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr4_valid" type="logic">
+      <obj_property name="ElementShortName">addr4_valid</obj_property>
+      <obj_property name="ObjectShortName">addr4_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr5_valid" type="logic">
+      <obj_property name="ElementShortName">addr5_valid</obj_property>
+      <obj_property name="ObjectShortName">addr5_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr6_valid" type="logic">
+      <obj_property name="ElementShortName">addr6_valid</obj_property>
+      <obj_property name="ObjectShortName">addr6_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr7_valid" type="logic">
+      <obj_property name="ElementShortName">addr7_valid</obj_property>
+      <obj_property name="ObjectShortName">addr7_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr8_valid" type="logic">
+      <obj_property name="ElementShortName">addr8_valid</obj_property>
+      <obj_property name="ObjectShortName">addr8_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/addr9_valid" type="logic">
+      <obj_property name="ElementShortName">addr9_valid</obj_property>
+      <obj_property name="ObjectShortName">addr9_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addra_0" type="array">
+      <obj_property name="ElementShortName">hist_addra_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addra_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addra_1" type="array">
+      <obj_property name="ElementShortName">hist_addra_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addra_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addra_2" type="array">
+      <obj_property name="ElementShortName">hist_addra_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addra_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addra_3" type="array">
+      <obj_property name="ElementShortName">hist_addra_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addra_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addrb_0" type="array">
+      <obj_property name="ElementShortName">hist_addrb_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addrb_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addrb_1" type="array">
+      <obj_property name="ElementShortName">hist_addrb_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addrb_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addrb_2" type="array">
+      <obj_property name="ElementShortName">hist_addrb_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addrb_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_addrb_3" type="array">
+      <obj_property name="ElementShortName">hist_addrb_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_addrb_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_dinb_0" type="array">
+      <obj_property name="ElementShortName">hist_dinb_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_dinb_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_dinb_1" type="array">
+      <obj_property name="ElementShortName">hist_dinb_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_dinb_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_dinb_2" type="array">
+      <obj_property name="ElementShortName">hist_dinb_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_dinb_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/hist_dinb_3" type="array">
+      <obj_property name="ElementShortName">hist_dinb_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">hist_dinb_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_cell_row" type="array">
+      <obj_property name="ElementShortName">mod_cell_row[5:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_row[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_cell_col" type="array">
+      <obj_property name="ElementShortName">mod_cell_col[5:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_col[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_cell_in_row" type="array">
+      <obj_property name="ElementShortName">mod_cell_in_row[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_in_row[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_cell_in_col" type="array">
+      <obj_property name="ElementShortName">mod_cell_in_col[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_in_col[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_cell_row_r1" type="array">
+      <obj_property name="ElementShortName">mod_cell_row_r1[5:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_row_r1[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/mod_cell_col_r1" type="array">
+      <obj_property name="ElementShortName">mod_cell_col_r1[5:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_col_r1[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/initial_bram" type="logic">
+      <obj_property name="ElementShortName">initial_bram</obj_property>
+      <obj_property name="ObjectShortName">initial_bram</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/initial_addrb" type="array">
+      <obj_property name="ElementShortName">initial_addrb[12:0]</obj_property>
+      <obj_property name="ObjectShortName">initial_addrb[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/TOTAL_BIT_WIDTH" type="array">
+      <obj_property name="ElementShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_read_write_cell_bram/DELAY" type="array">
+      <obj_property name="ElementShortName">DELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/arest_n" type="logic">
+      <obj_property name="ElementShortName">arest_n</obj_property>
+      <obj_property name="ObjectShortName">arest_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/window_valid" type="logic">
+      <obj_property name="ElementShortName">window_valid</obj_property>
+      <obj_property name="ObjectShortName">window_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg1" type="array">
+      <obj_property name="ElementShortName">sos_reg1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg2" type="array">
+      <obj_property name="ElementShortName">sos_reg2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg3" type="array">
+      <obj_property name="ElementShortName">sos_reg3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg4" type="array">
+      <obj_property name="ElementShortName">sos_reg4[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg4[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg5" type="array">
+      <obj_property name="ElementShortName">sos_reg5[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg5[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg6" type="array">
+      <obj_property name="ElementShortName">sos_reg6[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg6[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg7" type="array">
+      <obj_property name="ElementShortName">sos_reg7[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg7[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg8" type="array">
+      <obj_property name="ElementShortName">sos_reg8[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg8[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/sos_reg9" type="array">
+      <obj_property name="ElementShortName">sos_reg9[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg9[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/normal_addrb_0" type="array">
+      <obj_property name="ElementShortName">normal_addrb_0[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_0[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/normal_addrb_1" type="array">
+      <obj_property name="ElementShortName">normal_addrb_1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_1[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/normal_addrb_2" type="array">
+      <obj_property name="ElementShortName">normal_addrb_2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_2[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/normal_addrb_3" type="array">
+      <obj_property name="ElementShortName">normal_addrb_3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">normal_addrb_3[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/doutb_0" type="array">
+      <obj_property name="ElementShortName">doutb_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/doutb_1" type="array">
+      <obj_property name="ElementShortName">doutb_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/doutb_2" type="array">
+      <obj_property name="ElementShortName">doutb_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/doutb_3" type="array">
+      <obj_property name="ElementShortName">doutb_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_feature_valid" type="logic">
+      <obj_property name="ElementShortName">bin0_17_feature_valid</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_feature_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_feature_valid" type="logic">
+      <obj_property name="ElementShortName">bin18_26_feature_valid</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_feature_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_feature_valid" type="logic">
+      <obj_property name="ElementShortName">bin27_30_feature_valid</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_feature_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17" type="array">
+      <obj_property name="ElementShortName">bin0_17[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26" type="array">
+      <obj_property name="ElementShortName">bin18_26[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30" type="array">
+      <obj_property name="ElementShortName">bin27_30[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_cstate" type="array">
+      <obj_property name="ElementShortName">block_cstate[2:0]</obj_property>
+      <obj_property name="ObjectShortName">block_cstate[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_nstate" type="array">
+      <obj_property name="ElementShortName">block_nstate[2:0]</obj_property>
+      <obj_property name="ObjectShortName">block_nstate[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_valid" type="logic">
+      <obj_property name="ElementShortName">block_valid</obj_property>
+      <obj_property name="ObjectShortName">block_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_sos" type="array">
+      <obj_property name="ElementShortName">block_sos[34:0]</obj_property>
+      <obj_property name="ObjectShortName">block_sos[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/int_to_f_tready" type="logic">
+      <obj_property name="ElementShortName">int_to_f_tready</obj_property>
+      <obj_property name="ObjectShortName">int_to_f_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/f_result_tvalid" type="logic">
+      <obj_property name="ElementShortName">f_result_tvalid</obj_property>
+      <obj_property name="ObjectShortName">f_result_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/f_result_tdata" type="array">
+      <obj_property name="ElementShortName">f_result_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">f_result_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_sos_r1" type="array">
+      <obj_property name="ElementShortName">block_sos_r1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">block_sos_r1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_float" type="array">
+      <obj_property name="ElementShortName">y_float[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y_float[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_float_valid" type="logic">
+      <obj_property name="ElementShortName">y_float_valid</obj_property>
+      <obj_property name="ObjectShortName">y_float_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_sos_r2" type="array">
+      <obj_property name="ElementShortName">block_sos_r2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">block_sos_r2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/f_to_int_tready" type="logic">
+      <obj_property name="ElementShortName">f_to_int_tready</obj_property>
+      <obj_property name="ObjectShortName">f_to_int_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_int_tvalid" type="logic">
+      <obj_property name="ElementShortName">y_int_tvalid</obj_property>
+      <obj_property name="ObjectShortName">y_int_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_int" type="array">
+      <obj_property name="ElementShortName">y_int[39:0]</obj_property>
+      <obj_property name="ObjectShortName">y_int[39:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_sos_r3" type="array">
+      <obj_property name="ElementShortName">block_sos_r3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">block_sos_r3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_square" type="array">
+      <obj_property name="ElementShortName">y_square[69:0]</obj_property>
+      <obj_property name="ObjectShortName">y_square[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_square_valid" type="logic">
+      <obj_property name="ElementShortName">y_square_valid</obj_property>
+      <obj_property name="ObjectShortName">y_square_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/block_sos_r4" type="array">
+      <obj_property name="ElementShortName">block_sos_r4[34:0]</obj_property>
+      <obj_property name="ObjectShortName">block_sos_r4[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_int_r1" type="array">
+      <obj_property name="ElementShortName">y_int_r1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">y_int_r1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_y_r" type="array">
+      <obj_property name="ElementShortName">y_y_r[69:0]</obj_property>
+      <obj_property name="ObjectShortName">y_y_r[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_y_r_valid" type="logic">
+      <obj_property name="ElementShortName">y_y_r_valid</obj_property>
+      <obj_property name="ObjectShortName">y_y_r_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_int_r2" type="array">
+      <obj_property name="ElementShortName">y_int_r2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">y_int_r2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/_3_sub_yyr" type="array">
+      <obj_property name="ElementShortName">_3_sub_yyr[34:0]</obj_property>
+      <obj_property name="ObjectShortName">_3_sub_yyr[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/_3_sub_yyr_valid" type="logic">
+      <obj_property name="ElementShortName">_3_sub_yyr_valid</obj_property>
+      <obj_property name="ObjectShortName">_3_sub_yyr_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/y_int_r3" type="array">
+      <obj_property name="ElementShortName">y_int_r3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">y_int_r3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root[69:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_valid" type="logic">
+      <obj_property name="ElementShortName">inverse_sqre_root_valid</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/isr_cstate" type="array">
+      <obj_property name="ElementShortName">isr_cstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">isr_cstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/isr_nstate" type="array">
+      <obj_property name="ElementShortName">isr_nstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">isr_nstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_0_0" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_0_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_0_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_0_1" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_0_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_0_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_0_2" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_0_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_0_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_0_3" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_0_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_0_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_1_0" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_1_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_1_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_1_1" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_1_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_1_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_1_2" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_1_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_1_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_1_3" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_1_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_1_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/isr_flag" type="logic">
+      <obj_property name="ElementShortName">isr_flag</obj_property>
+      <obj_property name="ObjectShortName">isr_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/isr_count" type="array">
+      <obj_property name="ElementShortName">isr_count[11:0]</obj_property>
+      <obj_property name="ObjectShortName">isr_count[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/isr_valid" type="logic">
+      <obj_property name="ElementShortName">isr_valid</obj_property>
+      <obj_property name="ObjectShortName">isr_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_0" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_1" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_2" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/inverse_sqre_root_3" type="array">
+      <obj_property name="ElementShortName">inverse_sqre_root_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">inverse_sqre_root_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin_data_valid" type="logic">
+      <obj_property name="ElementShortName">bin_data_valid</obj_property>
+      <obj_property name="ObjectShortName">bin_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin_data" type="array">
+      <obj_property name="ElementShortName">bin_data[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin_data[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_normal_0" type="array">
+      <obj_property name="ElementShortName">bin0_17_normal_0[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_normal_0[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_normal_1" type="array">
+      <obj_property name="ElementShortName">bin0_17_normal_1[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_normal_1[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_normal_2" type="array">
+      <obj_property name="ElementShortName">bin0_17_normal_2[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_normal_2[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_normal_3" type="array">
+      <obj_property name="ElementShortName">bin0_17_normal_3[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_normal_3[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_normal_valid" type="logic">
+      <obj_property name="ElementShortName">bin0_17_normal_valid</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_normal_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_truncate_0" type="array">
+      <obj_property name="ElementShortName">bin0_17_truncate_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_truncate_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_truncate_1" type="array">
+      <obj_property name="ElementShortName">bin0_17_truncate_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_truncate_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_truncate_2" type="array">
+      <obj_property name="ElementShortName">bin0_17_truncate_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_truncate_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_truncate_3" type="array">
+      <obj_property name="ElementShortName">bin0_17_truncate_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_truncate_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin_data_r1" type="array">
+      <obj_property name="ElementShortName">bin_data_r1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin_data_r1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin_data_count" type="logic">
+      <obj_property name="ElementShortName">bin_data_count</obj_property>
+      <obj_property name="ObjectShortName">bin_data_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin_0_9_sum" type="array">
+      <obj_property name="ElementShortName">bin_0_9_sum[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin_0_9_sum[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin_0_9_sum_valid" type="logic">
+      <obj_property name="ElementShortName">bin_0_9_sum_valid</obj_property>
+      <obj_property name="ObjectShortName">bin_0_9_sum_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_pca" type="array">
+      <obj_property name="ElementShortName">bin0_17_pca[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_pca[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_pca_valid" type="logic">
+      <obj_property name="ElementShortName">bin0_17_pca_valid</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_pca_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_normal_0" type="array">
+      <obj_property name="ElementShortName">bin18_26_normal_0[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_normal_0[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_normal_1" type="array">
+      <obj_property name="ElementShortName">bin18_26_normal_1[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_normal_1[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_normal_2" type="array">
+      <obj_property name="ElementShortName">bin18_26_normal_2[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_normal_2[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_normal_3" type="array">
+      <obj_property name="ElementShortName">bin18_26_normal_3[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_normal_3[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_normal_valid" type="logic">
+      <obj_property name="ElementShortName">bin18_26_normal_valid</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_normal_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_truncate_0" type="array">
+      <obj_property name="ElementShortName">bin18_26_truncate_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_truncate_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_truncate_1" type="array">
+      <obj_property name="ElementShortName">bin18_26_truncate_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_truncate_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_truncate_2" type="array">
+      <obj_property name="ElementShortName">bin18_26_truncate_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_truncate_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_truncate_3" type="array">
+      <obj_property name="ElementShortName">bin18_26_truncate_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_truncate_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_truncate_0" type="array">
+      <obj_property name="ElementShortName">bin27_30_truncate_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_truncate_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_truncate_1" type="array">
+      <obj_property name="ElementShortName">bin27_30_truncate_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_truncate_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_truncate_2" type="array">
+      <obj_property name="ElementShortName">bin27_30_truncate_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_truncate_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_truncate_3" type="array">
+      <obj_property name="ElementShortName">bin27_30_truncate_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_truncate_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_truncate_valid" type="logic">
+      <obj_property name="ElementShortName">bin27_30_truncate_valid</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_truncate_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_sum_count" type="array">
+      <obj_property name="ElementShortName">bin0_17_sum_count[4:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_sum_count[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_pca" type="array">
+      <obj_property name="ElementShortName">bin18_26_pca[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_pca[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_pca_valid" type="logic">
+      <obj_property name="ElementShortName">bin18_26_pca_valid</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_pca_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_0" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca_0[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_0[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_1" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca_1[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_1[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_2" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca_2[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_2[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_3" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca_3[69:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_3[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_valid" type="logic">
+      <obj_property name="ElementShortName">bin27_30_pca_valid</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/cell_row" type="array">
+      <obj_property name="ElementShortName">cell_row[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cell_row[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/cell_col" type="array">
+      <obj_property name="ElementShortName">cell_col[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cell_col[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/hamming_row" type="array">
+      <obj_property name="ElementShortName">hamming_row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">hamming_row[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/hamming_col" type="array">
+      <obj_property name="ElementShortName">hamming_col[3:0]</obj_property>
+      <obj_property name="ObjectShortName">hamming_col[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/hamming_addr" type="array">
+      <obj_property name="ElementShortName">hamming_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">hamming_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/hamming_data" type="array">
+      <obj_property name="ElementShortName">hamming_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">hamming_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/hamming_data_r1" type="array">
+      <obj_property name="ElementShortName">hamming_data_r1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">hamming_data_r1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_1_r1" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca_1_r1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_1_r1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_2_r1" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca_2_r1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_2_r1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca_3_r1" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca_3_r1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca_3_r1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin0_17_feature" type="array">
+      <obj_property name="ElementShortName">bin0_17_feature[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bin0_17_feature[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin18_26_feature" type="array">
+      <obj_property name="ElementShortName">bin18_26_feature[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bin18_26_feature[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_feature" type="array">
+      <obj_property name="ElementShortName">bin27_30_feature[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_feature[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_count" type="array">
+      <obj_property name="ElementShortName">bin27_30_count[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_count[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/bin27_30_pca" type="array">
+      <obj_property name="ElementShortName">bin27_30_pca[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin27_30_pca[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/PARAM_TRUNCATE" type="array">
+      <obj_property name="ElementShortName">PARAM_TRUNCATE[34:0]</obj_property>
+      <obj_property name="ObjectShortName">PARAM_TRUNCATE[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/PARAM_GAMA" type="array">
+      <obj_property name="ElementShortName">PARAM_GAMA[34:0]</obj_property>
+      <obj_property name="ObjectShortName">PARAM_GAMA[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/QN" type="array">
+      <obj_property name="ElementShortName">QN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">QN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/TOTAL_BIT_WIDTH" type="array">
+      <obj_property name="ElementShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/DELAY" type="array">
+      <obj_property name="ElementShortName">DELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/BLOCK_IDLE" type="array">
+      <obj_property name="ElementShortName">BLOCK_IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_IDLE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/BLOCK_RD" type="array">
+      <obj_property name="ElementShortName">BLOCK_RD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_RD[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/BLOCK_RU" type="array">
+      <obj_property name="ElementShortName">BLOCK_RU[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_RU[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/BLOCK_LD" type="array">
+      <obj_property name="ElementShortName">BLOCK_LD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_LD[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/BLOCK_LU" type="array">
+      <obj_property name="ElementShortName">BLOCK_LU[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_LU[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/MAGIC_NUM" type="array">
+      <obj_property name="ElementShortName">MAGIC_NUM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAGIC_NUM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/ISR_IDLE" type="array">
+      <obj_property name="ElementShortName">ISR_IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ISR_IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/ISR_GROUP0" type="array">
+      <obj_property name="ElementShortName">ISR_GROUP0[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ISR_GROUP0[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/ISR_GROUP1" type="array">
+      <obj_property name="ElementShortName">ISR_GROUP1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ISR_GROUP1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_normalize_truncate_pca/ISR_WAIT" type="array">
+      <obj_property name="ElementShortName">ISR_WAIT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ISR_WAIT[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/arest_n" type="logic">
+      <obj_property name="ElementShortName">arest_n</obj_property>
+      <obj_property name="ObjectShortName">arest_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_valid" type="logic">
+      <obj_property name="ElementShortName">sos_valid</obj_property>
+      <obj_property name="ObjectShortName">sos_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sum_of_squares" type="array">
+      <obj_property name="ElementShortName">sum_of_squares[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_of_squares[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/window_valid" type="logic">
+      <obj_property name="ElementShortName">window_valid</obj_property>
+      <obj_property name="ObjectShortName">window_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg1" type="array">
+      <obj_property name="ElementShortName">sos_reg1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg2" type="array">
+      <obj_property name="ElementShortName">sos_reg2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg3" type="array">
+      <obj_property name="ElementShortName">sos_reg3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg4" type="array">
+      <obj_property name="ElementShortName">sos_reg4[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg4[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg5" type="array">
+      <obj_property name="ElementShortName">sos_reg5[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg5[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg6" type="array">
+      <obj_property name="ElementShortName">sos_reg6[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg6[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg7" type="array">
+      <obj_property name="ElementShortName">sos_reg7[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg7[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg8" type="array">
+      <obj_property name="ElementShortName">sos_reg8[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg8[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg9" type="array">
+      <obj_property name="ElementShortName">sos_reg9[34:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg9[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/addra_1" type="array">
+      <obj_property name="ElementShortName">addra_1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/dina_1" type="array">
+      <obj_property name="ElementShortName">dina_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/we_1" type="logic">
+      <obj_property name="ElementShortName">we_1</obj_property>
+      <obj_property name="ObjectShortName">we_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/addrb_1" type="array">
+      <obj_property name="ElementShortName">addrb_1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/doutb_1" type="array">
+      <obj_property name="ElementShortName">doutb_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/addra_2" type="array">
+      <obj_property name="ElementShortName">addra_2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/dina_2" type="array">
+      <obj_property name="ElementShortName">dina_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/we_2" type="logic">
+      <obj_property name="ElementShortName">we_2</obj_property>
+      <obj_property name="ObjectShortName">we_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/addrb_2" type="array">
+      <obj_property name="ElementShortName">addrb_2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/doutb_2" type="array">
+      <obj_property name="ElementShortName">doutb_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/rd_row1_valid" type="logic">
+      <obj_property name="ElementShortName">rd_row1_valid</obj_property>
+      <obj_property name="ObjectShortName">rd_row1_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/rd_row2_valid" type="logic">
+      <obj_property name="ElementShortName">rd_row2_valid</obj_property>
+      <obj_property name="ObjectShortName">rd_row2_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_count" type="array">
+      <obj_property name="ElementShortName">sos_count[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_count[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg4_col" type="array">
+      <obj_property name="ElementShortName">sos_reg4_col[5:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg4_col[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/sos_reg5_col" type="array">
+      <obj_property name="ElementShortName">sos_reg5_col[5:0]</obj_property>
+      <obj_property name="ObjectShortName">sos_reg5_col[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/TOTAL_BIT_WIDTH" type="array">
+      <obj_property name="ElementShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_normalization_pca_hamming_top/inst_sos_cache/DELAY" type="array">
+      <obj_property name="ElementShortName">DELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/arest_n" type="logic">
+      <obj_property name="ElementShortName">arest_n</obj_property>
+      <obj_property name="ObjectShortName">arest_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/p" type="array">
+      <obj_property name="ElementShortName">p[7:0]</obj_property>
+      <obj_property name="ObjectShortName">p[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/p_valid" type="logic">
+      <obj_property name="ElementShortName">p_valid</obj_property>
+      <obj_property name="ObjectShortName">p_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/finish" type="logic">
+      <obj_property name="ElementShortName">finish</obj_property>
+      <obj_property name="ObjectShortName">finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/bin_num" type="array">
+      <obj_property name="ElementShortName">bin_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">bin_num[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/bin_num_valid" type="logic">
+      <obj_property name="ElementShortName">bin_num_valid</obj_property>
+      <obj_property name="ObjectShortName">bin_num_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_row_r2" type="array">
+      <obj_property name="ElementShortName">mod_row_r2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_row_r2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_col_r2" type="array">
+      <obj_property name="ElementShortName">mod_col_r2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_col_r2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/intensity_0" type="array">
+      <obj_property name="ElementShortName">intensity_0[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_0[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/intensity_1" type="array">
+      <obj_property name="ElementShortName">intensity_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/intensity_2" type="array">
+      <obj_property name="ElementShortName">intensity_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/intensity_3" type="array">
+      <obj_property name="ElementShortName">intensity_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">intensity_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/intensity_valid" type="logic">
+      <obj_property name="ElementShortName">intensity_valid</obj_property>
+      <obj_property name="ObjectShortName">intensity_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/grad_cstate" type="array">
+      <obj_property name="ElementShortName">grad_cstate[2:0]</obj_property>
+      <obj_property name="ObjectShortName">grad_cstate[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/grad_nstate" type="array">
+      <obj_property name="ElementShortName">grad_nstate[2:0]</obj_property>
+      <obj_property name="ObjectShortName">grad_nstate[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/dx" type="array">
+      <obj_property name="ElementShortName">dx[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dx[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/dy" type="array">
+      <obj_property name="ElementShortName">dy[34:0]</obj_property>
+      <obj_property name="ObjectShortName">dy[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/quadrant" type="array">
+      <obj_property name="ElementShortName">quadrant[1:0]</obj_property>
+      <obj_property name="ObjectShortName">quadrant[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/dx_dy_valid" type="logic">
+      <obj_property name="ElementShortName">dx_dy_valid</obj_property>
+      <obj_property name="ObjectShortName">dx_dy_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/a" type="array">
+      <obj_property name="ElementShortName">a[34:0]</obj_property>
+      <obj_property name="ObjectShortName">a[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/b" type="array">
+      <obj_property name="ElementShortName">b[34:0]</obj_property>
+      <obj_property name="ObjectShortName">b[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/a_R_1" type="array">
+      <obj_property name="ElementShortName">a_R_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">a_R_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/a_R_2" type="array">
+      <obj_property name="ElementShortName">a_R_2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">a_R_2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/a_R_3" type="array">
+      <obj_property name="ElementShortName">a_R_3[34:0]</obj_property>
+      <obj_property name="ObjectShortName">a_R_3[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/b_R_1" type="array">
+      <obj_property name="ElementShortName">b_R_1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">b_R_1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/a_r1" type="array">
+      <obj_property name="ElementShortName">a_r1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">a_r1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/a1_add_a2" type="array">
+      <obj_property name="ElementShortName">a1_add_a2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">a1_add_a2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/a3_add_b1" type="array">
+      <obj_property name="ElementShortName">a3_add_b1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">a3_add_b1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/sra_valid1" type="logic">
+      <obj_property name="ElementShortName">sra_valid1</obj_property>
+      <obj_property name="ObjectShortName">sra_valid1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/c" type="array">
+      <obj_property name="ElementShortName">c[34:0]</obj_property>
+      <obj_property name="ObjectShortName">c[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/vec_mod" type="array">
+      <obj_property name="ElementShortName">vec_mod[34:0]</obj_property>
+      <obj_property name="ObjectShortName">vec_mod[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/vec_mod_valid" type="logic">
+      <obj_property name="ElementShortName">vec_mod_valid</obj_property>
+      <obj_property name="ObjectShortName">vec_mod_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_row" type="array">
+      <obj_property name="ElementShortName">mod_row[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_row[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_col" type="array">
+      <obj_property name="ElementShortName">mod_col[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_col[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_cell_row" type="array">
+      <obj_property name="ElementShortName">mod_cell_row[5:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_row[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_cell_col" type="array">
+      <obj_property name="ElementShortName">mod_cell_col[5:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_col[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_cell_in_row" type="array">
+      <obj_property name="ElementShortName">mod_cell_in_row[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_in_row[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_cell_in_col" type="array">
+      <obj_property name="ElementShortName">mod_cell_in_col[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_cell_in_col[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_0" type="array">
+      <obj_property name="ElementShortName">factor_0[69:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_0[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_1" type="array">
+      <obj_property name="ElementShortName">factor_1[69:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_1[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_2" type="array">
+      <obj_property name="ElementShortName">factor_2[69:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_2[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_3" type="array">
+      <obj_property name="ElementShortName">factor_3[69:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_3[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_0_x" type="array">
+      <obj_property name="ElementShortName">factor_0_x[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_0_x[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_1_x" type="array">
+      <obj_property name="ElementShortName">factor_1_x[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_1_x[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_2_x" type="array">
+      <obj_property name="ElementShortName">factor_2_x[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_2_x[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_3_x" type="array">
+      <obj_property name="ElementShortName">factor_3_x[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_3_x[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_0_y" type="array">
+      <obj_property name="ElementShortName">factor_0_y[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_0_y[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_1_y" type="array">
+      <obj_property name="ElementShortName">factor_1_y[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_1_y[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_2_y" type="array">
+      <obj_property name="ElementShortName">factor_2_y[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_2_y[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_3_y" type="array">
+      <obj_property name="ElementShortName">factor_3_y[34:0]</obj_property>
+      <obj_property name="ObjectShortName">factor_3_y[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/vec_mod_r1" type="array">
+      <obj_property name="ElementShortName">vec_mod_r1[34:0]</obj_property>
+      <obj_property name="ObjectShortName">vec_mod_r1[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/vec_mod_valid_r1" type="logic">
+      <obj_property name="ElementShortName">vec_mod_valid_r1</obj_property>
+      <obj_property name="ObjectShortName">vec_mod_valid_r1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_row_r1" type="array">
+      <obj_property name="ElementShortName">mod_row_r1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_row_r1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_col_r1" type="array">
+      <obj_property name="ElementShortName">mod_col_r1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_col_r1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/vec_mod_r2" type="array">
+      <obj_property name="ElementShortName">vec_mod_r2[34:0]</obj_property>
+      <obj_property name="ObjectShortName">vec_mod_r2[34:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/factor_valid" type="logic">
+      <obj_property name="ElementShortName">factor_valid</obj_property>
+      <obj_property name="ObjectShortName">factor_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_intensity_0" type="array">
+      <obj_property name="ElementShortName">mod_intensity_0[69:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_intensity_0[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_intensity_1" type="array">
+      <obj_property name="ElementShortName">mod_intensity_1[69:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_intensity_1[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_intensity_2" type="array">
+      <obj_property name="ElementShortName">mod_intensity_2[69:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_intensity_2[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/mod_intensity_3" type="array">
+      <obj_property name="ElementShortName">mod_intensity_3[69:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_intensity_3[69:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/arest_n" type="logic">
+      <obj_property name="ElementShortName">arest_n</obj_property>
+      <obj_property name="ObjectShortName">arest_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/p" type="array">
+      <obj_property name="ElementShortName">p[7:0]</obj_property>
+      <obj_property name="ObjectShortName">p[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/p_valid" type="logic">
+      <obj_property name="ElementShortName">p_valid</obj_property>
+      <obj_property name="ObjectShortName">p_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_count" type="array">
+      <obj_property name="ElementShortName">pixel_count[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_count[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_row_count" type="array">
+      <obj_property name="ElementShortName">pixel_row_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_row_count[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_col_count" type="array">
+      <obj_property name="ElementShortName">pixel_col_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_col_count[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/remain_count" type="array">
+      <obj_property name="ElementShortName">remain_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">remain_count[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/remain_valid" type="logic">
+      <obj_property name="ElementShortName">remain_valid</obj_property>
+      <obj_property name="ObjectShortName">remain_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_reg1" type="array">
+      <obj_property name="ElementShortName">pixel_reg1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_reg1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_reg2" type="array">
+      <obj_property name="ElementShortName">pixel_reg2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_reg2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_reg3" type="array">
+      <obj_property name="ElementShortName">pixel_reg3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_reg3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_reg4" type="array">
+      <obj_property name="ElementShortName">pixel_reg4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_reg4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_reg5" type="array">
+      <obj_property name="ElementShortName">pixel_reg5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_reg5[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_reg6" type="array">
+      <obj_property name="ElementShortName">pixel_reg6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_reg6[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/pixel_reg7" type="array">
+      <obj_property name="ElementShortName">pixel_reg7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_reg7[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/reg4_valid" type="logic">
+      <obj_property name="ElementShortName">reg4_valid</obj_property>
+      <obj_property name="ObjectShortName">reg4_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/addra_1" type="array">
+      <obj_property name="ElementShortName">addra_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/dina_1" type="array">
+      <obj_property name="ElementShortName">dina_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/we_1" type="logic">
+      <obj_property name="ElementShortName">we_1</obj_property>
+      <obj_property name="ObjectShortName">we_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/addrb_1" type="array">
+      <obj_property name="ElementShortName">addrb_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/doutb_1" type="array">
+      <obj_property name="ElementShortName">doutb_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/addra_2" type="array">
+      <obj_property name="ElementShortName">addra_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/dina_2" type="array">
+      <obj_property name="ElementShortName">dina_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dina_2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/we_2" type="logic">
+      <obj_property name="ElementShortName">we_2</obj_property>
+      <obj_property name="ObjectShortName">we_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/addrb_2" type="array">
+      <obj_property name="ElementShortName">addrb_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/doutb_2" type="array">
+      <obj_property name="ElementShortName">doutb_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb_2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/rd_row1_valid" type="logic">
+      <obj_property name="ElementShortName">rd_row1_valid</obj_property>
+      <obj_property name="ObjectShortName">rd_row1_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/rd_row2_valid" type="logic">
+      <obj_property name="ElementShortName">rd_row2_valid</obj_property>
+      <obj_property name="ObjectShortName">rd_row2_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/IMAGE_SIZE" type="array">
+      <obj_property name="ElementShortName">IMAGE_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IMAGE_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/IMAGE_WIDTH" type="array">
+      <obj_property name="ElementShortName">IMAGE_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IMAGE_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/QN" type="array">
+      <obj_property name="ElementShortName">QN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">QN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/TOTAL_BIT_WIDTH" type="array">
+      <obj_property name="ElementShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/P_WIDTH" type="array">
+      <obj_property name="ElementShortName">P_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">P_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/DELAY" type="array">
+      <obj_property name="ElementShortName">DELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/GRAD_IDLE" type="array">
+      <obj_property name="ElementShortName">GRAD_IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAD_IDLE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/GRAD_LR" type="array">
+      <obj_property name="ElementShortName">GRAD_LR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAD_LR[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/GRAD_UD" type="array">
+      <obj_property name="ElementShortName">GRAD_UD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAD_UD[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/GRAD_LRUD" type="array">
+      <obj_property name="ElementShortName">GRAD_LRUD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAD_LRUD[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hog_top_tb/inst_hog_top/inst_histogram_top/inst_histogram/GRAD_IN" type="array">
+      <obj_property name="ElementShortName">GRAD_IN[2:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAD_IN[2:0]</obj_property>
+   </wvobject>
+</wave_config>
