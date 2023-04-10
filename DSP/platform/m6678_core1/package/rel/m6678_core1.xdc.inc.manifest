@@ -1,0 +1,17 @@
+m6678_core1/Platform.xdc
+m6678_core1/Platform.xs
+m6678_core1/config.bld
+m6678_core1/package/.vers_b160
+m6678_core1/package/.vers_g180
+m6678_core1/package/.vers_r170
+m6678_core1/package/.xdc-B21
+m6678_core1/package/build.cfg
+m6678_core1/package/m6678_core1.ccs
+m6678_core1/package/m6678_core1.class
+m6678_core1/package/m6678_core1.java
+m6678_core1/package/m6678_core1.sch
+m6678_core1/package/package.bld.xml
+m6678_core1/package/package.defs.h
+m6678_core1/package/package_m6678_core1.c
+m6678_core1/package.bld
+m6678_core1/package.xdc

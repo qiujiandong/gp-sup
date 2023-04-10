@@ -1,0 +1,34 @@
+m6678_core1.zip: Platform.xdc
+Platform.xdc:
+m6678_core1.zip: Platform.xs
+Platform.xs:
+m6678_core1.zip: config.bld
+config.bld:
+m6678_core1.zip: package/.vers_b160
+package/.vers_b160:
+m6678_core1.zip: package/.vers_g180
+package/.vers_g180:
+m6678_core1.zip: package/.vers_r170
+package/.vers_r170:
+m6678_core1.zip: package/.xdc-B21
+package/.xdc-B21:
+m6678_core1.zip: package/build.cfg
+package/build.cfg:
+m6678_core1.zip: package/m6678_core1.ccs
+package/m6678_core1.ccs:
+m6678_core1.zip: package/m6678_core1.class
+package/m6678_core1.class:
+m6678_core1.zip: package/m6678_core1.java
+package/m6678_core1.java:
+m6678_core1.zip: package/m6678_core1.sch
+package/m6678_core1.sch:
+m6678_core1.zip: package/package.bld.xml
+package/package.bld.xml:
+m6678_core1.zip: package/package.defs.h
+package/package.defs.h:
+m6678_core1.zip: package/package_m6678_core1.c
+package/package_m6678_core1.c:
+m6678_core1.zip: package.bld
+package.bld:
+m6678_core1.zip: package.xdc
+package.xdc:

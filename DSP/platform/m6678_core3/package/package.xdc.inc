@@ -1,0 +1,13 @@
+package.xdc
+Platform.xdc
+Platform.xs
+package/m6678_core3.sch
+package/.vers_g180
+package/.vers_r170
+package/.vers_b160
+package/.xdc-B21
+package/m6678_core3.java
+package/m6678_core3.class
+package/package_m6678_core3.c
+package/package.defs.h
+package/m6678_core3.ccs

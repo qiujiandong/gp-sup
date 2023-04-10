@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="GBK"?>
+<!--  This file conforms to the DTD xdc/bld/release.dtd -->
+<release name="m6678_core0" label="default" date="1671952247617" buildCount="1" producerId="undefined">
+<package name="m6678_core0"
+    version=""/>
+<imports>
+</imports>
+<references>
+    <package name="xdc"
+        version="1, 1, 1, 1469558654417"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="IPackage.xdc"/>
+        <file name="IPackage.xs"/>
+        <file name="Warnings.xs"/>
+        <file name="om2.xs"/>
+        <file name="package.xs"/>
+        <file name="template.xs"/>
+        <file name="utils.js"/>
+        <file name="xdc.tci"/>
+        <file name="xmlgen.xs"/>
+        <file name="xmlgen2.xs"/>
+    </package>
+    <package name="xdc.services.global"
+        version="1, 0, 0, 1469558817147"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="Clock.xs"/>
+        <file name="Trace.xs"/>
+        <file name="java\package.jar"/>
+    </package>
+    <package name="xdc.bld"
+        version="1, 0, 2, 1469558666755"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="BuildEnvironment.xs"/>
+        <file name="Configuration.xs"/>
+        <file name="Executable.xs"/>
+        <file name="ITarget.xs"/>
+        <file name="ITarget2.xs"/>
+        <file name="ITarget3.xs"/>
+        <file name="ITargetFilter.xs"/>
+        <file name="Library.xs"/>
+        <file name="Manifest.xs"/>
+        <file name="PackageContents.xs"/>
+        <file name="Repository.xs"/>
+        <file name="Script.xs"/>
+        <file name="Utils.xs"/>
+        <file name="_gen.xs"/>
+        <file name="bld.js"/>
+        <file name="package.xs"/>
+    </package>
+    <package name="xdc.platform"
+        version="1, 0, 1, 1469558705987"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="ICpuDataSheet.xdc"/>
+        <file name="IExeContext.xdc"/>
+        <file name="IPeripheral.xdc"/>
+        <file name="IPlatform.xdc"/>
+    </package>
+    <package name="ti.platforms.generic"
+        version="1, 0, 0, 1, 1562626915782"
+        providerId="C:/ti/bios_6_76_03_01/packages">
+        <file name="Platform.xdc"/>
+    </package>
+    <package name="xdc.shelf"
+        version="1, 0, 0, 1469558935126"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="java\antlr.jar"/>
+        <file name="java\ecj.jar"/>
+        <file name="java\js.jar"/>
+        <file name="java\tar.jar"/>
+    </package>
+    <package name="xdc.services.spec"
+        version="1, 0, 0, 1469558890731"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="java\package.jar"/>
+    </package>
+    <package name="xdc.services.intern.xsr"
+        version="1, 0, 0, 1469558863887"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="java\package.jar"/>
+    </package>
+    <package name="xdc.services.intern.gen"
+        version="1, 0, 0, 1469558858076"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="java\package.jar"/>
+    </package>
+    <package name="xdc.services.intern.cmd"
+        version="1, 0, 0, 1469558852345"
+        providerId="C:/ti/xdctools_3_32_01_22_core/packages">
+        <file name="java\package.jar"/>
+    </package>
+    <xdcRoot base="C:/ti/xdctools_3_32_01_22_core/">
+        <file name="/packages/xdc/package.xdc"/>
+        <xdcCorePkg version="16, 0, 2, 1469558698699" producerId="/db/ztree/library/trees/xdc/xdc-B21/src/packages" buildCount="1" releaseName="xdc_corevers" label="default" date="1469558698699"/>
+    </xdcRoot>
+</references>
+<orphans>
+</orphans>
+</release>

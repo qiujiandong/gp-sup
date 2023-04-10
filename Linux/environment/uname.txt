@@ -1,0 +1,1 @@
+Linux ubuntu-p6-1289cn 5.15.0-69-generic #76~20.04.1-Ubuntu SMP Mon Mar 20 15:54:19 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux

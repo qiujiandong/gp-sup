@@ -1,0 +1,17 @@
+m6678/Platform.xdc
+m6678/Platform.xs
+m6678/config.bld
+m6678/package/.vers_b160
+m6678/package/.vers_g180
+m6678/package/.vers_r170
+m6678/package/.xdc-B21
+m6678/package/build.cfg
+m6678/package/m6678.ccs
+m6678/package/m6678.class
+m6678/package/m6678.java
+m6678/package/m6678.sch
+m6678/package/package.bld.xml
+m6678/package/package.defs.h
+m6678/package/package_m6678.c
+m6678/package.bld
+m6678/package.xdc
