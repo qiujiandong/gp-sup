@@ -84,10 +84,6 @@ int CHwFhogManager::startHwFhog(const CvRect *pRect, RealScale *pRealScale)
     if(m_hHwFhog == 0 || pRect == NULL || pRealScale == NULL){
         return -1;
     }
-    // NOTE the image resize IP in FPGA only support 32k Bytes
-    if(pRect->width * pRect->height > 32768){
-        return -2;
-    }
 
     param.nSize = (pRect->width << 16) + pRect->height;
     param.nStride = m_txBlockSize.width;

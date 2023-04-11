@@ -448,8 +448,11 @@ int CKcfTracker::prepareBlock(
     pBlock->width = nWidth;
     pBlock->height = nHeight;
 
-    // NOTE: the hardware resize module using 8k block ram for one quard of image
-    if(ceil(nWidth * 0.5) * ceil(nHeight * 0.5) > 8192){
+    // NOTE: the hardware resize module using 128kB block ram for one quard of image
+    if(ceil(nWidth * 0.5) * ceil(nHeight * 0.5) > 131072){
+        
+        System_printf("exceed block size\n");
+
         m_fAddScaleW = divsp_i(nWidth, FIXED_SCALE);
         m_fAddScaleH = divsp_i(nHeight, FIXED_SCALE);
         pResizedData = (uint8_t *)memalign(4096, sizeof(uint8_t) * FIXED_SCALE * FIXED_SCALE);
@@ -497,18 +500,28 @@ int CKcfTracker::prepareBlock(
  */
 void CKcfTracker::getFeaturesByHwFhog(const CvRect &block, CvMat &x)
 {
+    int status;
     RealScale realScale;
 
     // start Hw FHOG
-    pHwFhogMgr->startHwFhog(&block, &realScale);
+    status = pHwFhogMgr->startHwFhog(&block, &realScale);
+    if(status != 0){
+        System_abort("start HwFhog param error\n");
+    }
     m_fScaleW = realScale.fScaleW * m_fAddScaleW;
     m_fScaleH = realScale.fScaleH * m_fAddScaleH;
-    Semaphore_pend(hHwFhogDoneSem, BIOS_WAIT_FOREVER);
+    status = Semaphore_pend(hHwFhogDoneSem, 1000); // 1s
+    if(status == 0){
+        System_abort("HwFhog Timeout\n");
+    }
 
     // start read data from DDR in FPGA
     pSrio2PcieMgr->startTxSwFromFPGA(cvPtr1D(&x, 0), FEATUREMAP_SIZE >> 3, RXRESULT_SRCADDR);
     Cache_inv(cvPtr1D(&x, 0), FEATUREMAP_SIZE, Cache_Type_ALLD, TRUE);
-    Semaphore_pend(hRxDbSwFromFPGASem, BIOS_WAIT_FOREVER);
+    status = Semaphore_pend(hRxDbSwFromFPGASem, BIOS_WAIT_FOREVER);
+    if(status == 0){
+        System_abort("HwFhog data readback Timeout\n");
+    }
 }
 
 void CKcfTracker::getFeaturesBySw(const CvMat &subw, CvMat &x)
