@@ -113,7 +113,7 @@ Usage:
   - Change directory to the driver directory.
         cd xdma
   - Compile and install the kernel module driver.
-        make install
+        sudo make install
   - Change directory to the tools directory.
         cd tools
   - Compile the provided example test tools.
@@ -122,7 +122,7 @@ Usage:
 	a. modprobe xdma
 	b. using the provided script.
 		cd tests
-        	./load_driver.sh
+        	sudo ./load_driver.sh
   - Run the provided test script to generate basic DMA traffic.
         ./run_test.sh
  	
