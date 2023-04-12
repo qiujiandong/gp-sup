@@ -23,8 +23,8 @@ TI的软件的下载现在都要有账号才行，如果能在官网下载推荐
 2. 编译器采用TI Compiler 7.4.4 下载地址：[官网](https://software-dl.ti.com/codegen/non-esd/downloads/download_archive.htm) [百度网盘](https://pan.baidu.com/s/1FCnDubYQcH1slSyHfXVBRw?pwd=abcd)
    - 编译器为了兼容FT-M6678，官网下载的需要另外打补丁。
    - 网盘上的是已经添加了补丁的，因此不能用来编译用于TI 的DSP工程。
-   - 从网盘上下载的编译器需要放在“==CCS安装根目录/ccsv6/tools/compiler/==”路径下
-3. 如果使用CCS6.2.0 还需要添加license，将下载的license文件放在“==CCS安装根目录/ccsv6/ccs_base/DebugServer/license/==”路径下。下载地址：[百度网盘](https://pan.baidu.com/s/1R0FAG-DhNgThmKQyeOyBbg?pwd=abcd)
+   - 从网盘上下载的编译器需要放在“CCS安装根目录/ccsv6/tools/compiler/”路径下
+3. 如果使用CCS6.2.0 还需要添加license，将下载的license文件放在“CCS安装根目录/ccsv6/ccs_base/DebugServer/license/”路径下。下载地址：[百度网盘](https://pan.baidu.com/s/1R0FAG-DhNgThmKQyeOyBbg?pwd=abcd)
 4. RTSC软件包。这些基本都是可以从官网直接下载的，不需要TI账号。如果下载不了，这里也提供网盘下载地址：[百度网盘](https://pan.baidu.com/s/1Bnwm9WrotmYAaGoBV2pX6A?pwd=abcd)
    - SYS/BIOS 6.34.4.22 下载地址：[官网](https://software-dl.ti.com/dsps/dsps_public_sw/sdo_sb/targetcontent/sysbios/index.html)
    - XDCTools 3.25.6.96 下载地址：[官网](https://software-dl.ti.com/dsps/dsps_public_sw/sdo_sb/targetcontent/rtsc/)
@@ -36,13 +36,19 @@ TI的软件的下载现在都要有账号才行，如果能在官网下载推荐
 
 1. 选择当前文件夹建立CCS workspace，**确认前面的RTSC软件包都已经安装**。
 2. Project → Import CCS projects ... 导入CCS project
-![工程导入界面](README/2023-04-11-15-39-40.png)
+
+    ![工程导入界面](README/2023-04-11-15-39-40.png)
+
 3. 先同时选中c6x_emcv和csl_m6678两个工程，分别完成Debug和Release版本的编译
    - c6x_emcv是基于OpenCV1.0移植到C6000 DSP上的OpenCV库
    - csl_m6678是FT-M6678的一些外设库
-  ![Lib](README/2023-04-11-15-47-43.png)
+
+    ![Lib](README/2023-04-11-15-47-43.png)
+
 4. 当前两个库编译完成后，可以开始其余工程的编译，选中剩余的所有工程，依次完成Debug和Release版本的编译
-![App](README/2023-04-11-15-48-12.png)
+
+    ![App](README/2023-04-11-15-48-12.png)
+
 5. 完成编译后就可以用调试器在线仿真调试
 6. 程序的固化并没有做……
 
@@ -52,7 +58,7 @@ TI的软件的下载现在都要有账号才行，如果能在官网下载推荐
 
 &emsp;&emsp;FFT_SW_Test和FFT_HW_Test两个工程是类似的，都通过main.c中的宏定义来修改实验内容，比如FFT_HW_Test中的 [main.c](FFT_HW_Test/main.c) 里的宏定义是这样的：
 
-```c
+```cpp
 #define LOOP_TIMES (10) //loop times
 #define FFT_GROUPS (100) // fft groups in every time
 #define FFT_POW (8) // 4, 5, 6, 7, 8
@@ -60,14 +66,16 @@ TI的软件的下载现在都要有账号才行，如果能在官网下载推荐
 
 &emsp;&emsp;FFT_SW_Test中 [main.c](FFT_SW_Test/main.c) 里的宏定义是这样的：
 
-```c
+```cpp
 #define LOOP_TIMES (10)
 #define FFT_GROUPS (1)
 #define FFT_LEN (256)
 ```
 
 &emsp;&emsp;LOOP_TIMES用来指定重复实验的次数；FFT_GROUPS指定连续进行FFT的次数，主要对单次运算和连续的100次运算进行了实验；FFT_LEN指定FFT的长度，覆盖16~256，都是2的整数次幂。程序计时采用的是TSC寄存器，计时单位是1 ns。
+
 &emsp;&emsp;待计算的序列中的每个值都是1，计算结果中只有索引为0的位置有值并且等于序列长度，其余位置都是0。
+
 &emsp;&emsp;待计算序列与结果都存放在DDR3 DRAM中，计算结果会与参考结果进行对比，保证计算的正确性。
 
 ### 双目标实时跟踪
@@ -89,7 +97,7 @@ type = 0
 
 [common.h](Kcf_Common/common.h)中的宏定义：
 
-```c
+```cpp
 #define SRC_WIDTH (640)
 #define SRC_HEIGHT (512)
 #define FRAME_SIZE (327680)
