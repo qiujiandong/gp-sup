@@ -3,6 +3,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
+  ipgui::add_param $IPINST -name "RAM_AW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXIL_AW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXIL_DW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXI_AW" -parent ${Page_0}
@@ -138,6 +139,15 @@ proc validate_PARAM_VALUE.QN { PARAM_VALUE.QN } {
 	return true
 }
 
+proc update_PARAM_VALUE.RAM_AW { PARAM_VALUE.RAM_AW } {
+	# Procedure called to update RAM_AW when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.RAM_AW { PARAM_VALUE.RAM_AW } {
+	# Procedure called to validate RAM_AW
+	return true
+}
+
 proc update_PARAM_VALUE.TOTAL_BIT_WIDTH { PARAM_VALUE.TOTAL_BIT_WIDTH } {
 	# Procedure called to update TOTAL_BIT_WIDTH when any of the dependent parameters in the arguments change
 }
@@ -216,5 +226,10 @@ proc update_MODELPARAM_VALUE.IMGX { MODELPARAM_VALUE.IMGX PARAM_VALUE.IMGX } {
 proc update_MODELPARAM_VALUE.IMGY { MODELPARAM_VALUE.IMGY PARAM_VALUE.IMGY } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.IMGY}] ${MODELPARAM_VALUE.IMGY}
+}
+
+proc update_MODELPARAM_VALUE.RAM_AW { MODELPARAM_VALUE.RAM_AW PARAM_VALUE.RAM_AW } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.RAM_AW}] ${MODELPARAM_VALUE.RAM_AW}
 }
 

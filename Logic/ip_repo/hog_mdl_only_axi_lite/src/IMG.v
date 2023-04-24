@@ -21,8 +21,9 @@ module IMG(
         A2,
         A3,
         A4,
-        P);
-
+        P,
+        img_status);
+	parameter RAM_AW = 17;
 	parameter   imgx = 136;
 	parameter   imgy = 136;//缩小后图像大小imgx*imgy
 
@@ -41,14 +42,15 @@ module IMG(
 	output  reg     finish;//输出结束信号
 	output  reg[31:0] 	A1,A2,A3,A4;//输出地址
     output  reg[7:0]    P;//输出双线性插值
+    output wire [3:0] img_status;
 	
     //定义状态
 	localparam await  = 2'b00;//等待启动状态
 	localparam await1 = 2'b01;//等待启动状态1
 	localparam work   = 2'b11;//正常工作状态
 
-	reg	[1:0]state;				//当前状态
-	reg	[1:0]next_state;		//下一周期状态
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)reg	[1:0]state;				//当前状态
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)reg	[1:0]next_state;		//下一周期状态
 
 	integer start_delay,finish_delay;//启动,结束延时标志
 	reg stallreq1,stallreq2,stallreq3,stallreq4,stallreq5,stallreq6,stallreq7,stallreq8;//暂停信号
@@ -62,6 +64,9 @@ module IMG(
 	reg [31:0]	R1_reg1,R1_reg2,R2_reg1,R2_reg2;//双线性插值中间结果寄存
 	reg [31:0]	Pr_reg1,Pr_reg2;//输出中间结果寄存
 	reg [31:0]	row_signal_reg;//输入行信号判断
+
+	//add img_status
+	assign img_status = {next_state,state};
 
 	assign start_flag = start & start_0;//获得开始信号的脉冲
 

@@ -32,9 +32,10 @@ module IMG_top(
         valid,
         finish,
         P,
+        img_status,
         rsta_busy,
         rstb_busy);
-
+    parameter   RAM_AW = 17;
     parameter   imgx = 136;
 	parameter   imgy = 136;//缩小后图像大小imgx*imgy
 //  parameter   img_Bits = 10;//输入图像字长
@@ -55,30 +56,35 @@ module IMG_top(
     output  wire     valid;//输出有效信号
 	output  wire     finish;//输出结束信号
     output  wire[7:0]    P;//输出双线性插值
+    //add
+    output wire[3:0] img_status;
+
     output  wire  rsta_busy,rstb_busy;
     
     input   wea1,wea2,wea3,wea4;//输入读写信号
     input   ena1,ena2,ena3,ena4,enb,rstb;//输入使能信号
-    input   [12:0]  AA1,AA2,AA3,AA4;//输入写入地址
+    input   [RAM_AW-1:0]  AA1,AA2,AA3,AA4;//输入写入地址
     input   [7:0]  DA1,DA2,DA3,DA4;//输入写入数据
 
     input enb1,enb2,enb3,enb4;
-    input [12:0] addrb1,addrb2,addrb3,addrb4;
+    input [RAM_AW-1:0] addrb1,addrb2,addrb3,addrb4;
     output [7:0]  doutb1,doutb2,doutb3,doutb4;//读出数据 
     //定义连线
     //wire[7:0]  DB1,DB2,DB3,DB4;//读出数据 
-    wire[12:0] AB1,AB2,AB3,AB4;//读出地址
+    wire[RAM_AW-1:0] AB1,AB2,AB3,AB4;//读出地址
     //wire wen;
 
     //读数据选通：图像缩放需要读取数据，最终结果读出也需要读取数据
-    wire [12:0] addrb_1,addrb_2,addrb_3,addrb_4;
+    wire [RAM_AW-1:0] addrb_1,addrb_2,addrb_3,addrb_4;
 
     assign addrb_1 = enb1 ? addrb1 : AB1;//当读取最终结果地址使能enb1-4有效，地址为外部输入的addr1-4，否则为内部图像缩放AB1-4
     assign addrb_2 = enb2 ? addrb2 : AB2;
     assign addrb_3 = enb3 ? addrb3 : AB3;
     assign addrb_4 = enb4 ? addrb4 : AB4;
     //存储器
-	RAM4bank R1(
+	RAM4bank #(
+        .RAM_AW(RAM_AW)
+        ) R1(
         .clk(clk),
         .wea1(wea1),
         .wea2(wea2),
@@ -111,6 +117,7 @@ module IMG_top(
     );
     //实例化图像变化
     IMG #(
+            .RAM_AW(RAM_AW),
             .imgx(imgx),
             .imgy(imgy)
         ) inst_IMG (
@@ -134,7 +141,8 @@ module IMG_top(
             .A2         (AB2),
             .A3         (AB3),
             .A4         (AB4),
-            .P          (P)
+            .P          (P),
+            .img_status  (img_status)
         );
 
 endmodule

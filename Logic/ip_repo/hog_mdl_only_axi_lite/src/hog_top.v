@@ -5,17 +5,17 @@
 //		"header": "Packages/Verilog Gadget/template/verilog_header.v"
 //
 // -----------------------------------------------------------------------------
-// Copyright (c) 2014-2022 All rights reserved
+// Copyright (c) 2014-2023 All rights reserved
 // -----------------------------------------------------------------------------
 // Author : yongchan jeon (Kris) poucotm@gmail.com
 // File   : hog_top.v
 // Create : 2022-10-13 20:20:17
-// Revise : 2022-10-14 15:37:15
+// Revise : 2023-03-16 15:46:50
 // Editor : sublime text3, tab size (4)
 // -----------------------------------------------------------------------------
 `timescale 1ns/1ns
 module hog_top #(
-
+	parameter RAM_AW 			= 17,
 	parameter IMAGE_SIZE 		= 18495,//136*136-1
 	parameter IMAGE_WIDTH 		= 136,
 	parameter QN 				= 8,
@@ -36,10 +36,10 @@ module hog_top #(
 	input p_valid,
 	input finish,
 
-	output [12:0]  res_addra_0,//最终特征图结果写入地址
-	output [12:0]  res_addra_1,
-	output [12:0]  res_addra_2,
-	output [12:0]  res_addra_3,
+	output [RAM_AW-1:0]  res_addra_0,//最终特征图结果写入地址
+	output [RAM_AW-1:0]  res_addra_1,
+	output [RAM_AW-1:0]  res_addra_2,
+	output [RAM_AW-1:0]  res_addra_3,
     output [QN-1:0]  res_dina_0,//最终特征图结果写入数据
     output [QN-1:0]  res_dina_1,
     output [QN-1:0]  res_dina_2,
@@ -52,10 +52,11 @@ module hog_top #(
 	output wea_1,
 	output wea_2,
 	output wea_3,
-	output write_feature_done//写特征完成
+	output write_feature_done,//写特征完成
+	output histogram_done
 );
 
-wire histogram_done;
+//wire histogram_done;
 wire [12:0] normal_addra_0;//histogram aport
 wire [12:0] normal_addra_1;
 wire [12:0] normal_addra_2;
@@ -153,6 +154,7 @@ normalization_pca_hamming_top #(
 
 
 write_bin0_31_feature #(
+		.RAM_AW(RAM_AW),
 		.QN(QN),
 		.DELAY(DELAY)
 	) inst_write_bin0_31_feature (

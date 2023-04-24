@@ -52,7 +52,7 @@ module hog_ctrl #(
 	    input 					s_axil_rready,	
 
 	// ctrl reg 
-		(*mark_debug="true"*)(*keep = "true"*)output reg [AXIL_DW-1:0] mb_ctrl,//bit0 == 1 == start master; bit1 == 1 == stop master 
+		(*mark_debug="true"*)(*keep = "true"*)output reg [AXIL_DW-1:0] mb_ctrl,//bit0 == 1 == start master; bit1 == 1 == stop master ;230315:增加软件复位，bit2 == 1 == rst_n
 		(*mark_debug="true"*)(*keep = "true"*)output reg [AXIL_DW-1:0] rd_wr_irq,//bit0 == 1 == rd1; bit1 == 1 == wr1 
 		
 		(*mark_debug="true"*)(*keep = "true"*)output reg [AXIL_DW-1:0] soft_trigger_en,
@@ -63,7 +63,7 @@ module hog_ctrl #(
 		output reg [AXIL_DW-1:0] wr1_config_3,//dest addr
 		output reg [AXIL_DW-1:0] wr1_config_4,//data_length
 
-		output reg hog_start,
+		(*mark_debug="true"*)(*keep = "true"*)output hog_start_irq,
 		output reg [15:0] img0x,
 		output reg [15:0] img0y,
 		output reg [31:0] absolute_addr,
@@ -71,7 +71,11 @@ module hog_ctrl #(
 		output reg [31:0] scale_x,
 		output reg [31:0] scale_y,
 		output reg [31:0] scale_n,
-		output reg [31:0] test_mode
+		output reg [31:0] test_mode,
+		input [3:0] img_status,
+		input [31:0] axi_status,
+		input [4:0]	circuit_busy,
+		input [1:0] rd1_wr1_done
 	
 );
 
@@ -89,7 +93,8 @@ reg [31:0] wr1_config_2;
 //reg [31:0] wr1_config_4;
 reg [31:0] wr1_config_5;
 
-
+reg hog_start;
+reg hog_start_r1;
 reg [31:0] default_data;
 
 
@@ -252,7 +257,9 @@ end
  		else begin 
  			mb_ctrl <=#DELAY 32'd0;
 			rd_wr_irq <=#DELAY 32'd0;
-			hog_start <=#DELAY 1'd0;
+			if(rd1_wr1_done[1])begin 
+				hog_start <=#DELAY 1'd0;
+			end
  		end
  	end
  end
@@ -314,6 +321,11 @@ always @(posedge aclk)begin
 				5'd20:reg_rdata <=#DELAY scale_y;
 				5'd21:reg_rdata <=#DELAY scale_n;
 				5'd22:reg_rdata <=#DELAY test_mode;
+				//status,提供给dsp或者上位机读取内部电路状态
+				5'd23:reg_rdata <=#DELAY {28'd0,img_status};//{next_state,state}
+				5'd24:reg_rdata <=#DELAY axi_status;//{{1'd0,w_nstate},{1'd0,w_cstate},{1'd0,aw_nstate},{1'd0,aw_cstate},r_nstate,r_cstate,{1'd0,ar_nstate},{1'd0,ar_cstate}}
+				5'd25:reg_rdata <=#DELAY {27'd0,circuit_busy};//{write_busy,feature_busy,histogram_busy,scaling_busy,read_busy}
+
 				default:reg_rdata <=#DELAY default_data;
 			endcase // s_axil_araddr[AXIL_AW-1:2]
 			reg_rvalid <=#DELAY 1'b1;
@@ -324,5 +336,17 @@ always @(posedge aclk)begin
 		end
 	end
 end
+
+always @(posedge aclk)begin 
+	if(!arest_n)begin 
+		hog_start_r1 <=#DELAY 1'd0;
+	end
+	else begin 
+		hog_start_r1 <=#DELAY hog_start;
+	end
+end
+
+assign hog_start_irq = hog_start & (!hog_start_r1);
+
 
 endmodule

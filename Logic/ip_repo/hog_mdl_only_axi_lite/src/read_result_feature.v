@@ -18,6 +18,7 @@
 // -----------------------------------------------------------------------------
 `timescale 1ns/1ns
 module read_result_feature #(
+	parameter RAM_AW = 17,
 	parameter QN = 8,
 	parameter DELAY = 1,
 	parameter AXI_DW = 512
@@ -36,10 +37,10 @@ module read_result_feature #(
 	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  res_enb_1,
 	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  res_enb_2,
 	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  res_enb_3,
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [12 : 0] res_addrb_0,
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [12 : 0] res_addrb_1,
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [12 : 0] res_addrb_2,
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [12 : 0] res_addrb_3,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [RAM_AW-1 : 0] res_addrb_0,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [RAM_AW-1 : 0] res_addrb_1,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [RAM_AW-1 : 0] res_addrb_2,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output  [RAM_AW-1 : 0] res_addrb_3,
 	(* KEEP = "TRUE" *)(* mark_debug="true" *)input [QN-1 : 0] res_doutb_0,
 	(* KEEP = "TRUE" *)(* mark_debug="true" *)input [QN-1 : 0] res_doutb_1,
 	(* KEEP = "TRUE" *)(* mark_debug="true" *)input [QN-1 : 0] res_doutb_2,
@@ -58,7 +59,7 @@ localparam STITCH_BIN27_30 	= 3'd3;
 localparam STITCH_WAIT 		= 3'd4;
 
 wire rd_en;//读使能
-reg [12:0] res_addrb;//读地址 
+reg [RAM_AW-1:0] res_addrb;//读地址 
 reg [4:0] bin_count;//bin计数，总共31个bin
 reg [5:0] start_count;//每个bin需要启动64次，
 reg [1:0] data_count;//每次启动，连续读取4次
@@ -135,15 +136,15 @@ assign res_addrb_3 = res_addrb;
 
 always @(posedge aclk)begin //读地址跳变
 	if(!arest_n)begin 
-		res_addrb <=#DELAY 13'd0;
+		res_addrb <=#DELAY 'd0;
 	end
 	else begin 
 		if(rd_en)begin 
 			if(res_addrb == 13'd7935)begin //256*31-1
-				res_addrb <=#DELAY 13'd0;
+				res_addrb <=#DELAY 'd0;
 			end
 			else begin 
-				res_addrb <=#DELAY res_addrb + 13'd1;
+				res_addrb <=#DELAY res_addrb + 1'd1;
 			end
 		end
 	end

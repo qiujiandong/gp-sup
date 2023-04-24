@@ -541,7 +541,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>73381a62</spirit:value>
+            <spirit:value>cc125548</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -569,7 +569,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>73381a62</spirit:value>
+            <spirit:value>cc125548</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -598,7 +598,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>be4c1eba</spirit:value>
+            <spirit:value>519266af</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1649,6 +1649,11 @@
         <spirit:displayName>Imgy</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IMGY">136</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>RAM_AW</spirit:name>
+        <spirit:displayName>Ram Aw</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RAM_AW">17</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
@@ -1773,7 +1778,7 @@
       <spirit:file>
         <spirit:name>src/hog_mdl_top.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f9f0bde9</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_0f34321a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1993,7 +1998,7 @@
       <spirit:file>
         <spirit:name>xgui/hog_mdl_only_axi_lite_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_be4c1eba</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_519266af</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2074,6 +2079,11 @@
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">hog_mdl_top_v1_0</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>RAM_AW</spirit:name>
+      <spirit:displayName>Ram Aw</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RAM_AW">17</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
@@ -2088,11 +2098,11 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>10</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:hog_mdl_top:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2023-03-09T12:58:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2023-04-11T01:56:11Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@147bb7cc_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_axi_arc_test/ip_package/hog_mdl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2c588082_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_axi_arc_test/ip_package/hog_mdl</xilinx:tag>
@@ -2431,6 +2441,226 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7422b97c_ARCHIVE_LOCATION">c:/Users/LinMian/Desktop/hog_mdl_only_axi_lite</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7654850f_ARCHIVE_LOCATION">c:/Users/LinMian/Desktop/hog_mdl_only_axi_lite</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4b283854_ARCHIVE_LOCATION">c:/Users/LinMian/Desktop/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20fb9a63_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@131f4aa7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@522be6d1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b4c9fb1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55746eb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bfe9284_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@417d08d1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1151ef5e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e8de0b2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@712eadbc_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@789ff8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@474ea953_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ca7e604_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b9ac52d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79c48135_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23fe4be7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f64534_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dadb986_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@807fedc_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@450327c6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba37e2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f792b78_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@610df75c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d0cd53f_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@163dc21f_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d223439_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23e018eb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38ed117d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42c112f_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3407913b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62135aee_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bad43b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@429244ca_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d419289_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@461e5ae7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c28499_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30b0a99e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@514314e6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cfeee_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@438ca5a0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197a200_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58db801c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f6100b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14a481e1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ce615d7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6716096f_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44988533_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13cbfbd5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@490c7656_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c835a04_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7235f3e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ad4ebcd_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@680bb575_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@330f4497_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b1d69ee_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c312b0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@378e5891_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69c41187_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a7213e1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@430669d8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d5cc402_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@573591fc_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a676eb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bee23b5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc96e9c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@698d9865_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d806c82_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c747f02_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bc01c8e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c10df0a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c675740_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f07b44e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@549d90aa_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26d31ad5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d2d83b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@689d489a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33e1248d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14d5e3e8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36069ae5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3831bcc9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a1f6fa_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fb2c48d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25c90f29_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4288f720_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bd45bb5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56a883cc_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5057efab_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39f33532_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776621d0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e8c4324_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fe84c24_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d30122_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ce39446_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@740f325_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29553eb9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52c086a5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c9896fb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@754628c4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dec793b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cf4e9f2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dd93352_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5af62677_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12f2d898_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a2133e6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2824694e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d6a9e2d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65727ff0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eb29175_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74a18419_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1651000_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1184d063_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a91076a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43b5d6e9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45d3e9b6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4358f768_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fee2fa4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7409f385_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13f15c12_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a0b833b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cbe1935_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@833e7a0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cfa0e93_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c54acb8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2848c4ce_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12083b5b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53d2d50c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57be04bb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16735cc5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@662e1d63_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@319ce407_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71879fbc_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@180f4be4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3df2d99_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3517ef0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@763f29df_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40d89123_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20ff5ce9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e9e47f4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc4cce1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b63e632_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18604375_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68639172_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9f95e2b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ad4882e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30fcfbe1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51e12c49_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15920cac_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dfebdaf_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fca957b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@730c161e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ed39b3_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f378759_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c01715c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dce014b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c9b7738_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18ef5a3e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef66759_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ce8982d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31776846_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb2e37c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f37c406_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46397fcd_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73c29d26_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35162c47_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c308b80_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cee34e2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e801857_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558feabb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11510993_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b564a04_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@590e97b4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37c64f91_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17d4814_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@299b3d8c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e41e00_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@591e1f04_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d8f58ce_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d4f2c1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7347bee_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b2048a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2516c216_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e4a577a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@120bef00_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6975b00c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2325111e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b8bdbaa_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b4c4d98_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ed1dbf4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@280e0c80_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66454d55_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c8858b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e7ac6a1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f78f26b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d5d6121_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@232ad2a9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ec1eb33_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77db17b5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e93edf1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29dfe7fc_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79c0496c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25fc10d4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@261bba2d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@727f2a35_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@655bdff6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3628d692_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d0526e9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1be8cdc8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dd9ecc5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d166fc6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@130a05f2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@660671bb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d2690c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@272c85d7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bc83675_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34f996a2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13f6082c_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@408a623_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@740facc2_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f97e194_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aeb9c5c_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
@@ -2438,10 +2668,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="15ecd21f"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="e08d91e5"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="d49099d9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bd6b09f9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="754e5d36"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="e445d3de"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="37f48fd5"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c151c4d7"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="ee1a2e51"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="38a4c472"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

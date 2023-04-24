@@ -19,6 +19,7 @@
 `timescale 1ns/1ns
 
 module hog_trans #(
+		parameter RAM_AW = 17,
 		parameter AXI_AW = 31,
 		parameter AXI_DW = 512,
 		parameter DELAY = 1,
@@ -105,17 +106,19 @@ module hog_trans #(
 	input scaling_finish,
 	//hog_top控制完成接口
 	//output initial_cell_bram,//初始化hog_top中histogram用到的cell bram
+	input histogram_done,
 	input write_feature_done,//hog_top特征提取完毕
+	
 
 	//读imagescaling中的结果bram：bank0-3
 	output  res_enb_0,//bank0
 	output  res_enb_1,
 	output  res_enb_2,
 	output  res_enb_3,
-	output [12 : 0] res_addrb_0,
-	output [12 : 0] res_addrb_1,
-	output [12 : 0] res_addrb_2,
-	output [12 : 0] res_addrb_3,
+	output [RAM_AW-1 : 0] res_addrb_0,
+	output [RAM_AW-1 : 0] res_addrb_1,
+	output [RAM_AW-1 : 0] res_addrb_2,
+	output [RAM_AW-1 : 0] res_addrb_3,
 	input [QN-1 : 0] res_doutb_0,
 	input [QN-1 : 0] res_doutb_1,
 	input [QN-1 : 0] res_doutb_2,
@@ -131,18 +134,20 @@ module hog_trans #(
 	output initial_ena_1,
 	output initial_ena_2,
 	output initial_ena_3,
-	(* mark_debug="true" *)output reg [12:0] initial_addra_0,
-	(* mark_debug="true" *)output reg [12:0] initial_addra_1,
-	(* mark_debug="true" *)output reg [12:0] initial_addra_2,
-	(* mark_debug="true" *)output reg [12:0] initial_addra_3,
+	(* mark_debug="true" *)output reg [RAM_AW-1:0] initial_addra_0,
+	(* mark_debug="true" *)output reg [RAM_AW-1:0] initial_addra_1,
+	(* mark_debug="true" *)output reg [RAM_AW-1:0] initial_addra_2,
+	(* mark_debug="true" *)output reg [RAM_AW-1:0] initial_addra_3,
 	(* mark_debug="true" *)output reg [P_WIDTH-1:0] initial_dina_0,
 	(* mark_debug="true" *)output reg [P_WIDTH-1:0] initial_dina_1,
 	(* mark_debug="true" *)output reg [P_WIDTH-1:0] initial_dina_2,
 	(* mark_debug="true" *)output reg [P_WIDTH-1:0] initial_dina_3,
 
 //output irq
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [1:0] rd1_wr1_done //rd1、wr1通道传输完成
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [1:0] rd1_wr1_done, //rd1、wr1通道传输完成
 	//(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [1:0] rd1_wr1_req//软件触发请求
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output [31:0] axi_status,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output [4:0] circuit_busy
 );
 
 //req 主动写结果请求
@@ -279,6 +284,20 @@ reg [511:0] r_data_r1;
 //read data from hog_imagescaling_top module
 wire res_data_valid;
 wire [AXI_DW-1:0] res_data;
+
+//add 增加电路状态，输出到axi-lite接口，提供给dsp或者上位机查询
+//busy
+
+
+reg read_busy;//hog启动，拉高；读原始图像数据完成，拉低
+reg scaling_busy;//hog启动，拉高,scaling_finish,拉低
+reg histogram_busy;//hog启动，拉高,histogram_done,拉低
+reg feature_busy;////hog启动，拉高,write_feature_done 拉低
+reg write_busy;//write_feature_done，拉高；结果写入到外部指定地址完成，拉低
+assign circuit_busy = {write_busy,feature_busy,histogram_busy,scaling_busy,read_busy};
+assign axi_status = {{1'd0,w_nstate},{1'd0,w_cstate},{1'd0,aw_nstate},{1'd0,aw_cstate},r_nstate,r_cstate,{1'd0,ar_nstate},{1'd0,ar_cstate}};
+
+
 
 //add
 assign rd_wr_irq = {30'd0,write_feature_done,hog_start};
@@ -728,6 +747,7 @@ always @(posedge aclk)begin
 end
 
 	read_result_feature #(
+			.RAM_AW(RAM_AW),
 			.QN(QN),
 			.DELAY(DELAY),
 			.AXI_DW(AXI_DW)
@@ -1558,10 +1578,10 @@ always @(posedge aclk)begin
 	initial_wea_1 <=#DELAY 1'd0;
 	initial_wea_2 <=#DELAY 1'd0;
 	initial_wea_3 <=#DELAY 1'd0;
-	initial_addra_0 <=#DELAY 13'd0;
-	initial_addra_1 <=#DELAY 13'd0;
-	initial_addra_2 <=#DELAY 13'd0;
-	initial_addra_3 <=#DELAY 13'd0;
+	initial_addra_0 <=#DELAY 'd0;
+	initial_addra_1 <=#DELAY 'd0;
+	initial_addra_2 <=#DELAY 'd0;
+	initial_addra_3 <=#DELAY 'd0;
 	initial_dina_0 <=#DELAY 'd0;
 	initial_dina_1 <=#DELAY 'd0;
 	initial_dina_2 <=#DELAY 'd0;
@@ -1585,10 +1605,10 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_0 <=#DELAY 13'h1_fff;//写地址，不断++
-				initial_addra_1 <=#DELAY 13'h1_fff;
-				initial_addra_2 <=#DELAY 13'h1_fff;
-				initial_addra_3 <=#DELAY 13'h1_fff;
+				initial_addra_0 <=#DELAY {RAM_AW{1'd1}};//写地址全1，不断++
+				initial_addra_1 <=#DELAY {RAM_AW{1'd1}};
+				initial_addra_2 <=#DELAY {RAM_AW{1'd1}};
+				initial_addra_3 <=#DELAY {RAM_AW{1'd1}};
 				initial_dina_0 <=#DELAY 'd0;
 				initial_dina_1 <=#DELAY 'd0;
 				initial_dina_2 <=#DELAY 'd0;
@@ -1622,8 +1642,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd1;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_0 <=#DELAY initial_addra_0 + 13'd1;//写地址++
-				initial_addra_1 <=#DELAY initial_addra_1 + 13'd1;
+				initial_addra_0 <=#DELAY initial_addra_0 + 1'd1;//写地址++
+				initial_addra_1 <=#DELAY initial_addra_1 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_0 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1644,8 +1664,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd1;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_0 <=#DELAY initial_addra_0 + 13'd1;//写地址++
-				initial_addra_1 <=#DELAY initial_addra_1 + 13'd1;
+				initial_addra_0 <=#DELAY initial_addra_0 + 1'd1;//写地址++
+				initial_addra_1 <=#DELAY initial_addra_1 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_1 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1694,7 +1714,7 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_0 <=#DELAY initial_addra_0 + 13'd1;//写地址++
+				initial_addra_0 <=#DELAY initial_addra_0 + 1'd1;//写地址++
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_0 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1741,7 +1761,7 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd1;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_1 <=#DELAY initial_addra_1 + 13'd1;//写地址++
+				initial_addra_1 <=#DELAY initial_addra_1 + 1'd1;//写地址++
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_1 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1787,8 +1807,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd1;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_0 <=#DELAY initial_addra_0 + 13'd1;//写地址++
-				initial_addra_1 <=#DELAY initial_addra_1 + 13'd1;
+				initial_addra_0 <=#DELAY initial_addra_0 + 1'd1;//写地址++
+				initial_addra_1 <=#DELAY initial_addra_1 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_0 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1836,8 +1856,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd1;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_0 <=#DELAY initial_addra_0 + 13'd1;//写地址++
-				initial_addra_1 <=#DELAY initial_addra_1 + 13'd1;
+				initial_addra_0 <=#DELAY initial_addra_0 + 1'd1;//写地址++
+				initial_addra_1 <=#DELAY initial_addra_1 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_1 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1857,8 +1877,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd1;
 				initial_wea_3 <=#DELAY 1'd1;
-				initial_addra_2 <=#DELAY initial_addra_2 + 13'd1;//写地址++
-				initial_addra_3 <=#DELAY initial_addra_3 + 13'd1;
+				initial_addra_2 <=#DELAY initial_addra_2 + 1'd1;//写地址++
+				initial_addra_3 <=#DELAY initial_addra_3 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_2 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1878,8 +1898,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd1;
 				initial_wea_3 <=#DELAY 1'd1;
-				initial_addra_2 <=#DELAY initial_addra_2 + 13'd1;//写地址++
-				initial_addra_3 <=#DELAY initial_addra_3 + 13'd1;
+				initial_addra_2 <=#DELAY initial_addra_2 + 1'd1;//写地址++
+				initial_addra_3 <=#DELAY initial_addra_3 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_3 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1928,7 +1948,7 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd1;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_2 <=#DELAY initial_addra_2 + 13'd1;//写地址++
+				initial_addra_2 <=#DELAY initial_addra_2 + 1'd1;//写地址++
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_2 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -1975,7 +1995,7 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd1;
-				initial_addra_3 <=#DELAY initial_addra_3 + 13'd1;//写地址++
+				initial_addra_3 <=#DELAY initial_addra_3 + 1'd1;//写地址++
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_3 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -2021,8 +2041,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd1;
 				initial_wea_3 <=#DELAY 1'd1;
-				initial_addra_2 <=#DELAY initial_addra_2 + 13'd1;//写地址++
-				initial_addra_3 <=#DELAY initial_addra_3 + 13'd1;
+				initial_addra_2 <=#DELAY initial_addra_2 + 1'd1;//写地址++
+				initial_addra_3 <=#DELAY initial_addra_3 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_2 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -2070,8 +2090,8 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd1;
 				initial_wea_3 <=#DELAY 1'd1;
-				initial_addra_2 <=#DELAY initial_addra_2 + 13'd1;//写地址++
-				initial_addra_3 <=#DELAY initial_addra_3 + 13'd1;
+				initial_addra_2 <=#DELAY initial_addra_2 + 1'd1;//写地址++
+				initial_addra_3 <=#DELAY initial_addra_3 + 1'd1;
 				if(r_handshake)begin 
 					r_data_r1 <=#DELAY m_axi_rdata;
 					initial_dina_3 <=#DELAY m_axi_rdata[(byte_en << 3) +: 8];//根据byte_en来选择数据
@@ -2106,10 +2126,10 @@ always @(posedge aclk)begin
 				initial_wea_1 <=#DELAY 1'd0;
 				initial_wea_2 <=#DELAY 1'd0;
 				initial_wea_3 <=#DELAY 1'd0;
-				initial_addra_0 <=#DELAY 13'd0;
-				initial_addra_1 <=#DELAY 13'd0;
-				initial_addra_2 <=#DELAY 13'd0;
-				initial_addra_3 <=#DELAY 13'd0;
+				initial_addra_0 <=#DELAY 'd0;
+				initial_addra_1 <=#DELAY 'd0;
+				initial_addra_2 <=#DELAY 'd0;
+				initial_addra_3 <=#DELAY 'd0;
 				initial_dina_0 <=#DELAY 'd0;
 				initial_dina_1 <=#DELAY 'd0;
 				initial_dina_2 <=#DELAY 'd0;
@@ -2118,6 +2138,49 @@ always @(posedge aclk)begin
 		endcase // r_nstate
 	end
 end
+//各个阶段的busy状态
+always @(posedge aclk)begin 
+	if(!arest_n)begin 
+		read_busy <=#DELAY 1'd0;
+		scaling_busy <=#DELAY 1'd0;
+		histogram_busy <=#DELAY 1'd0;
+		feature_busy <=#DELAY 1'd0;
+		write_busy <=#DELAY 1'd0;
+	end
+	else begin 
+		if(hog_start)begin //hog启动时，进入busy状态
+			read_busy <=#DELAY 1'd1;
+			scaling_busy <=#DELAY 1'd1;
+			histogram_busy <=#DELAY 1'd1;
+			feature_busy <=#DELAY 1'd1;
+			write_busy <=#DELAY 1'd1;
+		end
+		else begin 
+			//read busy
+			if(rd1_wr1_done[0])begin 
+				read_busy <=#DELAY 1'd0;
+			end
+			//scaling_busy
+			if(scaling_finish)begin 
+				scaling_busy <=#DELAY 1'd0;
+			end
+			//histogram_busy
+			if(histogram_done)begin 
+				histogram_busy <=#DELAY 1'd0;
+			end
+			//feature_busy
+			if(write_feature_done)begin 
+				feature_busy <=#DELAY 1'd0;
+			end
+			//write_busy
+			if(rd1_wr1_done[1])begin 
+				write_busy <=#DELAY 1'd0;
+			end
+		end
+	end
+end
+
+
 /*//测试test，将目标图像数据保存至 target_image.txt
 integer handle1;
 integer i;
