@@ -2,10 +2,10 @@ dataSet = 'OTB100';
 % dataSet = 'UAV123';
 
 % Linux
-parent_loc = '/home/ubuntu/gp-sup/Linux'; % no slash at the end!
+% parent_loc = '/home/ubuntu/gp-sup/Linux'; % no slash at the end!
 
 % Windows
-% parent_loc = 'D:/Algorithm/UAV123_OTB100'; % no slash at the end!
+parent_loc = 'D:/gp-sup/Linux'; % no slash at the end!
 
 if strcmp(dataSet, 'OTB100')
     rpAll = './results/OTB100_results_OPE/'; % result path

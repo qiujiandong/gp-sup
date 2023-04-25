@@ -448,43 +448,66 @@ int CKcfTracker::prepareBlock(
     pBlock->width = nWidth;
     pBlock->height = nHeight;
 
+    m_fAddScaleW = divsp_i(nWidth, FIXED_SCALE);
+    m_fAddScaleH = divsp_i(nHeight, FIXED_SCALE);
+    pResizedData = (uint8_t *)memalign(4096, sizeof(uint8_t) * FIXED_SCALE * FIXED_SCALE);
+    assert(pResizedData);
+    cvInitMatHeader(&blockMat, nHeight, nWidth, CV_8UC1, pData);
+    cvInitMatHeader(&resizedMat, FIXED_SCALE, FIXED_SCALE, CV_8UC1, pResizedData);
+
+    cvResize(&blockMat, &resizedMat);
+
+    pBlock->width = FIXED_SCALE;
+    pBlock->height = FIXED_SCALE;
+
+    // tx block
+    Cache_wb(pResizedData, FIXED_SCALE * FIXED_SCALE, Cache_Type_ALLD, TRUE);
+    status = pSrio2PcieMgr->startTxNwToFPGA(pResizedData, (FIXED_SCALE * FIXED_SCALE) >> 3, TXBLOCK_DSTADDR);
+    if(status != 0){
+        System_abort("Nw tx HwFhog Block error!\n");
+    }
+    pHwFhogMgr->setTxBlockSize(cvSize(FIXED_SCALE, FIXED_SCALE));
+
+    free(resizedMat.data.ptr);
+    resizedMat.data.ptr = NULL;
+
     // NOTE: the hardware resize module using 128kB block ram for one quard of image
-    if(ceil(nWidth * 0.5) * ceil(nHeight * 0.5) > 131072){
+    // if(ceil(nWidth * 0.5) * ceil(nHeight * 0.5) > 131072){
         
-        System_printf("exceed block size\n");
+    //     System_printf("exceed block size\n");
 
-        m_fAddScaleW = divsp_i(nWidth, FIXED_SCALE);
-        m_fAddScaleH = divsp_i(nHeight, FIXED_SCALE);
-        pResizedData = (uint8_t *)memalign(4096, sizeof(uint8_t) * FIXED_SCALE * FIXED_SCALE);
-        assert(pResizedData);
-        cvInitMatHeader(&blockMat, nHeight, nWidth, CV_8UC1, pData);
-        cvInitMatHeader(&resizedMat, FIXED_SCALE, FIXED_SCALE, CV_8UC1, pResizedData);
+    //     m_fAddScaleW = divsp_i(nWidth, FIXED_SCALE);
+    //     m_fAddScaleH = divsp_i(nHeight, FIXED_SCALE);
+    //     pResizedData = (uint8_t *)memalign(4096, sizeof(uint8_t) * FIXED_SCALE * FIXED_SCALE);
+    //     assert(pResizedData);
+    //     cvInitMatHeader(&blockMat, nHeight, nWidth, CV_8UC1, pData);
+    //     cvInitMatHeader(&resizedMat, FIXED_SCALE, FIXED_SCALE, CV_8UC1, pResizedData);
 
-        cvResize(&blockMat, &resizedMat);
+    //     cvResize(&blockMat, &resizedMat);
 
-        pBlock->width = FIXED_SCALE;
-        pBlock->height = FIXED_SCALE;
+    //     pBlock->width = FIXED_SCALE;
+    //     pBlock->height = FIXED_SCALE;
 
-        // tx block
-        Cache_wb(pResizedData, FIXED_SCALE * FIXED_SCALE, Cache_Type_ALLD, TRUE);
-        status = pSrio2PcieMgr->startTxNwToFPGA(pResizedData, (FIXED_SCALE * FIXED_SCALE) >> 3, TXBLOCK_DSTADDR);
-        if(status != 0){
-            System_abort("Nw tx HwFhog Block error!\n");
-        }
-        pHwFhogMgr->setTxBlockSize(cvSize(FIXED_SCALE, FIXED_SCALE));
+    //     // tx block
+    //     Cache_wb(pResizedData, FIXED_SCALE * FIXED_SCALE, Cache_Type_ALLD, TRUE);
+    //     status = pSrio2PcieMgr->startTxNwToFPGA(pResizedData, (FIXED_SCALE * FIXED_SCALE) >> 3, TXBLOCK_DSTADDR);
+    //     if(status != 0){
+    //         System_abort("Nw tx HwFhog Block error!\n");
+    //     }
+    //     pHwFhogMgr->setTxBlockSize(cvSize(FIXED_SCALE, FIXED_SCALE));
 
-        free(resizedMat.data.ptr);
-        resizedMat.data.ptr = NULL;
-    }
-    else{
-        // tx block
-        Cache_wb(pData, nSubwSize, Cache_Type_ALLD, TRUE);
-        status = pSrio2PcieMgr->startTxNwToFPGA(pData, nSubwSize >> 3, TXBLOCK_DSTADDR);
-        if(status != 0){
-            System_abort("Nw tx HwFhog Block error!\n");
-        }
-        pHwFhogMgr->setTxBlockSize(cvSize(nWidth, nHeight));
-    }
+    //     free(resizedMat.data.ptr);
+    //     resizedMat.data.ptr = NULL;
+    // }
+    // else{
+    //     // tx block
+    //     Cache_wb(pData, nSubwSize, Cache_Type_ALLD, TRUE);
+    //     status = pSrio2PcieMgr->startTxNwToFPGA(pData, nSubwSize >> 3, TXBLOCK_DSTADDR);
+    //     if(status != 0){
+    //         System_abort("Nw tx HwFhog Block error!\n");
+    //     }
+    //     pHwFhogMgr->setTxBlockSize(cvSize(nWidth, nHeight));
+    // }
 
     Memory_free((xdc_runtime_IHeap_Handle)hRxBufHeap, pData, nSubwSize);
     pData = NULL;
