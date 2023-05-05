@@ -22,12 +22,12 @@ module hog_imagescaling_top #(
 	parameter RAM_AW 			= 17,
 	parameter IMAGE_SIZE 		= 18495,//136*136-1
 	parameter IMAGE_WIDTH 		= 136,
-	parameter QN 				= 8,
-	parameter TOTAL_BIT_WIDTH 	= 35,
+	parameter QN 				= 10,
+	parameter TOTAL_BIT_WIDTH 	= 37,
 	parameter P_WIDTH 			= 8,
 	parameter DELAY 			= 1,
-	parameter PARAM_TRUNCATE    = 35'd51,//int(0.2 << QN)
-	parameter PARAM_GAMA		= 35'd60,//int(1/(根号18) << QN)
+	parameter PARAM_TRUNCATE    = 37'd204,//int(0.2 << QN)
+	parameter PARAM_GAMA		= 37'd241,//int(1/(根号18) << QN)
 
 	parameter	IMGX = 136,
 	parameter	IMGY = 136
@@ -150,10 +150,10 @@ wire [RAM_AW-1:0] addra_1;
 wire [RAM_AW-1:0] addra_2;
 wire [RAM_AW-1:0] addra_3;
 wire [RAM_AW-1:0] addra_4;
-wire [7:0] dina_1;
-wire [7:0] dina_2;
-wire [7:0] dina_3;
-wire [7:0] dina_4;
+wire [QN-1:0] dina_1;
+wire [QN-1:0] dina_2;
+wire [QN-1:0] dina_3;
+wire [QN-1:0] dina_4;
 
 //外部写原始数据到imagescaling中的bram：bank0-3
 //wire initial_wea_0;
@@ -192,10 +192,10 @@ assign addra_2 = res_ena_1 ? res_addra_1 : initial_addra_1;
 assign addra_3 = res_ena_2 ? res_addra_2 : initial_addra_2;
 assign addra_4 = res_ena_3 ? res_addra_3 : initial_addra_3;
 
-assign dina_1 = res_ena_0 ? res_dina_0 : initial_dina_0;
-assign dina_2 = res_ena_1 ? res_dina_1 : initial_dina_1;
-assign dina_3 = res_ena_2 ? res_dina_2 : initial_dina_2;
-assign dina_4 = res_ena_3 ? res_dina_3 : initial_dina_3;
+assign dina_1 = res_ena_0 ? res_dina_0 : {{QN-P_WIDTH{1'b0}},initial_dina_0};
+assign dina_2 = res_ena_1 ? res_dina_1 : {{QN-P_WIDTH{1'b0}},initial_dina_1};
+assign dina_3 = res_ena_2 ? res_dina_2 : {{QN-P_WIDTH{1'b0}},initial_dina_2};
+assign dina_4 = res_ena_3 ? res_dina_3 : {{QN-P_WIDTH{1'b0}},initial_dina_3};
 
 	hog_top #(
 			.RAM_AW(RAM_AW),
@@ -238,7 +238,8 @@ assign dina_4 = res_ena_3 ? res_dina_3 : initial_dina_3;
 	IMG_top #(
 			.RAM_AW(RAM_AW),
 			.imgx(IMGX),
-			.imgy(IMGY)
+			.imgy(IMGY),
+			.QN(QN)
 		) inst_IMG_top (
 			.clk       (aclk),
 			.start     (start),

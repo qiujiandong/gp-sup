@@ -16,6 +16,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "PARAM_TRUNCATE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "P_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "QN" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "RAM_AW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "TOTAL_BIT_WIDTH" -parent ${Page_0}
 
 
@@ -138,6 +139,15 @@ proc validate_PARAM_VALUE.QN { PARAM_VALUE.QN } {
 	return true
 }
 
+proc update_PARAM_VALUE.RAM_AW { PARAM_VALUE.RAM_AW } {
+	# Procedure called to update RAM_AW when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.RAM_AW { PARAM_VALUE.RAM_AW } {
+	# Procedure called to validate RAM_AW
+	return true
+}
+
 proc update_PARAM_VALUE.TOTAL_BIT_WIDTH { PARAM_VALUE.TOTAL_BIT_WIDTH } {
 	# Procedure called to update TOTAL_BIT_WIDTH when any of the dependent parameters in the arguments change
 }
@@ -147,6 +157,11 @@ proc validate_PARAM_VALUE.TOTAL_BIT_WIDTH { PARAM_VALUE.TOTAL_BIT_WIDTH } {
 	return true
 }
 
+
+proc update_MODELPARAM_VALUE.RAM_AW { MODELPARAM_VALUE.RAM_AW PARAM_VALUE.RAM_AW } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.RAM_AW}] ${MODELPARAM_VALUE.RAM_AW}
+}
 
 proc update_MODELPARAM_VALUE.AXIL_AW { MODELPARAM_VALUE.AXIL_AW PARAM_VALUE.AXIL_AW } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value

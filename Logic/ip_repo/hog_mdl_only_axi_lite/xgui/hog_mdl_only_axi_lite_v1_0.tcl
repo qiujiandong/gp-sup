@@ -3,7 +3,6 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
-  ipgui::add_param $IPINST -name "RAM_AW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXIL_AW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXIL_DW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXI_AW" -parent ${Page_0}
@@ -17,6 +16,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "PARAM_TRUNCATE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "P_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "QN" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "RAM_AW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "TOTAL_BIT_WIDTH" -parent ${Page_0}
 
 
@@ -158,6 +158,11 @@ proc validate_PARAM_VALUE.TOTAL_BIT_WIDTH { PARAM_VALUE.TOTAL_BIT_WIDTH } {
 }
 
 
+proc update_MODELPARAM_VALUE.RAM_AW { MODELPARAM_VALUE.RAM_AW PARAM_VALUE.RAM_AW } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.RAM_AW}] ${MODELPARAM_VALUE.RAM_AW}
+}
+
 proc update_MODELPARAM_VALUE.AXIL_AW { MODELPARAM_VALUE.AXIL_AW PARAM_VALUE.AXIL_AW } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.AXIL_AW}] ${MODELPARAM_VALUE.AXIL_AW}
@@ -226,10 +231,5 @@ proc update_MODELPARAM_VALUE.IMGX { MODELPARAM_VALUE.IMGX PARAM_VALUE.IMGX } {
 proc update_MODELPARAM_VALUE.IMGY { MODELPARAM_VALUE.IMGY PARAM_VALUE.IMGY } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.IMGY}] ${MODELPARAM_VALUE.IMGY}
-}
-
-proc update_MODELPARAM_VALUE.RAM_AW { MODELPARAM_VALUE.RAM_AW PARAM_VALUE.RAM_AW } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.RAM_AW}] ${MODELPARAM_VALUE.RAM_AW}
 }
 

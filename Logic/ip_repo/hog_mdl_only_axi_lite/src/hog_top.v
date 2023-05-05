@@ -10,7 +10,7 @@
 // Author : yongchan jeon (Kris) poucotm@gmail.com
 // File   : hog_top.v
 // Create : 2022-10-13 20:20:17
-// Revise : 2023-03-16 15:46:50
+// Revise : 2023-04-25 11:07:57
 // Editor : sublime text3, tab size (4)
 // -----------------------------------------------------------------------------
 `timescale 1ns/1ns
@@ -18,12 +18,12 @@ module hog_top #(
 	parameter RAM_AW 			= 17,
 	parameter IMAGE_SIZE 		= 18495,//136*136-1
 	parameter IMAGE_WIDTH 		= 136,
-	parameter QN 				= 8,
-	parameter TOTAL_BIT_WIDTH 	= 35,
+	parameter QN 				= 10,
+	parameter TOTAL_BIT_WIDTH 	= 37,
 	parameter P_WIDTH 			= 8,
 	parameter DELAY 			= 1,
-	parameter PARAM_TRUNCATE    = 35'd51,//int(0.2 << QN)
-	parameter PARAM_GAMA		= 35'd60//int(1/(根号18) << QN)
+	parameter PARAM_TRUNCATE    = 37'd204,//int(0.2 << QN)
+	parameter PARAM_GAMA		= 37'd241//int(1/(根号18) << QN)
 
 	)(
 	input aclk,    // Clock

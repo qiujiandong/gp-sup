@@ -299,60 +299,68 @@ end
 //将结果输出从8bit定点小数转为浮点数
 always @(*)begin 
 	casez(res_doutb_0)
-	8'b1???_????:float_res_0 = {1'd0,8'd126,res_doutb_0[6:0],16'd0};
-	8'b01??_????:float_res_0 = {1'd0,8'd125,res_doutb_0[5:0],17'd0};
-	8'b001?_????:float_res_0 = {1'd0,8'd124,res_doutb_0[4:0],18'd0};
-	8'b0001_????:float_res_0 = {1'd0,8'd123,res_doutb_0[3:0],19'd0};
-	8'b0000_1???:float_res_0 = {1'd0,8'd122,res_doutb_0[2:0],20'd0};
-	8'b0000_01??:float_res_0 = {1'd0,8'd121,res_doutb_0[1:0],21'd0};
-	8'b0000_001?:float_res_0 = {1'd0,8'd120,res_doutb_0[0],22'd0};
-	8'b0000_0001:float_res_0 = {1'd0,8'd119,23'd0};
-	8'b0000_0000:float_res_0 = 32'd0;
+	10'b1?_????_????:float_res_0 = {1'd0,8'd126,res_doutb_0[8:0],14'd0};
+	10'b01_????_????:float_res_0 = {1'd0,8'd125,res_doutb_0[7:0],15'd0};
+	10'b00_1???_????:float_res_0 = {1'd0,8'd124,res_doutb_0[6:0],16'd0};
+	10'b00_01??_????:float_res_0 = {1'd0,8'd123,res_doutb_0[5:0],17'd0};
+	10'b00_001?_????:float_res_0 = {1'd0,8'd122,res_doutb_0[4:0],18'd0};
+	10'b00_0001_????:float_res_0 = {1'd0,8'd121,res_doutb_0[3:0],19'd0};
+	10'b00_0000_1???:float_res_0 = {1'd0,8'd120,res_doutb_0[2:0],20'd0};
+	10'b00_0000_01??:float_res_0 = {1'd0,8'd119,res_doutb_0[1:0],21'd0};
+	10'b00_0000_001?:float_res_0 = {1'd0,8'd118,res_doutb_0[0],22'd0};
+	10'b00_0000_0001:float_res_0 = {1'd0,8'd117,23'd0};
+	10'b00_0000_0000:float_res_0 = 32'd0;
 	default:float_res_0 = 32'd0;
 	endcase
 end
 
 always @(*)begin 
 	casez(res_doutb_1)
-	8'b1???_????:float_res_1 = {1'd0,8'd126,res_doutb_1[6:0],16'd0};
-	8'b01??_????:float_res_1 = {1'd0,8'd125,res_doutb_1[5:0],17'd0};
-	8'b001?_????:float_res_1 = {1'd0,8'd124,res_doutb_1[4:0],18'd0};
-	8'b0001_????:float_res_1 = {1'd0,8'd123,res_doutb_1[3:0],19'd0};
-	8'b0000_1???:float_res_1 = {1'd0,8'd122,res_doutb_1[2:0],20'd0};
-	8'b0000_01??:float_res_1 = {1'd0,8'd121,res_doutb_1[1:0],21'd0};
-	8'b0000_001?:float_res_1 = {1'd0,8'd120,res_doutb_1[0],22'd0};
-	8'b0000_0001:float_res_1 = {1'd0,8'd119,23'd0};
-	8'b0000_0000:float_res_1 = 32'd0;
+	10'b1?_????_????:float_res_1 = {1'd0,8'd126,res_doutb_1[8:0],14'd0};
+	10'b01_????_????:float_res_1 = {1'd0,8'd125,res_doutb_1[7:0],15'd0};
+	10'b00_1???_????:float_res_1 = {1'd0,8'd124,res_doutb_1[6:0],16'd0};
+	10'b00_01??_????:float_res_1 = {1'd0,8'd123,res_doutb_1[5:0],17'd0};
+	10'b00_001?_????:float_res_1 = {1'd0,8'd122,res_doutb_1[4:0],18'd0};
+	10'b00_0001_????:float_res_1 = {1'd0,8'd121,res_doutb_1[3:0],19'd0};
+	10'b00_0000_1???:float_res_1 = {1'd0,8'd120,res_doutb_1[2:0],20'd0};
+	10'b00_0000_01??:float_res_1 = {1'd0,8'd119,res_doutb_1[1:0],21'd0};
+	10'b00_0000_001?:float_res_1 = {1'd0,8'd118,res_doutb_1[0],22'd0};
+	10'b00_0000_0001:float_res_1 = {1'd0,8'd117,23'd0};
+	10'b00_0000_0000:float_res_1 = 32'd0;
 	default:float_res_1 = 32'd0;
 	endcase
 end
 
 always @(*)begin 
 	casez(res_doutb_2)
-	8'b1???_????:float_res_2 = {1'd0,8'd126,res_doutb_2[6:0],16'd0};
-	8'b01??_????:float_res_2 = {1'd0,8'd125,res_doutb_2[5:0],17'd0};
-	8'b001?_????:float_res_2 = {1'd0,8'd124,res_doutb_2[4:0],18'd0};
-	8'b0001_????:float_res_2 = {1'd0,8'd123,res_doutb_2[3:0],19'd0};
-	8'b0000_1???:float_res_2 = {1'd0,8'd122,res_doutb_2[2:0],20'd0};
-	8'b0000_01??:float_res_2 = {1'd0,8'd121,res_doutb_2[1:0],21'd0};
-	8'b0000_001?:float_res_2 = {1'd0,8'd120,res_doutb_2[0],22'd0};
-	8'b0000_0001:float_res_2 = {1'd0,8'd119,23'd0};
-	8'b0000_0000:float_res_2 = 32'd0;
+	10'b1?_????_????:float_res_2 = {1'd0,8'd126,res_doutb_2[8:0],14'd0};
+	10'b01_????_????:float_res_2 = {1'd0,8'd125,res_doutb_2[7:0],15'd0};
+	10'b00_1???_????:float_res_2 = {1'd0,8'd124,res_doutb_2[6:0],16'd0};
+	10'b00_01??_????:float_res_2 = {1'd0,8'd123,res_doutb_2[5:0],17'd0};
+	10'b00_001?_????:float_res_2 = {1'd0,8'd122,res_doutb_2[4:0],18'd0};
+	10'b00_0001_????:float_res_2 = {1'd0,8'd121,res_doutb_2[3:0],19'd0};
+	10'b00_0000_1???:float_res_2 = {1'd0,8'd120,res_doutb_2[2:0],20'd0};
+	10'b00_0000_01??:float_res_2 = {1'd0,8'd119,res_doutb_2[1:0],21'd0};
+	10'b00_0000_001?:float_res_2 = {1'd0,8'd118,res_doutb_2[0],22'd0};
+	10'b00_0000_0001:float_res_2 = {1'd0,8'd117,23'd0};
+	10'b00_0000_0000:float_res_2 = 32'd0;
 	default:float_res_2 = 32'd0;
 	endcase
 end
 
 always @(*)begin 
 	casez(res_doutb_3)
-	8'b1???_????:float_res_3 = {1'd0,8'd126,res_doutb_3[6:0],16'd0};
-	8'b01??_????:float_res_3 = {1'd0,8'd125,res_doutb_3[5:0],17'd0};
-	8'b001?_????:float_res_3 = {1'd0,8'd124,res_doutb_3[4:0],18'd0};
-	8'b0001_????:float_res_3 = {1'd0,8'd123,res_doutb_3[3:0],19'd0};
-	8'b0000_1???:float_res_3 = {1'd0,8'd122,res_doutb_3[2:0],20'd0};
-	8'b0000_01??:float_res_3 = {1'd0,8'd121,res_doutb_3[1:0],21'd0};
-	8'b0000_001?:float_res_3 = {1'd0,8'd120,res_doutb_3[0],22'd0};
-	8'b0000_0001:float_res_3 = {1'd0,8'd119,23'd0};
-	8'b0000_0000:float_res_3 = 32'd0;
+	10'b1?_????_????:float_res_3 = {1'd0,8'd126,res_doutb_3[8:0],14'd0};
+	10'b01_????_????:float_res_3 = {1'd0,8'd125,res_doutb_3[7:0],15'd0};
+	10'b00_1???_????:float_res_3 = {1'd0,8'd124,res_doutb_3[6:0],16'd0};
+	10'b00_01??_????:float_res_3 = {1'd0,8'd123,res_doutb_3[5:0],17'd0};
+	10'b00_001?_????:float_res_3 = {1'd0,8'd122,res_doutb_3[4:0],18'd0};
+	10'b00_0001_????:float_res_3 = {1'd0,8'd121,res_doutb_3[3:0],19'd0};
+	10'b00_0000_1???:float_res_3 = {1'd0,8'd120,res_doutb_3[2:0],20'd0};
+	10'b00_0000_01??:float_res_3 = {1'd0,8'd119,res_doutb_3[1:0],21'd0};
+	10'b00_0000_001?:float_res_3 = {1'd0,8'd118,res_doutb_3[0],22'd0};
+	10'b00_0000_0001:float_res_3 = {1'd0,8'd117,23'd0};
+	10'b00_0000_0000:float_res_3 = 32'd0;
 	default:float_res_3 = 32'd0;
 	endcase
 end

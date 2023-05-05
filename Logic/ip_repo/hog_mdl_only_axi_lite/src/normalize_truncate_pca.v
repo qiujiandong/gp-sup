@@ -322,8 +322,18 @@ always @(posedge aclk)begin
 	end
 end
 //////reg3
-//y的float值转为int值，并且保留小数后12bit，12bit = QN+QN/2
+//y的float值转为int值，并且保留小数后12bit，12bit = QN+QN/2; Qn = 10时，为15bit
+/*
 float32_to_point27_8 float_to_int (
+  .aclk(aclk),                                  // input wire aclk
+  .aresetn(arest_n),                            // input wire aresetn
+  .s_axis_a_tvalid(y_float_valid),            // input wire s_axis_a_tvalid
+  .s_axis_a_tready(f_to_int_tready),            // output wire s_axis_a_tready
+  .s_axis_a_tdata(y_float),              // input wire [31 : 0] s_axis_a_tdata
+  .m_axis_result_tvalid(y_int_tvalid),  // output wire m_axis_result_tvalid
+  .m_axis_result_tdata(y_int)    // output wire [39 : 0] m_axis_result_tdata
+);*/
+float32_to_point27_10 float_to_int (
   .aclk(aclk),                                  // input wire aclk
   .aresetn(arest_n),                            // input wire aresetn
   .s_axis_a_tvalid(y_float_valid),            // input wire s_axis_a_tvalid
@@ -905,12 +915,16 @@ assign hamming_col = (cell_col > 5'd15) ? 5'd31-cell_col : cell_col;//右半部�
 assign hamming_row = (cell_row > 5'd15) ? 5'd31-cell_row : cell_row;//下半部分映射到上半部分
 assign hamming_addr = (hamming_row << 4) + hamming_col;//在hamming窗左上block寻址
 
-disrom_hamming hamming_param (
+/*disrom_hamming hamming_param (
   .a(hamming_addr),        // input wire [7 : 0] a
   .clk(aclk),    // input wire clk
   .qspo(hamming_data)  // output wire [7 : 0] qspo
+);*/
+disrom_hamming_10bit hamming_param (
+  .a(hamming_addr),      // input wire [7 : 0] a
+  .clk(aclk),    // input wire clk
+  .qspo(hamming_data)  // output wire [9 : 0] spo
 );
-
 //hamming_data_r1,便于bin27-30使用，因为hamming_data在bin27-30有效前一周期跳变，其在bin17pca后一拍产生
 always @(posedge aclk)begin 
 	if(!arest_n)begin 
@@ -933,13 +947,18 @@ always @(posedge aclk)begin
 		bin0_17_feature_valid <=#DELAY bin0_17_pca_valid;
 	end
 end
-mult_8_8 bin0_17_pca_mul_hamming (
+/*mult_8_8 bin0_17_pca_mul_hamming (
+  .CLK(aclk),  // input wire CLK
+  .A(hamming_data),      // input wire [7 : 0] A
+  .B(bin0_17_pca >> 1),      // input wire [7 : 0] B
+  .P(bin0_17_feature)      // output wire [15 : 0] P
+);*/
+mult_10_10 bin0_17_pca_mul_hamming (
   .CLK(aclk),  // input wire CLK
   .A(hamming_data),      // input wire [7 : 0] A
   .B(bin0_17_pca >> 1),      // input wire [7 : 0] B
   .P(bin0_17_feature)      // output wire [15 : 0] P
 );
-
 //bin18-26
 //与reg15同步,出现第一个feature
 always @(posedge aclk)begin 
@@ -950,13 +969,18 @@ always @(posedge aclk)begin
 		bin18_26_feature_valid <=#DELAY bin18_26_pca_valid;
 	end
 end
-mult_8_8 bin18_26_pca_mul_hamming (
+/*mult_8_8 bin18_26_pca_mul_hamming (
+  .CLK(aclk),  // input wire CLK
+  .A(hamming_data),      // input wire [7 : 0] A
+  .B(bin18_26_pca >> 1),      // input wire [7 : 0] B
+  .P(bin18_26_feature)      // output wire [15 : 0] P
+);*/
+mult_10_10 bin18_26_pca_mul_hamming (
   .CLK(aclk),  // input wire CLK
   .A(hamming_data),      // input wire [7 : 0] A
   .B(bin18_26_pca >> 1),      // input wire [7 : 0] B
   .P(bin18_26_feature)      // output wire [15 : 0] P
 );
-
 //bin27-30
 //bin17feature有效的下一个周期出现bin27
 //产生bin27-30feature数据有效信号，当bin27_30_pca_valid有效，连续输出4个周期feature有效信号，将bin27-30feature依次输出
@@ -1006,13 +1030,18 @@ always @(*)begin //根据count选择需要输出的bin27_30pca
 	endcase // bin27_30_count
 end
 
-mult_8_8 bin27_30_pca_mul_hamming (
+/*mult_8_8 bin27_30_pca_mul_hamming (
+  .CLK(aclk),  // input wire CLK
+  .A(hamming_data_r1),      // input wire [7 : 0] A
+  .B(bin27_30_pca),      // input wire [7 : 0] B
+  .P(bin27_30_feature)      // output wire [15 : 0] P
+);*/
+mult_10_10 bin27_30_pca_mul_hamming (
   .CLK(aclk),  // input wire CLK
   .A(hamming_data_r1),      // input wire [7 : 0] A
   .B(bin27_30_pca),      // input wire [7 : 0] B
   .P(bin27_30_feature)      // output wire [15 : 0] P
 );
-
 //最终输出结果
 assign bin0_17 = bin0_17_feature[QN+QN-1:QN];//pca*hamming后，需要 >> QN
 assign bin18_26 = bin18_26_feature[QN+QN-1:QN];

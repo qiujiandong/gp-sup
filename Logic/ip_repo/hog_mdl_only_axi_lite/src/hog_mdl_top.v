@@ -26,12 +26,12 @@ module hog_mdl_top #(
 
 	parameter IMAGE_SIZE 		= 18495,//136*136-1
 	parameter IMAGE_WIDTH 		= 136,
-	parameter QN 				= 8,
-	parameter TOTAL_BIT_WIDTH 	= 35,
+	parameter QN 				= 10,
+	parameter TOTAL_BIT_WIDTH 	= 37,
 	parameter P_WIDTH 			= 8,
 	parameter DELAY 			= 1,
-	parameter PARAM_TRUNCATE    = 35'd51,//int(0.2 << QN)
-	parameter PARAM_GAMA		= 35'd60,//int(1/(根号18) << QN)
+	parameter PARAM_TRUNCATE    = 37'd204,//int(0.2 << QN)
+	parameter PARAM_GAMA		= 37'd241,//int(1/(根号18) << QN)
 
 	parameter	IMGX = 136,
 	parameter	IMGY = 136
