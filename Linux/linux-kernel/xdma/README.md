@@ -1,6 +1,6 @@
-# 修改记录
+# README
 
-修改libxdma.h，增加：
+修改libxdma.h，去掉注释：
 
 ```c
 #define XDMA_CONFIG_BAR_NUM 1

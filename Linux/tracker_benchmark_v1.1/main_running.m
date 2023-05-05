@@ -17,6 +17,9 @@ shiftTypeSet = {'left','right','up','down','topLeft','topRight','bottomLeft','bo
 
 evalType='OPE'; %'OPE','SRE', Only support OPE
 
+if ~exist('tmp','dir')
+    mkdir('tmp');
+end
 diary(['./tmp/' evalType '.txt']);
 
 numSeq=length(seqs);
