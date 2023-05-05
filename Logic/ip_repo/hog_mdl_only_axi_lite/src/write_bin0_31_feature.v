@@ -19,6 +19,7 @@
 `timescale 1ns/1ns
 
 module write_bin0_31_feature #(
+	parameter RAM_AW			= 17,
 	parameter QN 				= 8,
 	parameter DELAY 			= 1
 	)(
@@ -34,10 +35,10 @@ module write_bin0_31_feature #(
 	input [QN-1:0] bin27_30,
 
 	//最终结果存放位置，图像缩放部分的bram bank0-3可以分时复用，存入最终的32*32*31*8bit的特征图，每个bank可存放8张特征图
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [12:0]  res_addra_0,//最终特征图结果写入地址
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [12:0]  res_addra_1,
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [12:0]  res_addra_2,
-	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [12:0]  res_addra_3,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [RAM_AW-1:0]  res_addra_0,//最终特征图结果写入地址
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [RAM_AW-1:0]  res_addra_1,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [RAM_AW-1:0]  res_addra_2,
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [RAM_AW-1:0]  res_addra_3,
     (* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [QN-1:0]  res_dina_0,//最终特征图结果写入数据
     (* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [QN-1:0]  res_dina_1,
     (* KEEP = "TRUE" *)(* mark_debug="true" *)output reg [QN-1:0]  res_dina_2,
@@ -334,10 +335,10 @@ always @(posedge aclk)begin
 		wea_1 <=#DELAY 1'd0;
 		wea_2 <=#DELAY 1'd0;
 		wea_3 <=#DELAY 1'd0;
-		res_addra_0 <=#DELAY 13'd0;
-		res_addra_1 <=#DELAY 13'd0;
-		res_addra_2 <=#DELAY 13'd0;
-		res_addra_3 <=#DELAY 13'd0;
+		res_addra_0 <=#DELAY 'd0;
+		res_addra_1 <=#DELAY 'd0;
+		res_addra_2 <=#DELAY 'd0;
+		res_addra_3 <=#DELAY 'd0;
 		res_dina_0 <=#DELAY 'd0;
 		res_dina_1 <=#DELAY 'd0;
 		res_dina_2 <=#DELAY 'd0;
@@ -352,10 +353,10 @@ always @(posedge aclk)begin
 				wea_1 <=#DELAY 1'd0;
 				wea_2 <=#DELAY 1'd0;
 				wea_3 <=#DELAY 1'd0;
-				res_addra_0 <=#DELAY 13'd0;
-				res_addra_1 <=#DELAY 13'd0;
-				res_addra_2 <=#DELAY 13'd0;
-				res_addra_3 <=#DELAY 13'd0;
+				res_addra_0 <=#DELAY 'd0;
+				res_addra_1 <=#DELAY 'd0;
+				res_addra_2 <=#DELAY 'd0;
+				res_addra_3 <=#DELAY 'd0;
 				res_dina_0 <=#DELAY 'd0;
 				res_dina_1 <=#DELAY 'd0;
 				res_dina_2 <=#DELAY 'd0;
@@ -653,10 +654,10 @@ always @(posedge aclk)begin
 				wea_1 <=#DELAY 1'd0;
 				wea_2 <=#DELAY 1'd0;
 				wea_3 <=#DELAY 1'd0;
-				res_addra_0 <=#DELAY 13'd0;
-				res_addra_1 <=#DELAY 13'd0;
-				res_addra_2 <=#DELAY 13'd0;
-				res_addra_3 <=#DELAY 13'd0;
+				res_addra_0 <=#DELAY 'd0;
+				res_addra_1 <=#DELAY 'd0;
+				res_addra_2 <=#DELAY 'd0;
+				res_addra_3 <=#DELAY 'd0;
 				res_dina_0 <=#DELAY 'd0;
 				res_dina_1 <=#DELAY 'd0;
 				res_dina_2 <=#DELAY 'd0;

@@ -5,12 +5,12 @@
 //		"header": "Packages/Verilog Gadget/template/verilog_header.v"
 //
 // -----------------------------------------------------------------------------
-// Copyright (c) 2014-2022 All rights reserved
+// Copyright (c) 2014-2023 All rights reserved
 // -----------------------------------------------------------------------------
 // Author : yongchan jeon (Kris) poucotm@gmail.com
 // File   : calculate_bin.v
 // Create : 2022-10-11 16:45:09
-// Revise : 2022-10-14 09:48:23
+// Revise : 2023-04-25 11:26:44
 // Editor : sublime text3, tab size (4)
 // -----------------------------------------------------------------------------
 `timescale 1ns/1ns
@@ -33,16 +33,16 @@ module calculate_bin #(
 	
 );
 
-localparam BIN_VEC_X0 = 35'd256;//int(cos(0)<<QN)
-localparam BIN_VEC_X1 = 35'd240;//int(cos(20)<<QN)
-localparam BIN_VEC_X2 = 35'd196;//int(cos(40)<<QN)
-localparam BIN_VEC_X3 = 35'd128;//int(cos(60)<<QN)
-localparam BIN_VEC_X4 = 35'd44;//int(cos(80)<<QN)
-localparam BIN_VEC_Y0 = 35'd0;//int(sin(0)<<QN)
-localparam BIN_VEC_Y1 = 35'd87;//int(sin(0)<<QN)
-localparam BIN_VEC_Y2 = 35'd164;//int(sin(0)<<QN)
-localparam BIN_VEC_Y3 = 35'd221;//int(sin(0)<<QN)
-localparam BIN_VEC_Y4 = 35'd252;//int(sin(0)<<QN)
+localparam BIN_VEC_X0 = 37'd1024;//int(cos(0)<<QN)
+localparam BIN_VEC_X1 = 37'd962;//int(cos(20)<<QN)
+localparam BIN_VEC_X2 = 37'd784;//int(cos(40)<<QN)
+localparam BIN_VEC_X3 = 37'd512;//int(cos(60)<<QN)
+localparam BIN_VEC_X4 = 37'd177;//int(cos(80)<<QN)
+localparam BIN_VEC_Y0 = 37'd0;//int(sin(0)<<QN)
+localparam BIN_VEC_Y1 = 37'd350;//int(sin(20)<<QN)
+localparam BIN_VEC_Y2 = 37'd658;//int(sin(40)<<QN)
+localparam BIN_VEC_Y3 = 37'd886;//int(sin(60)<<QN)
+localparam BIN_VEC_Y4 = 37'd1008;//int(sin(80)<<QN)
 
 
 wire [TOTAL_BIT_WIDTH*2-1:0] dx_vecx_0;//dx*vec_x

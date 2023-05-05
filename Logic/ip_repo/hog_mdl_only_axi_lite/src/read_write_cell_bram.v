@@ -5,12 +5,12 @@
 //		"header": "Packages/Verilog Gadget/template/verilog_header.v"
 //
 // -----------------------------------------------------------------------------
-// Copyright (c) 2014-2022 All rights reserved
+// Copyright (c) 2014-2023 All rights reserved
 // -----------------------------------------------------------------------------
 // Author : yongchan jeon (Kris) poucotm@gmail.com
 // File   : read_write_cell_bram.v
 // Create : 2022-10-12 16:21:25
-// Revise : 2022-10-14 23:18:27
+// Revise : 2023-04-25 11:34:21
 // Editor : sublime text3, tab size (4)
 // -----------------------------------------------------------------------------
 `timescale 1ns/1ns
@@ -1303,7 +1303,56 @@ always @(posedge aclk)begin
 	end
 end
 
+bram_w37_r37_d5202 bank0_odd_row_odd_col (
+  .clka(aclk),    // input wire clka
+  .wea(wea_0),      // input wire [0 : 0] wea
+  .addra(addra_0),  // input wire [12 : 0] addra
+  .dina(dina_0),    // input wire [34 : 0] dina
+  .douta(douta_0),  // output wire [34 : 0] douta
+  .clkb(aclk),    // input wire clkb
+  .web(web_0),      // input wire [0 : 0] web
+  .addrb(addrb_0),  // input wire [12 : 0] addrb
+  .dinb(dinb_0),    // input wire [34 : 0] dinb
+  .doutb(doutb_0)  // output wire [34 : 0] doutb
+);
+bram_w37_r37_d5202 bank1_odd_row_even_col (
+  .clka(aclk),    // input wire clka
+  .wea(wea_1),      // input wire [0 : 0] wea
+  .addra(addra_1),  // input wire [12 : 0] addra
+  .dina(dina_1),    // input wire [34 : 0] dina
+  .douta(douta_1),  // output wire [34 : 0] douta
+  .clkb(aclk),    // input wire clkb
+  .web(web_1),      // input wire [0 : 0] web
+  .addrb(addrb_1),  // input wire [12 : 0] addrb
+  .dinb(dinb_1),    // input wire [34 : 0] dinb
+  .doutb(doutb_1)  // output wire [34 : 0] doutb
+);
+bram_w37_r37_d5202 bank2_even_row_odd_col (
+  .clka(aclk),    // input wire clka
+  .wea(wea_2),      // input wire [0 : 0] wea
+  .addra(addra_2),  // input wire [12 : 0] addra
+  .dina(dina_2),    // input wire [34 : 0] dina
+  .douta(douta_2),  // output wire [34 : 0] douta
+  .clkb(aclk),    // input wire clkb
+  .web(web_2),      // input wire [0 : 0] web
+  .addrb(addrb_2),  // input wire [12 : 0] addrb
+  .dinb(dinb_2),    // input wire [34 : 0] dinb
+  .doutb(doutb_2)  // output wire [34 : 0] doutb
+);
+bram_w37_r37_d5202 bank3_even_row_even_col (
+  .clka(aclk),    // input wire clka
+  .wea(wea_3),      // input wire [0 : 0] wea
+  .addra(addra_3),  // input wire [12 : 0] addra
+  .dina(dina_3),    // input wire [34 : 0] dina
+  .douta(douta_3),  // output wire [34 : 0] douta
+  .clkb(aclk),    // input wire clkb
+  .web(web_3),      // input wire [0 : 0] web
+  .addrb(addrb_3),  // input wire [12 : 0] addrb
+  .dinb(dinb_3),    // input wire [34 : 0] dinb
+  .doutb(doutb_3)  // output wire [34 : 0] doutb
+);
 
+/*
 bram_w35_r35_d5202 bank0_odd_row_odd_col (
   .clka(aclk),    // input wire clka
   .wea(wea_0),      // input wire [0 : 0] wea
@@ -1352,5 +1401,5 @@ bram_w35_r35_d5202 bank3_even_row_even_col (
   .dinb(dinb_3),    // input wire [34 : 0] dinb
   .doutb(doutb_3)  // output wire [34 : 0] doutb
 );
-
+*/
 endmodule

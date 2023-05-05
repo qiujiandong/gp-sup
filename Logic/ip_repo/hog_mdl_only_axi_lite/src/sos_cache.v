@@ -5,12 +5,12 @@
 //		"header": "Packages/Verilog Gadget/template/verilog_header.v"
 //
 // -----------------------------------------------------------------------------
-// Copyright (c) 2014-2022 All rights reserved
+// Copyright (c) 2014-2023 All rights reserved
 // -----------------------------------------------------------------------------
 // Author : yongchan jeon (Kris) poucotm@gmail.com
 // File   : sos_cache.v
 // Create : 2022-10-17 17:30:41
-// Revise : 2022-10-17 23:06:19
+// Revise : 2023-04-25 11:46:11
 // Editor : sublime text3, tab size (4)
 // -----------------------------------------------------------------------------
 `timescale 1ns/1ns
@@ -464,6 +464,25 @@ end
 
 
 
+dist_ram_w37_r37_d32 row1_31sos (
+  .a(addra_1),        // input wire [4 : 0] a
+  .d(dina_1),        // input wire [34 : 0] d
+  .dpra(addrb_1),  // input wire [4 : 0] dpra
+  .clk(aclk),    // input wire clk
+  .we(we_1),      // input wire we
+  .dpo(doutb_1)    // output wire [34 : 0] dpo
+);
+
+dist_ram_w37_r37_d32 row2_31sos (
+  .a(addra_2),        // input wire [4 : 0] a
+  .d(dina_2),        // input wire [34 : 0] d
+  .dpra(addrb_2),  // input wire [4 : 0] dpra
+  .clk(aclk),    // input wire clk
+  .we(we_2),      // input wire we
+  .dpo(doutb_2)    // output wire [34 : 0] dpo
+);
+
+/*
 dist_ram_w35_r35_d32 row1_31sos (
   .a(addra_1),        // input wire [4 : 0] a
   .d(dina_1),        // input wire [34 : 0] d
@@ -481,7 +500,7 @@ dist_ram_w35_r35_d32 row2_31sos (
   .we(we_2),      // input wire we
   .dpo(doutb_2)    // output wire [34 : 0] dpo
 );
-
+*/
 
 /*//tb
 integer i;

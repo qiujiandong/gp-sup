@@ -21,8 +21,9 @@ module IMG(
         A2,
         A3,
         A4,
-        P);
-
+        P,
+        img_status);
+	parameter RAM_AW = 17;
 	parameter   imgx = 136;
 	parameter   imgy = 136;//缩小后图像大小imgx*imgy
 
@@ -41,27 +42,25 @@ module IMG(
 	output  reg     finish;//输出结束信号
 	output  reg[31:0] 	A1,A2,A3,A4;//输出地址
     output  reg[7:0]    P;//输出双线性插值
+    output wire [3:0] img_status;
 	
     //定义状态
 	localparam await  = 2'b00;//等待启动状态
 	localparam await1 = 2'b01;//等待启动状态1
 	localparam work   = 2'b11;//正常工作状态
 
-	reg	[1:0]state;				//当前状态
-	reg	[1:0]next_state;		//下一周期状态
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)reg	[1:0]state;				//当前状态
+	(* KEEP = "TRUE" *)(* mark_debug="true" *)reg	[1:0]next_state;		//下一周期状态
 
 	integer start_delay,finish_delay;//启动,结束延时标志
 	reg stallreq1,stallreq2,stallreq3,stallreq4,stallreq5,stallreq6,stallreq7,stallreq8;//暂停信号
 	reg [7:0]	A,B,C,D;//插值数字寄存器
-	reg [7:0]	R1,R2;	//插值中间结果
 	reg start_0;		//开始信号取反
-	reg [31:0] row,column,row0,column0,row0_reg1,row0_reg2,column0_reg1,column0_reg2;//行列寄存器
-
-    reg [31:0]	P_reg0,P_reg1,P_reg2,P_reg3,P_reg4,P_reg5;//输出中间结果寄存
-	reg [31:0]	R_reg0,R_reg1,R_reg2,R_reg3;//双线性插值中间结果寄存
-	reg [31:0]	R1_reg1,R1_reg2,R2_reg1,R2_reg2;//双线性插值中间结果寄存
-	reg [31:0]	Pr_reg1,Pr_reg2;//输出中间结果寄存
-	reg [31:0]	row_signal_reg;//输入行信号判断
+	reg [47:0] row,column,row0,column0,row0_positive,row0_fractional,column0_positive,column0_fractional,row0_decimal,column0_decimal,row0_fractional_reg2,column0_fractional_reg2,row0_fractional_reg1,column0_fractional_reg1;//行列寄存器
+	reg [47:0]	P1,P2;//输出中间结果寄存
+	reg [7:0]	P_reg;//结果寄存	
+	reg [47:0]	row_signal_reg;//输入行信号判断
+	reg [47:0]	A_factor,B_factor,C_factor,D_factor,A_factor_reg1,B_factor_reg1,C_factor_reg1,D_factor_reg1;//双线性插值系数
 
 	assign start_flag = start & start_0;//获得开始信号的脉冲
 
@@ -108,11 +107,11 @@ module IMG(
 	begin
 		if(rst)
 		begin
-			row_signal_reg <= #2 32'b0;
+			row_signal_reg <= #2 48'b0;
 		end
 		else
 		begin
-			row_signal_reg <= (((row+1)*t_x)>>N)+1;
+			row_signal_reg <= (((row+2)*t_x)>>N)+1;	//给出目标有效行
 		end
 	end
 
@@ -121,7 +120,7 @@ module IMG(
 	begin
 		if(rst)//响应复位操作
 		begin
-			row <= #2 32'b0;
+			row <= #2 48'b0;
 			column <= #2 -1;
 			start_delay <= #2 0;
 			finish_delay <= #2 0;
@@ -140,7 +139,7 @@ module IMG(
 			case(next_state)
 				await:								//等待启动状态，初始化
 				begin
-					row <= #2 32'b0;
+					row <= #2 48'b0;
 					column <= #2 -1;
 					start_delay <= #2 0;
 					finish_delay <= #2 0;
@@ -204,28 +203,16 @@ module IMG(
 	begin
 		if(rst)//响应复位操作
 		begin
-			row0 <= #2 32'b0;
-			column0 <= #2 32'b0;
-			row0_reg1 <= #2 32'b0;
-			column0_reg1 <= #2 32'b0;
-			row0_reg2 <= #2 32'b0;
-			column0_reg2 <= #2 32'b0;
-			R_reg0 <= #2 32'b0;
-			P_reg0 <= #2 32'b0;
+			row0 <= #2 48'b0;
+			column0 <= #2 48'b0;
 		end
 		else
 		begin
 			if(next_state==work && start_delay>0 && stallreq1==1'b0)//流水线2启动条件
-			begin													//(处于work状态，启动延时第一阶段)
-				row0 <= #2 ((row * t_x) >> N);
-				column0 <= #2 ((column * t_y) >> N);				//求原图对应坐标
-				R_reg0 <= #2 row * t_x;
-				P_reg0 <= #2 column * t_y;
+			begin													//(处于work状态，启动延时第一阶段)			
+				row0 <= #2 (((row * t_x * 2) + (t_x) - (1<<N)));
+				column0 <= #2 (((column * t_y * 2) + (t_y) - (1<<N)));		//求原图对应坐标
 			end
-			row0_reg1 <= #2 row0;
-			column0_reg1 <= #2 column0;
-			row0_reg2 <= #2 row0_reg1;
-			column0_reg2 <= #2 column0_reg1;
 		end
 	end
 
@@ -233,169 +220,210 @@ module IMG(
 	begin
 		if(rst)//响应复位操作
 		begin
+			row0_positive <= #2 48'b0;
+			row0_fractional <= #2 48'b0;
+			column0_positive <= #2 48'b0;
+			column0_fractional <= #2 48'b0;
+		end
+		else
+		begin
+			if(next_state==work && start_delay>1 && stallreq2==1'b0)//流水线3启动条件
+			begin													//(处于work状态，启动延时第一阶段)				
+				if(row0[47:30] == 1'b0)	//若目标坐标为正数
+				begin
+					row0_positive <= #2 row0;		//原图对应坐标
+					row0_fractional <= #2 row0>>(N+1);	//原图对应坐标整数部分
+				end
+				else
+				begin
+					row0_positive <= #2 48'b0;		//原图对应坐标	
+					row0_fractional <= #2 48'b0;	//原图对应坐标整数部分
+				end
+				if(column0[47:30] == 1'b0)	//若目标坐标为正数
+				begin
+					column0_positive <= #2 column0;
+					column0_fractional <= #2 column0>>(N+1);
+				end
+				else
+				begin
+					column0_positive <= #2 48'b0;
+					column0_fractional <= #2 48'b0;
+				end
+			end
+		end
+	end
+
+	always @(posedge clk)//流水线4
+	begin
+		if(rst)//响应复位操作
+		begin
 			A1 <= #2 32'b0;
 			A2 <= #2 32'b0;
 			A3 <= #2 32'b0;
 			A4 <= #2 32'b0;
-			R_reg1 <= #2 32'b0; 
-			P_reg1 <= #2 32'b0;
+			row0_decimal <= #2 48'b0;
+			column0_decimal <= #2 48'b0;
+			row0_fractional_reg1 <= #2 48'b0;
+			column0_fractional_reg1 <= #2 48'b0;
 		end
 		else
 		begin
-			if(next_state==work && start_delay>1 && stallreq2==1'b0)	//流水线3启动条件
+			if(next_state==work && start_delay>2 && stallreq3==1'b0)	//流水线4启动条件
 			begin
-				R_reg1 <= #2 R_reg0 - (row0<<N);
-				P_reg1 <= #2 P_reg0 - (column0<<N);
-				if(row0 < (img0x - 1) && column0 < (img0y - 1))//正常情况
+				row0_decimal <= #2 row0_positive - (row0_fractional<<(N+1));
+				column0_decimal <= #2 column0_positive - (column0_fractional<<(N+1));	//原图对应坐标小数部分
+				row0_fractional_reg1 <= #2 row0_fractional;
+				column0_fractional_reg1 <= #2 column0_fractional;	//原图对应坐标整数部分寄存
+				if(row0_fractional < (img0x - 1) && column0_fractional < (img0y - 1))//正常情况
 				begin
-					case({img0y[0],row0[0],column0[0]})//根据输入图像列数的奇偶性，原图对应坐标的行奇偶性，列奇偶性判断存数据地址
+					case({img0y[0],row0_fractional[0],column0_fractional[0]})//根据输入图像列数的奇偶性，原图对应坐标的行奇偶性，列奇偶性判断存数据地址
 					3'b000:
 					begin
-						A1 <= #2  ((row0>>1)*(img0y>>1)+(column0>>1));
-						A2 <= #2  ((row0>>1)*(img0y>>1)+(column0>>1));
-						A3 <= #2  ((row0>>1)*(img0y>>1)+(column0>>1));
-						A4 <= #2  ((row0>>1)*(img0y>>1)+(column0>>1));
+						A1 <= #2  ((row0_fractional>>1)*(img0y>>1)+(column0_fractional>>1));
+						A2 <= #2  ((row0_fractional>>1)*(img0y>>1)+(column0_fractional>>1));
+						A3 <= #2  ((row0_fractional>>1)*(img0y>>1)+(column0_fractional>>1));
+						A4 <= #2  ((row0_fractional>>1)*(img0y>>1)+(column0_fractional>>1));
 					end
 					3'b001:
 					begin
-						A1 <= #2  ((row0>>1)*(img0y>>1)+((column0+1)>>1));
-						A2 <= #2  ((row0>>1)*(img0y>>1)+((column0-1)>>1));
-						A3 <= #2  ((row0>>1)*(img0y>>1)+((column0+1)>>1));
-						A4 <= #2  ((row0>>1)*(img0y>>1)+((column0-1)>>1));
+						A1 <= #2  ((row0_fractional>>1)*(img0y>>1)+((column0_fractional+1)>>1));
+						A2 <= #2  ((row0_fractional>>1)*(img0y>>1)+((column0_fractional-1)>>1));
+						A3 <= #2  ((row0_fractional>>1)*(img0y>>1)+((column0_fractional+1)>>1));
+						A4 <= #2  ((row0_fractional>>1)*(img0y>>1)+((column0_fractional-1)>>1));
 					end
 					3'b010:
 					begin
-						A1 <= #2  (((row0+1)>>1)*(img0y>>1)+(column0>>1));
-						A2 <= #2  (((row0+1)>>1)*(img0y>>1)+(column0>>1));
-						A3 <= #2  (((row0-1)>>1)*(img0y>>1)+(column0>>1));
-						A4 <= #2  (((row0-1)>>1)*(img0y>>1)+(column0>>1));
+						A1 <= #2  (((row0_fractional+1)>>1)*(img0y>>1)+(column0_fractional>>1));
+						A2 <= #2  (((row0_fractional+1)>>1)*(img0y>>1)+(column0_fractional>>1));
+						A3 <= #2  (((row0_fractional-1)>>1)*(img0y>>1)+(column0_fractional>>1));
+						A4 <= #2  (((row0_fractional-1)>>1)*(img0y>>1)+(column0_fractional>>1));
 					end
 					3'b011:
 					begin
-						A1 <= #2  (((row0+1)>>1)*(img0y>>1)+((column0+1)>>1));
-						A2 <= #2  (((row0+1)>>1)*(img0y>>1)+((column0-1)>>1));
-						A3 <= #2  (((row0-1)>>1)*(img0y>>1)+((column0+1)>>1));
-						A4 <= #2  (((row0-1)>>1)*(img0y>>1)+((column0-1)>>1));
+						A1 <= #2  (((row0_fractional+1)>>1)*(img0y>>1)+((column0_fractional+1)>>1));
+						A2 <= #2  (((row0_fractional+1)>>1)*(img0y>>1)+((column0_fractional-1)>>1));
+						A3 <= #2  (((row0_fractional-1)>>1)*(img0y>>1)+((column0_fractional+1)>>1));
+						A4 <= #2  (((row0_fractional-1)>>1)*(img0y>>1)+((column0_fractional-1)>>1));
 					end
 					3'b100:
 					begin
-						A1 <= #2  ((row0>>1)*(((img0y-1)>>1)+1)+(column0>>1));	
-						A2 <= #2  ((row0>>1)*((img0y-1)>>1)+(column0>>1));
-						A3 <= #2  ((row0>>1)*(((img0y-1)>>1)+1)+(column0>>1));
-						A4 <= #2  ((row0>>1)*((img0y-1)>>1)+(column0>>1));
+						A1 <= #2  ((row0_fractional>>1)*(((img0y-1)>>1)+1)+(column0_fractional>>1));	
+						A2 <= #2  ((row0_fractional>>1)*((img0y-1)>>1)+(column0_fractional>>1));
+						A3 <= #2  ((row0_fractional>>1)*(((img0y-1)>>1)+1)+(column0_fractional>>1));
+						A4 <= #2  ((row0_fractional>>1)*((img0y-1)>>1)+(column0_fractional>>1));
 					end
 					3'b101:
 					begin	
-						A1 <= #2  ((row0>>1)*(((img0y-1)>>1)+1)+((column0+1)>>1));
-						A2 <= #2  ((row0>>1)*((img0y-1)>>1)+((column0-1)>>1));
-						A3 <= #2  ((row0>>1)*(((img0y-1)>>1)+1)+((column0+1)>>1));
-						A4 <= #2  ((row0>>1)*((img0y-1)>>1)+((column0-1)>>1));
+						A1 <= #2  ((row0_fractional>>1)*(((img0y-1)>>1)+1)+((column0_fractional+1)>>1));
+						A2 <= #2  ((row0_fractional>>1)*((img0y-1)>>1)+((column0_fractional-1)>>1));
+						A3 <= #2  ((row0_fractional>>1)*(((img0y-1)>>1)+1)+((column0_fractional+1)>>1));
+						A4 <= #2  ((row0_fractional>>1)*((img0y-1)>>1)+((column0_fractional-1)>>1));
 					end
 					3'b110:
 					begin
-						A1 <= #2  (((row0+1)>>1)*(((img0y-1)>>1)+1)+(column0>>1));
-						A2 <= #2  (((row0+1)>>1)*((img0y-1)>>1)+(column0>>1));
-						A3 <= #2  (((row0-1)>>1)*(((img0y-1)>>1)+1)+(column0>>1));
-						A4 <= #2  (((row0-1)>>1)*((img0y-1)>>1)+(column0>>1));
+						A1 <= #2  (((row0_fractional+1)>>1)*(((img0y-1)>>1)+1)+(column0_fractional>>1));
+						A2 <= #2  (((row0_fractional+1)>>1)*((img0y-1)>>1)+(column0_fractional>>1));
+						A3 <= #2  (((row0_fractional-1)>>1)*(((img0y-1)>>1)+1)+(column0_fractional>>1));
+						A4 <= #2  (((row0_fractional-1)>>1)*((img0y-1)>>1)+(column0_fractional>>1));
 					end
 					3'b111:
 					begin
-						A1 <= #2  (((row0+1)>>1)*(((img0y-1)>>1)+1)+((column0+1)>>1));
-						A2 <= #2  (((row0+1)>>1)*((img0y-1)>>1)+((column0-1)>>1));
-						A3 <= #2  (((row0-1)>>1)*(((img0y-1)>>1)+1)+((column0+1)>>1));
-						A4 <= #2  (((row0-1)>>1)*((img0y-1)>>1)+((column0-1)>>1));
+						A1 <= #2  (((row0_fractional+1)>>1)*(((img0y-1)>>1)+1)+((column0_fractional+1)>>1));
+						A2 <= #2  (((row0_fractional+1)>>1)*((img0y-1)>>1)+((column0_fractional-1)>>1));
+						A3 <= #2  (((row0_fractional-1)>>1)*(((img0y-1)>>1)+1)+((column0_fractional+1)>>1));
+						A4 <= #2  (((row0_fractional-1)>>1)*((img0y-1)>>1)+((column0_fractional-1)>>1));
 					end
 					endcase
 				end
-				else if(row0 < (img0x - 1) && column0 > (img0y - 2))//输入图像大小不满足输出要求
+				else if(row0_fractional < (img0x - 1) && column0_fractional > (img0y - 2))//输入图像大小不满足输出要求
 				begin
-					case({img0y[0],row0[0]})//根据输入图像列数的奇偶性，原图对应坐标的行奇偶性判断存数据地址
+					case({img0y[0],row0_fractional[0]})//根据输入图像列数的奇偶性，原图对应坐标的行奇偶性判断存数据地址
 					2'b00:
 					begin
 						A1 <= #2  13'b0;
-						A2 <= #2  ((row0>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
+						A2 <= #2  ((row0_fractional>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
 						A3 <= #2  13'b0;
-						A4 <= #2  ((row0>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
+						A4 <= #2  ((row0_fractional>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
 					end
 					2'b01:
 					begin
 						A1 <= #2  13'b0;
-						A2 <= #2  (((row0 + 1)>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
+						A2 <= #2  (((row0_fractional + 1)>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
 						A3 <= #2  13'b0;
-						A4 <= #2  (((row0 - 1)>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
+						A4 <= #2  (((row0_fractional - 1)>>1)*(img0y>>1)+(((img0y - 1) - 1)>>1));
 					end
 					2'b10:
 					begin
-						A1 <= #2  ((row0>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
+						A1 <= #2  ((row0_fractional>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
 						A2 <= #2  13'b0;
-						A3 <= #2  ((row0>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
+						A3 <= #2  ((row0_fractional>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
 						A4 <= #2  13'b0;
 					end
 					2'b11:
 					begin
-						A1 <= #2  (((row0 + 1)>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
+						A1 <= #2  (((row0_fractional + 1)>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
 						A2 <= #2  13'b0;
-						A3 <= #2  (((row0 - 1)>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
+						A3 <= #2  (((row0_fractional - 1)>>1)*(((img0y-1)>>1)+1)+((img0y - 1)>>1));
 						A4 <= #2  13'b0;
 					end
 					endcase
 				end
-				else if(row0 > (img0x - 2) && column0 < (img0y - 1))
+				else if(row0_fractional > (img0x - 2) && column0_fractional < (img0y - 1))
 				begin
-					case({img0x[0],img0y[0],column0[0]})//根据输入图像行列数的奇偶性，原图对应坐标的列奇偶性判断存数据地址
+					case({img0x[0],img0y[0],column0_fractional[0]})//根据输入图像行列数的奇偶性，原图对应坐标的列奇偶性判断存数据地址
 					3'b000:
 					begin
 						A1 <= #2  13'b0;
 						A2 <= #2  13'b0;
-						A3 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+(column0>>1));
-						A4 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+(column0>>1));
+						A3 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+(column0_fractional>>1));
+						A4 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+(column0_fractional>>1));
 					end
 					3'b001:
 					begin
 						A1 <= #2  13'b0;
 						A2 <= #2  13'b0;
-						A3 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+((column0 + 1)>>1));
-						A4 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+((column0 - 1)>>1));
+						A3 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+((column0_fractional + 1)>>1));
+						A4 <= #2  ((((img0x - 1) - 1)>>1)*(img0y>>1)+((column0_fractional - 1)>>1));
 					end
 					3'b010:
 					begin
 						A1 <= #2  13'b0;
 						A2 <= #2  13'b0;
-						A3 <= #2  ((((img0x - 1) - 1)>>1)*(((img0y-1)>>1)+1)+(column0>>1));
-						A4 <= #2  ((((img0x - 1) - 1)>>1)*((img0y-1)>>1)+(column0>>1));
+						A3 <= #2  ((((img0x - 1) - 1)>>1)*(((img0y-1)>>1)+1)+(column0_fractional>>1));
+						A4 <= #2  ((((img0x - 1) - 1)>>1)*((img0y-1)>>1)+(column0_fractional>>1));
 					end
 					3'b011:
 					begin
 						A1 <= #2  13'b0;
 						A2 <= #2  13'b0;
-						A3 <= #2  ((((img0x - 1) - 1)>>1)*(((img0y-1)>>1)+1)+((column0 + 1)>>1));
-						A4 <= #2  ((((img0x - 1) - 1)>>1)*((img0y-1)>>1)+((column0 - 1)>>1));
+						A3 <= #2  ((((img0x - 1) - 1)>>1)*(((img0y-1)>>1)+1)+((column0_fractional + 1)>>1));
+						A4 <= #2  ((((img0x - 1) - 1)>>1)*((img0y-1)>>1)+((column0_fractional - 1)>>1));
 					end
 					3'b100:
 					begin
-						A1 <= #2  (((img0x - 1)>>1)*(img0y>>1)+(column0>>1));	
-						A2 <= #2  (((img0x - 1)>>1)*(img0y>>1)+(column0>>1));
+						A1 <= #2  (((img0x - 1)>>1)*(img0y>>1)+(column0_fractional>>1));	
+						A2 <= #2  (((img0x - 1)>>1)*(img0y>>1)+(column0_fractional>>1));
 						A3 <= #2  13'b0;
 						A4 <= #2  13'b0;
 					end
 					3'b101:
 					begin	
-						A1 <= #2  (((img0x - 1)>>1)*(img0y>>1)+((column0 + 1)>>1));	
-						A2 <= #2  (((img0x - 1)>>1)*(img0y>>1)+((column0 - 1)>>1));
+						A1 <= #2  (((img0x - 1)>>1)*(img0y>>1)+((column0_fractional + 1)>>1));	
+						A2 <= #2  (((img0x - 1)>>1)*(img0y>>1)+((column0_fractional - 1)>>1));
 						A3 <= #2  13'b0;
 						A4 <= #2  13'b0;
 					end
 					3'b110:
 					begin
-						A1 <= #2  (((img0x - 1)>>1)*(((img0y-1)>>1)+1)+(column0>>1));	
-						A2 <= #2  (((img0x - 1)>>1)*((img0y-1)>>1)+(column0>>1));
+						A1 <= #2  (((img0x - 1)>>1)*(((img0y-1)>>1)+1)+(column0_fractional>>1));	
+						A2 <= #2  (((img0x - 1)>>1)*((img0y-1)>>1)+(column0_fractional>>1));
 						A3 <= #2  13'b0;
 						A4 <= #2  13'b0;
 					end
 					3'b111:
 					begin
-						A1 <= #2  (((img0x - 1)>>1)*(((img0y-1)>>1)+1)+((column0 + 1)>>1));	
-						A2 <= #2  (((img0x - 1)>>1)*((img0y-1)>>1)+((column0 - 1)>>1));
+						A1 <= #2  (((img0x - 1)>>1)*(((img0y-1)>>1)+1)+((column0_fractional + 1)>>1));	
+						A2 <= #2  (((img0x - 1)>>1)*((img0y-1)>>1)+((column0_fractional - 1)>>1));
 						A3 <= #2  13'b0;
 						A4 <= #2  13'b0;
 					end
@@ -438,22 +466,30 @@ module IMG(
 		end
 	end
 
-	always @(posedge clk)//流水线4
+	always @(posedge clk)//流水线5
 	begin
 		if(rst)
 		begin
-			R_reg2 <= #2 32'b0;
-			P_reg2 <= #2 32'b0;
+			A_factor <= #2 48'b0;
+			B_factor <= #2 48'b0;
+			C_factor <= #2 48'b0;
+			D_factor <= #2 48'b0;
+			row0_fractional_reg2 <= #2 48'b0;
+			column0_fractional_reg2 <= #2 48'b0;
 		end
 		else
-		if(next_state==work && start_delay>2 && stallreq3==1'b0)
+		if(next_state==work && start_delay>3 && stallreq4==1'b0)	//流水线5启动条件
 		begin
-			R_reg2 <= #2 R_reg1;	//双线性插值中间结果
-			P_reg2 <= #2 P_reg1;
+			A_factor <= #2	((1<<(N+1))-row0_decimal)*((1<<(N+1))-column0_decimal);	
+			B_factor <= #2	((1<<(N+1))-row0_decimal)*(column0_decimal);
+			C_factor <= #2	(row0_decimal)*((1<<(N+1))-column0_decimal);
+			D_factor <= #2	(row0_decimal)*(column0_decimal);		//双线性插值系数
+			row0_fractional_reg2 <= #2 row0_fractional_reg1;
+			column0_fractional_reg2 <= #2 column0_fractional_reg1;				//寄存原图对应坐标整数部分
 		end
 	end
 
-	always @(posedge clk)//流水线5
+	always @(posedge clk)//流水线6
     begin
 		if(rst)//响应复位操作
 		begin
@@ -461,19 +497,23 @@ module IMG(
 			B <= #2 8'b0;
 			C <= #2 8'b0;
 			D <= #2 8'b0;
-			R_reg3 <= #2 32'b0;
-			P_reg3 <= #2 32'b0;
+			A_factor_reg1 <= #2 48'b0;
+			B_factor_reg1 <= #2 48'b0;
+			C_factor_reg1 <= #2 48'b0;
+			D_factor_reg1 <= #2 48'b0;
 		end
 		else
 		begin
-        	if(next_state==work && start_delay>3 && stallreq4==1'b0)	//流水线5启动条件
+        	if(next_state==work && start_delay>4 && stallreq5==1'b0)	//流水线6启动条件
 			begin														//(处于work状态，启动延时第二阶段,无暂停信号)
-				R_reg3 <= #2 R_reg2;	//双线性插值中间结果
-				P_reg3 <= #2 P_reg2;
+				A_factor_reg1 <= #2	A_factor;	
+				B_factor_reg1 <= #2	B_factor;
+				C_factor_reg1 <= #2	C_factor;
+				D_factor_reg1 <= #2	D_factor;		//寄存双线性插值系数
 				//存储器输出值寄存器
-				if(row0_reg2 < (img0x - 1) && column0_reg2 < (img0y - 1))//正常情况
+				if(row0_fractional_reg2 < (img0x - 1) && column0_fractional_reg2 < (img0y - 1))//正常情况
 				begin
-					case({row0_reg2[0],column0_reg2[0]})//根据原图对应坐标的行奇偶性、列奇偶性获取对应位置数值
+					case({row0_fractional_reg2[0],column0_fractional_reg2[0]})//根据原图对应坐标的行奇偶性、列奇偶性获取对应位置数值
 					2'b00:
 					begin
 						A <= #2 Q1;
@@ -504,9 +544,9 @@ module IMG(
 					end
 					endcase
 				end
-				else if(row0_reg2 < (img0x - 1) && column0_reg2 > (img0y - 2))//输入图像大小不满足输出要求
+				else if(row0_fractional_reg2 < (img0x - 1) && column0_fractional_reg2 > (img0y - 2))//输入图像大小不满足输出要求
 				begin
-					case({row0_reg2[0],column0_reg2[0]})//根据原图对应坐标的行奇偶性、列奇偶性获取对应位置数值
+					case({row0_fractional_reg2[0],column0_fractional_reg2[0]})//根据原图对应坐标的行奇偶性、列奇偶性获取对应位置数值
 					2'b00:
 					begin
 						A <= #2 Q1;
@@ -537,9 +577,9 @@ module IMG(
 					end
 					endcase
 				end
-				else if(row0_reg2 > (img0x - 2) && column0_reg2 < (img0y - 1))
+				else if(row0_fractional_reg2 > (img0x - 2) && column0_fractional_reg2 < (img0y - 1))
 				begin
-					case({row0_reg2[0],column0_reg2[0]})//根据原图对应坐标的行奇偶性、列奇偶性获取对应位置数值
+					case({row0_fractional_reg2[0],column0_fractional_reg2[0]})//根据原图对应坐标的行奇偶性、列奇偶性获取对应位置数值
 					2'b00:
 					begin
 						A <= #2 Q1;
@@ -607,43 +647,17 @@ module IMG(
 		end
 	end
 	
-	always @(posedge clk)//流水线6
-	begin
-		if(rst)//响应复位操作
-		begin
-			P_reg4 <= #2 32'b0;
-			R1_reg1 <= #2 32'b0;
-			R1_reg2 <= #2 32'b0;
-			R2_reg1 <= #2 32'b0;
-			R2_reg2 <= #2 32'b0;
-		end
-		if(next_state==work && start_delay>4 && stallreq5==1'b0)		//流水线6启动条件
-		begin
-			R1_reg1 <= #2 ((1<<N)-R_reg3)*A;	//双线性插值中间结果寄存
-			R1_reg2 <= #2 R_reg3*C;
-			R2_reg1 <= #2 ((1<<N)-R_reg3)*B;
-			R2_reg2 <= #2 R_reg3*D;
-			P_reg4 <= #2 P_reg3;
-		end
-	end
-
 	always @(posedge clk)//流水线7
 	begin
 		if(rst)//响应复位操作
 		begin
-			R1 <= 8'b0;
-			R2 <= 8'b0;
-			P_reg5 <= 32'b0;
+			P1 <= #2 48'b0;
+			P2 <= #2 48'b0;
 		end
-		else
+		if(next_state==work && start_delay>5 && stallreq6==1'b0)		//流水线7启动条件
 		begin
-			if(next_state==work && start_delay>5 && stallreq6==1'b0)//流水线7启动条件
-			begin													//(处于work状态,启动延时结束,无暂停信号)
-            	R1 <= #2 (R1_reg1+R1_reg2) >> N;
-				R2 <= #2 (R2_reg1+R2_reg2) >> N;	//输出双线性插值数值
-            	P_reg5 <= #2 P_reg4;
-       	 	end
-			
+			P1 <= #2 A_factor_reg1*A + D_factor_reg1*D;
+			P2 <= #2 B_factor_reg1*B + C_factor_reg1*C;				//双线性插值中间结果
 		end
 	end
 
@@ -651,16 +665,15 @@ module IMG(
 	begin
 		if(rst)//响应复位操作
 		begin
-			Pr_reg1 <= #2 32'b0;
-			Pr_reg2 <= #2 32'b0;
+			P_reg <= #2 8'b0;
 		end
 		else
 		begin
 			if(next_state==work && start_delay>6 && stallreq7==1'b0)//流水线8启动条件
 			begin													//(处于work状态,启动延时结束,无暂停信号)
-            	Pr_reg1 <= #2 ((1<<N)-P_reg5)*R1;
-				Pr_reg2 <= #2 P_reg5*R2;
+            	P_reg <= (P1 + P2)>>(N+N+2);			//双线性插值结果寄存
        	 	end
+			
 		end
 	end
 
@@ -673,9 +686,9 @@ module IMG(
 		end
 		else
 		begin
-			if(next_state==work && start_delay>7 && finish==0 && finish_delay!=9 && stallreq8==1'b0)//流水线8启动条件
+			if(next_state==work && start_delay>7 && finish==0 && finish_delay!=9 && stallreq8==1'b0)//流水线9启动条件
 			begin															//(处于work状态,启动延时结束,无结束信号,结束延时未结束,暂停信号未结束,暂停恢复信号结束)
-            	P <= #2 (Pr_reg1 + Pr_reg2) >> N;	//输出双线性插值数值
+            	P <= #2 P_reg;	//输出双线性插值数值
             	valid <= #2 1'b1;	//给出有效信号
        	 	end
 			else					//流水线9未启动说明此时非有效信号

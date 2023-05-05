@@ -18,6 +18,7 @@
 // -----------------------------------------------------------------------------
 `timescale 1ns/1ns
 module hog_mdl_top #(
+	parameter RAM_AW = 17,
 	parameter AXIL_AW = 7,
 	parameter AXIL_DW = 32,
 	parameter AXI_AW = 31,
@@ -25,12 +26,12 @@ module hog_mdl_top #(
 
 	parameter IMAGE_SIZE 		= 18495,//136*136-1
 	parameter IMAGE_WIDTH 		= 136,
-	parameter QN 				= 8,
-	parameter TOTAL_BIT_WIDTH 	= 35,
+	parameter QN 				= 10,
+	parameter TOTAL_BIT_WIDTH 	= 37,
 	parameter P_WIDTH 			= 8,
 	parameter DELAY 			= 1,
-	parameter PARAM_TRUNCATE    = 35'd51,//int(0.2 << QN)
-	parameter PARAM_GAMA		= 35'd60,//int(1/(根号18) << QN)
+	parameter PARAM_TRUNCATE    = 37'd204,//int(0.2 << QN)
+	parameter PARAM_GAMA		= 37'd241,//int(1/(根号18) << QN)
 
 	parameter	IMGX = 136,
 	parameter	IMGY = 136
@@ -141,16 +142,17 @@ wire [31:0] test_mode;
 //hog_top控制完成接口
 //wire initial_cell_bram;//初始化hog_top中histogram用到的cell bram
 wire write_feature_done;//hog_top特征提取完毕
+wire histogram_done;
 
 //读imagescaling中的结果bram：bank0-3
 wire  res_enb_0;
 wire  res_enb_1;
 wire  res_enb_2;
 wire  res_enb_3;
-wire [12 : 0] res_addrb_0;
-wire [12 : 0] res_addrb_1;
-wire [12 : 0] res_addrb_2;
-wire [12 : 0] res_addrb_3;
+wire [RAM_AW-1 : 0] res_addrb_0;
+wire [RAM_AW-1 : 0] res_addrb_1;
+wire [RAM_AW-1 : 0] res_addrb_2;
+wire [RAM_AW-1 : 0] res_addrb_3;
 wire [QN-1 : 0] res_doutb_0;
 wire [QN-1 : 0] res_doutb_1;
 wire [QN-1 : 0] res_doutb_2;
@@ -166,14 +168,22 @@ wire initial_ena_0;
 wire initial_ena_1;
 wire initial_ena_2;
 wire initial_ena_3;
-wire [12:0] initial_addra_0;
-wire [12:0] initial_addra_1;
-wire [12:0] initial_addra_2;
-wire [12:0] initial_addra_3;
+wire [RAM_AW-1:0] initial_addra_0;
+wire [RAM_AW-1:0] initial_addra_1;
+wire [RAM_AW-1:0] initial_addra_2;
+wire [RAM_AW-1:0] initial_addra_3;
 wire [P_WIDTH-1:0] initial_dina_0;
 wire [P_WIDTH-1:0] initial_dina_1;
 wire [P_WIDTH-1:0] initial_dina_2;
 wire [P_WIDTH-1:0] initial_dina_3;
+
+//增加电路内部状态
+wire [3:0] img_status;
+wire [31:0] axi_status;
+wire [4:0] circuit_busy;
+//增加软件复位，axi-lite 地址0：bit2 =1，复位
+wire rst_n;
+assign rst_n = arest_n & (~mb_ctrl[2]);//上电复位 & 软件复位 
 
 	hog_ctrl #(
 			.AXIL_AW(AXIL_AW),
@@ -181,7 +191,7 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.DELAY(DELAY)
 		) inst_hog_ctrl (
 			.aclk             (aclk),
-			.arest_n          (arest_n),
+			.arest_n          (rst_n),
 			.s_axil_awaddr    (s_axil_awaddr),
 			.s_axil_awprot    (s_axil_awprot),
 			.s_axil_awvalid   (s_axil_awvalid),
@@ -208,7 +218,7 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.rd1_config_4     (rd1_config_4),
 			.wr1_config_3     (wr1_config_3),
 			.wr1_config_4     (wr1_config_4),
-			.hog_start        (hog_start),
+			.hog_start_irq    (hog_start),
 			.img0x            (img0x),
 			.img0y            (img0y),
 			.absolute_addr    (absolute_addr),
@@ -216,10 +226,15 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.scale_x          (scale_x),
 			.scale_y          (scale_y),
 			.scale_n          (scale_n),
-			.test_mode        (test_mode)
+			.test_mode        (test_mode),
+			.img_status		  (img_status),
+			.axi_status		  (axi_status),
+			.circuit_busy	  (circuit_busy),
+			.rd1_wr1_done     (rd1_wr1_done)
 		);
 
 	hog_trans #(
+			.RAM_AW(RAM_AW),
 			.AXI_AW(AXI_AW),
 			.AXI_DW(AXI_DW),
 			.DELAY(DELAY),
@@ -227,7 +242,7 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.P_WIDTH(P_WIDTH)
 		) inst_hog_trans (
 			.aclk               (aclk),
-			.arest_n            (arest_n),
+			.arest_n            (rst_n),
 			.m_axi_awid         (m_axi_awid),
 			.m_axi_awaddr       (m_axi_awaddr),
 			.m_axi_awlen        (m_axi_awlen),
@@ -279,6 +294,7 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.scale_n            (scale_n),
 			.test_mode 			(test_mode),
 			.scaling_finish     (scaling_finish),
+			.histogram_done		(histogram_done),
 			.write_feature_done (write_feature_done),
 			.res_enb_0          (res_enb_0),
 			.res_enb_1          (res_enb_1),
@@ -309,10 +325,13 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.initial_dina_1     (initial_dina_1),
 			.initial_dina_2     (initial_dina_2),
 			.initial_dina_3     (initial_dina_3),
-			.rd1_wr1_done       (rd1_wr1_done)
+			.rd1_wr1_done       (rd1_wr1_done),
+			.axi_status 			(axi_status),
+			.circuit_busy		(circuit_busy)
 		);
 
 			hog_imagescaling_top #(
+			.RAM_AW(RAM_AW),
 			.IMAGE_SIZE(IMAGE_SIZE),
 			.IMAGE_WIDTH(IMAGE_WIDTH),
 			.QN(QN),
@@ -325,7 +344,7 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.IMGY(IMGY)
 		) inst_hog_imagescaling_top (
 			.aclk               (aclk),
-			.arest_n            (arest_n),
+			.arest_n            (rst_n),
 			.start              (hog_start),
 			//.stallreq           (stallreq),
 			.img0x              ({16'd0,img0x}),
@@ -338,6 +357,7 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			//.hog_ready			(hog_ready),
 			.scaling_finish		(scaling_finish),
 			.write_feature_done (write_feature_done),
+			.histogram_done		(histogram_done),
 			.res_enb_0          (res_enb_0),
 			.res_enb_1          (res_enb_1),
 			.res_enb_2          (res_enb_2),
@@ -366,7 +386,8 @@ wire [P_WIDTH-1:0] initial_dina_3;
 			.initial_dina_0     (initial_dina_0),
 			.initial_dina_1     (initial_dina_1),
 			.initial_dina_2     (initial_dina_2),
-			.initial_dina_3     (initial_dina_3)
+			.initial_dina_3     (initial_dina_3),
+			.img_status			(img_status)
 		);
 
 

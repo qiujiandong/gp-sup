@@ -19,14 +19,15 @@
 `timescale 1ns/1ns
 
 module hog_imagescaling_top #(
+	parameter RAM_AW 			= 17,
 	parameter IMAGE_SIZE 		= 18495,//136*136-1
 	parameter IMAGE_WIDTH 		= 136,
-	parameter QN 				= 8,
-	parameter TOTAL_BIT_WIDTH 	= 35,
+	parameter QN 				= 10,
+	parameter TOTAL_BIT_WIDTH 	= 37,
 	parameter P_WIDTH 			= 8,
 	parameter DELAY 			= 1,
-	parameter PARAM_TRUNCATE    = 35'd51,//int(0.2 << QN)
-	parameter PARAM_GAMA		= 35'd60,//int(1/(根号18) << QN)
+	parameter PARAM_TRUNCATE    = 37'd204,//int(0.2 << QN)
+	parameter PARAM_GAMA		= 37'd241,//int(1/(根号18) << QN)
 
 	parameter	IMGX = 136,
 	parameter	IMGY = 136
@@ -49,16 +50,17 @@ module hog_imagescaling_top #(
 	//output hog_ready,
 	output scaling_finish,//图像缩放完成
 	output write_feature_done,//hog_top特征提取完毕
+	output histogram_done,
 
 	//读imagescaling中的结果bram：bank0-3
 	input  res_enb_0,
 	input  res_enb_1,
 	input  res_enb_2,
 	input  res_enb_3,
-	input [12 : 0] res_addrb_0,
-	input [12 : 0] res_addrb_1,
-	input [12 : 0] res_addrb_2,
-	input [12 : 0] res_addrb_3,
+	input [RAM_AW-1 : 0] res_addrb_0,
+	input [RAM_AW-1 : 0] res_addrb_1,
+	input [RAM_AW-1 : 0] res_addrb_2,
+	input [RAM_AW-1 : 0] res_addrb_3,
 	output [QN-1 : 0] res_doutb_0,
 	output [QN-1 : 0] res_doutb_1,
 	output [QN-1 : 0] res_doutb_2,
@@ -74,14 +76,15 @@ module hog_imagescaling_top #(
 	input initial_ena_1,
 	input initial_ena_2,
 	input initial_ena_3,
-	input [12:0] initial_addra_0,
-	input [12:0] initial_addra_1,
-	input [12:0] initial_addra_2,
-	input [12:0] initial_addra_3,
+	input [RAM_AW-1:0] initial_addra_0,
+	input [RAM_AW-1:0] initial_addra_1,
+	input [RAM_AW-1:0] initial_addra_2,
+	input [RAM_AW-1:0] initial_addra_3,
 	input [P_WIDTH-1:0] initial_dina_0,
 	input [P_WIDTH-1:0] initial_dina_1,
 	input [P_WIDTH-1:0] initial_dina_2,
-	input [P_WIDTH-1:0] initial_dina_3
+	input [P_WIDTH-1:0] initial_dina_3,
+	output [3:0] img_status
 
 );
 
@@ -93,10 +96,10 @@ wire [7:0] p_scaling;
 (* mark_debug="true" *)wire [7:0] p;
 (* mark_debug="true" *)wire p_valid;
 //wire finish;
-wire [12:0] res_addra_0;//hog_top写结果到imagescaling中的bram：bank0-3
-wire [12:0] res_addra_1;
-wire [12:0] res_addra_2;
-wire [12:0] res_addra_3;
+wire [RAM_AW-1:0] res_addra_0;//hog_top写结果到imagescaling中的bram：bank0-3
+wire [RAM_AW-1:0] res_addra_1;
+wire [RAM_AW-1:0] res_addra_2;
+wire [RAM_AW-1:0] res_addra_3;
 wire [QN-1:0] res_dina_0;
 wire [QN-1:0] res_dina_1;
 wire [QN-1:0] res_dina_2;
@@ -143,14 +146,14 @@ wire ena_1;
 wire ena_2;
 wire ena_3;
 wire ena_4;
-wire [12:0] addra_1;
-wire [12:0] addra_2;
-wire [12:0] addra_3;
-wire [12:0] addra_4;
-wire [7:0] dina_1;
-wire [7:0] dina_2;
-wire [7:0] dina_3;
-wire [7:0] dina_4;
+wire [RAM_AW-1:0] addra_1;
+wire [RAM_AW-1:0] addra_2;
+wire [RAM_AW-1:0] addra_3;
+wire [RAM_AW-1:0] addra_4;
+wire [QN-1:0] dina_1;
+wire [QN-1:0] dina_2;
+wire [QN-1:0] dina_3;
+wire [QN-1:0] dina_4;
 
 //外部写原始数据到imagescaling中的bram：bank0-3
 //wire initial_wea_0;
@@ -189,12 +192,13 @@ assign addra_2 = res_ena_1 ? res_addra_1 : initial_addra_1;
 assign addra_3 = res_ena_2 ? res_addra_2 : initial_addra_2;
 assign addra_4 = res_ena_3 ? res_addra_3 : initial_addra_3;
 
-assign dina_1 = res_ena_0 ? res_dina_0 : initial_dina_0;
-assign dina_2 = res_ena_1 ? res_dina_1 : initial_dina_1;
-assign dina_3 = res_ena_2 ? res_dina_2 : initial_dina_2;
-assign dina_4 = res_ena_3 ? res_dina_3 : initial_dina_3;
+assign dina_1 = res_ena_0 ? res_dina_0 : {{QN-P_WIDTH{1'b0}},initial_dina_0};
+assign dina_2 = res_ena_1 ? res_dina_1 : {{QN-P_WIDTH{1'b0}},initial_dina_1};
+assign dina_3 = res_ena_2 ? res_dina_2 : {{QN-P_WIDTH{1'b0}},initial_dina_2};
+assign dina_4 = res_ena_3 ? res_dina_3 : {{QN-P_WIDTH{1'b0}},initial_dina_3};
 
 	hog_top #(
+			.RAM_AW(RAM_AW),
 			.IMAGE_SIZE(IMAGE_SIZE),
 			.IMAGE_WIDTH(IMAGE_WIDTH),
 			.QN(QN),
@@ -227,12 +231,15 @@ assign dina_4 = res_ena_3 ? res_dina_3 : initial_dina_3;
 			.wea_1              (res_wea_1),
 			.wea_2              (res_wea_2),
 			.wea_3              (res_wea_3),
-			.write_feature_done (write_feature_done)
+			.write_feature_done (write_feature_done),
+			.histogram_done		(histogram_done)
 		);
 
 	IMG_top #(
+			.RAM_AW(RAM_AW),
 			.imgx(IMGX),
-			.imgy(IMGY)
+			.imgy(IMGY),
+			.QN(QN)
 		) inst_IMG_top (
 			.clk       (aclk),
 			.start     (start),
@@ -278,6 +285,7 @@ assign dina_4 = res_ena_3 ? res_dina_3 : initial_dina_3;
 			.valid     (p_valid),
 			.finish    (scaling_finish),
 			.P         (p_scaling),
+			.img_status(img_status),
 			.rsta_busy (rsta_busy),
 			.rstb_busy (rstb_busy)
 		);
