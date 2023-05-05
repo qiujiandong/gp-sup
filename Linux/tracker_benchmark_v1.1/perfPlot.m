@@ -92,7 +92,7 @@ end
 metricTypeSet = {'error', 'overlap'};
 evalTypeSet = {'OPE'}; %'SRE', 'OPE'
 
-rankingType = 'threshold'; %AUC, threshold
+rankingType = 'AUC'; %AUC, threshold
 
 rankNum = 14;%number of plots to show
 
@@ -121,9 +121,9 @@ for i=1:length(metricTypeSet)
             yLabelName = 'Precision';
     end  
         
-    if strcmp(metricType,'error')&strcmp(rankingType,'AUC')
-        continue;
-    end
+%     if strcmp(metricType,'error')&strcmp(rankingType,'AUC')
+%         continue;
+%     end
     
     tNum = length(thresholdSet);
     

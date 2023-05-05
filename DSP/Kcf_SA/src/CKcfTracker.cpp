@@ -460,43 +460,69 @@ int CKcfTracker::prepareBlocks(
     m_fAddScaleW = 1.0;
     m_fAddScaleH = 1.0;
 
+    m_fAddScaleW = divsp_i(nWidth, FIXED_SCALE_L);
+    m_fAddScaleH = divsp_i(nHeight, FIXED_SCALE_L);
+    pResizedData = (uint8_t *)memalign(4096, sizeof(uint8_t) * FIXED_SCALE_L * FIXED_SCALE_L);
+    assert(pResizedData);
+    cvInitMatHeader(&blockMat, nHeight, nWidth, CV_8UC1, pData);
+    cvInitMatHeader(&resizedMat, FIXED_SCALE_L, FIXED_SCALE_L, CV_8UC1, pResizedData);
+
+    cvResize(&blockMat, &resizedMat);
+
+    pBlocks[0] = cvRect(0, 0, FIXED_SCALE_L, FIXED_SCALE_L);
+    if(nScaleCnt > 1){
+        pBlocks[1] = cvRect(4, 4, FIXED_SCALE_N, FIXED_SCALE_N);
+        pBlocks[2] = cvRect(7, 7, FIXED_SCALE_S, FIXED_SCALE_S);
+    }
+
+    // tx block
+    Cache_wb(pResizedData, FIXED_SCALE_L * FIXED_SCALE_L, Cache_Type_ALLD, TRUE);
+    status = pSrio2PcieMgr->startTxNwToFPGA(pResizedData, (FIXED_SCALE_L * FIXED_SCALE_L) >> 3, TXBLOCK_DSTADDR);
+    if(status != 0){
+        System_abort("Nw tx HwFhog Block error!\n");
+    }
+    pHwFhogMgr->setTxBlockSize(cvSize(FIXED_SCALE_L, FIXED_SCALE_L));
+
+    free(resizedMat.data.ptr);
+    resizedMat.data.ptr = NULL;
+
     // NOTE: the hardware resize module using 8k block ram for one quard of image
-    if(ceil(nWidth * 0.5) * ceil(nHeight * 0.5) > 8192){
-        m_fAddScaleW = divsp_i(nWidth, FIXED_SCALE_L);
-        m_fAddScaleH = divsp_i(nHeight, FIXED_SCALE_L);
-        pResizedData = (uint8_t *)memalign(4096, sizeof(uint8_t) * FIXED_SCALE_L * FIXED_SCALE_L);
-        assert(pResizedData);
-        cvInitMatHeader(&blockMat, nHeight, nWidth, CV_8UC1, pData);
-        cvInitMatHeader(&resizedMat, FIXED_SCALE_L, FIXED_SCALE_L, CV_8UC1, pResizedData);
+    // if(ceil(nWidth * 0.5) * ceil(nHeight * 0.5) > 8192){
+    //     m_fAddScaleW = divsp_i(nWidth, FIXED_SCALE_L);
+    //     m_fAddScaleH = divsp_i(nHeight, FIXED_SCALE_L);
+    //     pResizedData = (uint8_t *)memalign(4096, sizeof(uint8_t) * FIXED_SCALE_L * FIXED_SCALE_L);
+    //     assert(pResizedData);
+    //     cvInitMatHeader(&blockMat, nHeight, nWidth, CV_8UC1, pData);
+    //     cvInitMatHeader(&resizedMat, FIXED_SCALE_L, FIXED_SCALE_L, CV_8UC1, pResizedData);
 
-        cvResize(&blockMat, &resizedMat);
+    //     cvResize(&blockMat, &resizedMat);
 
-        pBlocks[0] = cvRect(0, 0, FIXED_SCALE_L, FIXED_SCALE_L);
-        if(nScaleCnt > 1){
-            pBlocks[1] = cvRect(4, 4, FIXED_SCALE_N, FIXED_SCALE_N);
-            pBlocks[2] = cvRect(7, 7, FIXED_SCALE_S, FIXED_SCALE_S);
-        }
+    //     pBlocks[0] = cvRect(0, 0, FIXED_SCALE_L, FIXED_SCALE_L);
+    //     if(nScaleCnt > 1){
+    //         pBlocks[1] = cvRect(4, 4, FIXED_SCALE_N, FIXED_SCALE_N);
+    //         pBlocks[2] = cvRect(7, 7, FIXED_SCALE_S, FIXED_SCALE_S);
+    //     }
 
-        // tx block
-        Cache_wb(pResizedData, FIXED_SCALE_L * FIXED_SCALE_L, Cache_Type_ALLD, TRUE);
-        status = pSrio2PcieMgr->startTxNwToFPGA(pResizedData, (FIXED_SCALE_L * FIXED_SCALE_L) >> 3, TXBLOCK_DSTADDR);
-        if(status != 0){
-            System_abort("Nw tx HwFhog Block error!\n");
-        }
-        pHwFhogMgr->setTxBlockSize(cvSize(FIXED_SCALE_L, FIXED_SCALE_L));
+    //     // tx block
+    //     Cache_wb(pResizedData, FIXED_SCALE_L * FIXED_SCALE_L, Cache_Type_ALLD, TRUE);
+    //     status = pSrio2PcieMgr->startTxNwToFPGA(pResizedData, (FIXED_SCALE_L * FIXED_SCALE_L) >> 3, TXBLOCK_DSTADDR);
+    //     if(status != 0){
+    //         System_abort("Nw tx HwFhog Block error!\n");
+    //     }
+    //     pHwFhogMgr->setTxBlockSize(cvSize(FIXED_SCALE_L, FIXED_SCALE_L));
 
-        free(resizedMat.data.ptr);
-        resizedMat.data.ptr = NULL;
-    }
-    else{
-        // tx block
-        Cache_wb(pData, nSubwSize, Cache_Type_ALLD, TRUE);
-        status = pSrio2PcieMgr->startTxNwToFPGA(pData, nSubwSize >> 3, TXBLOCK_DSTADDR);
-        if(status != 0){
-            System_abort("Nw tx HwFhog Block error!\n");
-        }
-        pHwFhogMgr->setTxBlockSize(cvSize(nWidth, nHeight));
-    }
+    //     free(resizedMat.data.ptr);
+    //     resizedMat.data.ptr = NULL;
+    // }
+    // else{
+    //     // tx block
+    //     Cache_wb(pData, nSubwSize, Cache_Type_ALLD, TRUE);
+    //     status = pSrio2PcieMgr->startTxNwToFPGA(pData, nSubwSize >> 3, TXBLOCK_DSTADDR);
+    //     if(status != 0){
+    //         System_abort("Nw tx HwFhog Block error!\n");
+    //     }
+    //     pHwFhogMgr->setTxBlockSize(cvSize(nWidth, nHeight));
+    // }
 
     // free(pData);
     // pData = NULL;
