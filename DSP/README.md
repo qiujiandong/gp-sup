@@ -15,9 +15,21 @@
   - 尺度固定(Scale Fixed)的KCF算法 Kcf_SF
   - 两个工程分别包含纯软件实现和硬件加速的方案
 
+## 关键点
+
+1. FT-M6678使用时，编译器，仿真器驱动都需要打补丁。
+2. 多核程序设计注意资源分配
+   1. 首先分配存储资源，建立platform，熟悉每一类存储资源的容量与性质。
+   2. EDMA资源的分配，中断号的分配，可以用[common.h](Kcf_Common/common.h)记录。区分CIC(cpintc)与每个内核的中断控制器intc。3个EDMA传输控制器（CC）的使用。
+   3. 这部分内容与TI的文档是一致的，可以直接看[C6678](https://www.ti.com.cn/cn/lit/ds/symlink/tms320c6678.pdf)的文档。
+3. SRIO相关
+   1. 如何使用？从CSrioManager公有继承，完成硬件初始化。
+   2. 用SRIO的DMA发送NW事务包，数据长度以字节为单位，要求为256的整数倍；接收数据会产生事先注册的门铃中断。
+   3. SRIO的控制寄存器地址映射，中断相关的配置
+
 ## 环境搭建
 
-TI的软件的下载现在都要有账号才行，如果能在官网下载推荐直接在官网下载，不行的话就用网盘上的文件
+TI的软件的下载现在都要有账号才行，如果能在官网下载推荐直接在官网下载，不行的话就用网盘上的文件。不要用学校的邮箱注册TI账号，可以用QQ邮箱注册。
 
 1. 安装CCS软件，所有工程均已在CCS6.2.0上进行测试，更高版本的CCS可能也可以。CCS620下载地址：[官网](https://www.ti.com/tool/download/CCSTUDIO/6.2.0.00050) [百度网盘](https://pan.baidu.com/s/1qpahFXGl8LDbYl1UOu8ZpA?pwd=abcd)
 2. 编译器采用TI Compiler 7.4.4 下载地址：[官网](https://software-dl.ti.com/codegen/non-esd/downloads/download_archive.htm) [百度网盘](https://pan.baidu.com/s/1FCnDubYQcH1slSyHfXVBRw?pwd=abcd)

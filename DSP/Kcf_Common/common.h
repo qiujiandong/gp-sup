@@ -63,7 +63,7 @@
  * | Core Interrupt | Host Interrupt | Event ID | Function                   						|
  * | 4				| 43             | 21       | EDMA3 CC0 Region1 interrupt, for matrix transpose |
  * | 5				| / 		     | 91       | IPC interrupt										|
- * | 14				| /				 | 64	    | Core0 Timer										|
+ * | 14				| /				 | 64	    | Core1 Timer										|
  */
 
 #define CORE1_INTC_TSPS_HOSTINT (43)
@@ -76,7 +76,7 @@
  * | Core Interrupt | Host Interrupt | Event ID | Function                    						|
  * | 4			 	| 54             | 21       | EDMA3 CC0 Region2 interrupt, for matrix transpose |
  * | 5				| / 		     | 91       | IPC interrupt										|
- * | 14				| /				 | 64	    | Core0 Timer										|
+ * | 14				| /				 | 64	    | Core2 Timer										|
  */
 
 #define CORE2_INTC_TSPS_HOSTINT (54)
@@ -89,7 +89,7 @@
  * | Core Interrupt | Host Interrupt | Event ID | Function                    						|
  * | 4			 	| 65             | 21       | EDMA3 CC0 Region3 interrupt, for FFT transpose	|
  * | 5				| / 		     | 91       | IPC interrupt										|
- * | 14				| /				 | 64	    | Core0 Timer										|
+ * | 14				| /				 | 64	    | Core3 Timer										|
  */
 
 #define CORE3_INTC_FFT_HOSTINT (65)

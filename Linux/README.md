@@ -2,6 +2,24 @@
 
 &emsp;&emsp;Linux上位机的程序主要包括XDMA的驱动程序，用于测试实验的程序和一些用于读寄存器的工具。所用的Linux实验环境在environment文件夹里列出。
 
+## 关键点
+
+1. 如何编译与加载内核驱动？
+   1. 在此之前也需要对FPGA上的PCIe接口实现需要有一定了解，可以参考我的这篇[文章](https://blog.csdn.net/qq_35787848/article/details/121541957)。
+   2. 在BIOS中关闭安全引导（Secure Boot），否则无法加载驱动
+   3. 用lspci列出PCI设备，查看是否存在Xilinx的设备，记住设备ID，需要与load_driver.sh中的device_id一致。如果没有发现Xilinx的设备，需要检查FPGA是否正确烧写，板卡是否连接到位。
+   4. 我对原版驱动做了一些修改，详见[README](linux-kernel/xdma/README.md)，直接指定config_bar的位置。
+
+      ![bar](README/2023-05-29-19-53-47.png)
+
+   5. 用load_driver.sh加载驱动，如果失败了，可以用dmesg查看内核打印的信息来查找问题。
+   6. 加载驱动完成后记得改设备文件的访问权限。
+2. 上位机与FPGA之间的数据收发实现方式——文件读写操作。
+3. XDMA的AXI4-Lite接口访问可以直接用mmap函数映射到用户地址空间。
+4. 数据集测试平台中跟踪器脚本的编写，详见[毕设论文](../Thesis/Thesis.pdf)4.2.1
+5. 上位机软件与DSP软件的同步方式，详见[毕设论文](../Thesis/Thesis.pdf)4.2.3
+6. 数据集测试平台的使用
+
 ## XDMA驱动程序
 
 &emsp;&emsp;驱动程序源于[官方](https://github.com/Xilinx/dma_ip_drivers/tree/master/XDMA/linux-kernel)的驱动代码。只需要按照[readme.txt](linux-kernel/readme.txt)中的步骤完成编译和加载驱动即可。值得注意的是，xdma驱动的编译是依赖内核源码树的，因此需要用sudo make install，而不是make install。运行[load_driver.sh](linux-kernel/tests/load_driver.sh)也需要加上sudo。
