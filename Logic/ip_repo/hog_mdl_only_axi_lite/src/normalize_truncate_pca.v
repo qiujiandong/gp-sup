@@ -333,7 +333,7 @@ float32_to_point27_8 float_to_int (
   .m_axis_result_tvalid(y_int_tvalid),  // output wire m_axis_result_tvalid
   .m_axis_result_tdata(y_int)    // output wire [39 : 0] m_axis_result_tdata
 );*/
-float32_to_point27_10 float_to_int (
+float32_to_point float_to_int (
   .aclk(aclk),                                  // input wire aclk
   .aresetn(arest_n),                            // input wire aresetn
   .s_axis_a_tvalid(y_float_valid),            // input wire s_axis_a_tvalid
@@ -920,7 +920,7 @@ assign hamming_addr = (hamming_row << 4) + hamming_col;//在hamming窗左上bloc
   .clk(aclk),    // input wire clk
   .qspo(hamming_data)  // output wire [7 : 0] qspo
 );*/
-disrom_hamming_10bit hamming_param (
+disrom_hamming hamming_param (
   .a(hamming_addr),      // input wire [7 : 0] a
   .clk(aclk),    // input wire clk
   .qspo(hamming_data)  // output wire [9 : 0] spo
@@ -953,7 +953,7 @@ end
   .B(bin0_17_pca >> 1),      // input wire [7 : 0] B
   .P(bin0_17_feature)      // output wire [15 : 0] P
 );*/
-mult_10_10 bin0_17_pca_mul_hamming (
+mult_gen_1 bin0_17_pca_mul_hamming (
   .CLK(aclk),  // input wire CLK
   .A(hamming_data),      // input wire [7 : 0] A
   .B(bin0_17_pca >> 1),      // input wire [7 : 0] B
@@ -975,7 +975,7 @@ end
   .B(bin18_26_pca >> 1),      // input wire [7 : 0] B
   .P(bin18_26_feature)      // output wire [15 : 0] P
 );*/
-mult_10_10 bin18_26_pca_mul_hamming (
+mult_gen_1 bin18_26_pca_mul_hamming (
   .CLK(aclk),  // input wire CLK
   .A(hamming_data),      // input wire [7 : 0] A
   .B(bin18_26_pca >> 1),      // input wire [7 : 0] B
@@ -1036,7 +1036,7 @@ end
   .B(bin27_30_pca),      // input wire [7 : 0] B
   .P(bin27_30_feature)      // output wire [15 : 0] P
 );*/
-mult_10_10 bin27_30_pca_mul_hamming (
+mult_gen_1 bin27_30_pca_mul_hamming (
   .CLK(aclk),  // input wire CLK
   .A(hamming_data_r1),      // input wire [7 : 0] A
   .B(bin27_30_pca),      // input wire [7 : 0] B

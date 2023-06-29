@@ -16,7 +16,7 @@ module RAM4bank#(
 
 //230425 将8bit改为10bit
     //定义四块存储器作为4个bank
-    bram_w8_d8192 U1(
+    bram_d81920 U1(
         .clka(clk), 
         .ena(ena1),      
         .wea(wea1),      
@@ -31,7 +31,7 @@ module RAM4bank#(
         .rstb_busy(rstb_busy)
     );
 
-    bram_w8_d8192 U2(
+    bram_d81920 U2(
         .clka(clk),  
         .ena(ena2),      
         .wea(wea2),      
@@ -46,7 +46,7 @@ module RAM4bank#(
         .rstb_busy()
     );
 
-    bram_w8_d8192 U3(
+    bram_d81920 U3(
         .clka(clk), 
         .ena(ena3),       
         .wea(wea3),      
@@ -61,7 +61,7 @@ module RAM4bank#(
         .rstb_busy()
     );
 
-    bram_w8_d8192 U4(
+    bram_d81920 U4(
         .clka(clk), 
         .ena(ena4),      
         .wea(wea4),      

@@ -30,7 +30,17 @@ module hog_imagescaling_top #(
 	parameter PARAM_GAMA		= 37'd241,//int(1/(根号18) << QN)
 
 	parameter	IMGX = 136,
-	parameter	IMGY = 136
+	parameter	IMGY = 136,
+	parameter BIN_VEC_X0 = 39'd4096,//int(cos(0)<<QN)
+	parameter BIN_VEC_X1 = 39'd3848,//int(cos(20)<<QN)
+	parameter BIN_VEC_X2 = 39'd3137,//int(cos(40)<<QN)
+	parameter BIN_VEC_X3 = 39'd2048,//int(cos(60)<<QN)
+	parameter BIN_VEC_X4 = 39'd711,//int(cos(80)<<QN)
+	parameter BIN_VEC_Y0 = 39'd0,//int(sin(0)<<QN)
+	parameter BIN_VEC_Y1 = 39'd1400,//int(sin(20)<<QN)
+	parameter BIN_VEC_Y2 = 39'd2632,//int(sin(40)<<QN)
+	parameter BIN_VEC_Y3 = 39'd3547,//int(sin(60)<<QN)
+	parameter BIN_VEC_Y4 = 39'd4033//int(sin(80)<<QN)
 	)(
 	input aclk,    // Clock
 	input arest_n,  // Asynchronous reset active low
@@ -206,7 +216,17 @@ assign dina_4 = res_ena_3 ? res_dina_3 : {{QN-P_WIDTH{1'b0}},initial_dina_3};
 			.P_WIDTH(P_WIDTH),
 			.DELAY(DELAY),
 			.PARAM_TRUNCATE(PARAM_TRUNCATE),
-			.PARAM_GAMA(PARAM_GAMA)
+			.PARAM_GAMA(PARAM_GAMA),
+			.BIN_VEC_X0(BIN_VEC_X0),
+			.BIN_VEC_X1(BIN_VEC_X1),
+			.BIN_VEC_X2(BIN_VEC_X2),
+			.BIN_VEC_X3(BIN_VEC_X3),
+			.BIN_VEC_X4(BIN_VEC_X4),
+			.BIN_VEC_Y0(BIN_VEC_Y0),
+			.BIN_VEC_Y1(BIN_VEC_Y1),
+			.BIN_VEC_Y2(BIN_VEC_Y2),
+			.BIN_VEC_Y3(BIN_VEC_Y3),
+			.BIN_VEC_Y4(BIN_VEC_Y4)
 		) inst_hog_top (
 			.aclk               (aclk),
 			.arest_n            (arest_n),

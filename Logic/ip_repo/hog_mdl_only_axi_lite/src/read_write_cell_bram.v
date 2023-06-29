@@ -1303,7 +1303,7 @@ always @(posedge aclk)begin
 	end
 end
 
-bram_w37_r37_d5202 bank0_odd_row_odd_col (
+cell_bram_d5202 bank0_odd_row_odd_col (
   .clka(aclk),    // input wire clka
   .wea(wea_0),      // input wire [0 : 0] wea
   .addra(addra_0),  // input wire [12 : 0] addra
@@ -1315,7 +1315,7 @@ bram_w37_r37_d5202 bank0_odd_row_odd_col (
   .dinb(dinb_0),    // input wire [34 : 0] dinb
   .doutb(doutb_0)  // output wire [34 : 0] doutb
 );
-bram_w37_r37_d5202 bank1_odd_row_even_col (
+cell_bram_d5202 bank1_odd_row_even_col (
   .clka(aclk),    // input wire clka
   .wea(wea_1),      // input wire [0 : 0] wea
   .addra(addra_1),  // input wire [12 : 0] addra
@@ -1327,7 +1327,7 @@ bram_w37_r37_d5202 bank1_odd_row_even_col (
   .dinb(dinb_1),    // input wire [34 : 0] dinb
   .doutb(doutb_1)  // output wire [34 : 0] doutb
 );
-bram_w37_r37_d5202 bank2_even_row_odd_col (
+cell_bram_d5202 bank2_even_row_odd_col (
   .clka(aclk),    // input wire clka
   .wea(wea_2),      // input wire [0 : 0] wea
   .addra(addra_2),  // input wire [12 : 0] addra
@@ -1339,7 +1339,7 @@ bram_w37_r37_d5202 bank2_even_row_odd_col (
   .dinb(dinb_2),    // input wire [34 : 0] dinb
   .doutb(doutb_2)  // output wire [34 : 0] doutb
 );
-bram_w37_r37_d5202 bank3_even_row_even_col (
+cell_bram_d5202 bank3_even_row_even_col (
   .clka(aclk),    // input wire clka
   .wea(wea_3),      // input wire [0 : 0] wea
   .addra(addra_3),  // input wire [12 : 0] addra

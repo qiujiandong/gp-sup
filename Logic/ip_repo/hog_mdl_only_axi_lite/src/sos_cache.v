@@ -464,7 +464,7 @@ end
 
 
 
-dist_ram_w37_r37_d32 row1_31sos (
+dist_ram_d32 row1_31sos (
   .a(addra_1),        // input wire [4 : 0] a
   .d(dina_1),        // input wire [34 : 0] d
   .dpra(addrb_1),  // input wire [4 : 0] dpra
@@ -473,7 +473,7 @@ dist_ram_w37_r37_d32 row1_31sos (
   .dpo(doutb_1)    // output wire [34 : 0] dpo
 );
 
-dist_ram_w37_r37_d32 row2_31sos (
+dist_ram_d32 row2_31sos (
   .a(addra_2),        // input wire [4 : 0] a
   .d(dina_2),        // input wire [34 : 0] d
   .dpra(addrb_2),  // input wire [4 : 0] dpra

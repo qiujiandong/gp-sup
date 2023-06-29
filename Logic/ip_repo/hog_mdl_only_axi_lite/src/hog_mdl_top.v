@@ -26,15 +26,25 @@ module hog_mdl_top #(
 
 	parameter IMAGE_SIZE 		= 18495,//136*136-1
 	parameter IMAGE_WIDTH 		= 136,
-	parameter QN 				= 10,
-	parameter TOTAL_BIT_WIDTH 	= 37,
+	parameter QN 				= 12,
+	parameter TOTAL_BIT_WIDTH 	= 39,
 	parameter P_WIDTH 			= 8,
 	parameter DELAY 			= 1,
-	parameter PARAM_TRUNCATE    = 37'd204,//int(0.2 << QN)
-	parameter PARAM_GAMA		= 37'd241,//int(1/(根号18) << QN)
+	parameter PARAM_TRUNCATE    = 39'd819,//int(0.2 << QN)
+	parameter PARAM_GAMA		= 39'd965,//int(1/(根号18) << QN)
 
 	parameter	IMGX = 136,
-	parameter	IMGY = 136
+	parameter	IMGY = 136,
+	parameter BIN_VEC_X0 = 39'd4096,//int(cos(0)<<QN)
+	parameter BIN_VEC_X1 = 39'd3848,//int(cos(20)<<QN)
+	parameter BIN_VEC_X2 = 39'd3137,//int(cos(40)<<QN)
+	parameter BIN_VEC_X3 = 39'd2048,//int(cos(60)<<QN)
+	parameter BIN_VEC_X4 = 39'd711,//int(cos(80)<<QN)
+	parameter BIN_VEC_Y0 = 39'd0,//int(sin(0)<<QN)
+	parameter BIN_VEC_Y1 = 39'd1400,//int(sin(20)<<QN)
+	parameter BIN_VEC_Y2 = 39'd2632,//int(sin(40)<<QN)
+	parameter BIN_VEC_Y3 = 39'd3547,//int(sin(60)<<QN)
+	parameter BIN_VEC_Y4 = 39'd4033//int(sin(80)<<QN)
 
 
 	)(
@@ -341,7 +351,17 @@ assign rst_n = arest_n & (~mb_ctrl[2]);//上电复位 & 软件复位
 			.PARAM_TRUNCATE(PARAM_TRUNCATE),
 			.PARAM_GAMA(PARAM_GAMA),
 			.IMGX(IMGX),
-			.IMGY(IMGY)
+			.IMGY(IMGY),
+			.BIN_VEC_X0(BIN_VEC_X0),
+			.BIN_VEC_X1(BIN_VEC_X1),
+			.BIN_VEC_X2(BIN_VEC_X2),
+			.BIN_VEC_X3(BIN_VEC_X3),
+			.BIN_VEC_X4(BIN_VEC_X4),
+			.BIN_VEC_Y0(BIN_VEC_Y0),
+			.BIN_VEC_Y1(BIN_VEC_Y1),
+			.BIN_VEC_Y2(BIN_VEC_Y2),
+			.BIN_VEC_Y3(BIN_VEC_Y3),
+			.BIN_VEC_Y4(BIN_VEC_Y4)
 		) inst_hog_imagescaling_top (
 			.aclk               (aclk),
 			.arest_n            (rst_n),

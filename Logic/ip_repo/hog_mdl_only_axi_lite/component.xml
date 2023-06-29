@@ -527,13 +527,13 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_mult_gen_12_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_dist_mem_gen_8_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
@@ -541,7 +541,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7573e6b9</spirit:value>
+            <spirit:value>eca0adec</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -555,13 +555,13 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_mult_gen_12_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_dist_mem_gen_8_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
@@ -569,22 +569,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7573e6b9</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_testbench</spirit:name>
-        <spirit:displayName>Test Bench</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
-        <spirit:modelName>hog_mdl_top</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6410d8cb</spirit:value>
+            <spirit:value>eca0adec</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -598,7 +583,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e51ea8cc</spirit:value>
+            <spirit:value>8369d544</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1617,12 +1602,12 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>QN</spirit:name>
         <spirit:displayName>Qn</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.QN">10</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.QN">12</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>TOTAL_BIT_WIDTH</spirit:name>
         <spirit:displayName>Total Bit Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TOTAL_BIT_WIDTH">37</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TOTAL_BIT_WIDTH">39</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>P_WIDTH</spirit:name>
@@ -1637,12 +1622,12 @@
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>PARAM_TRUNCATE</spirit:name>
         <spirit:displayName>Param Truncate</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PARAM_TRUNCATE" spirit:bitStringLength="37">&quot;0000000000000000000000000000011001100&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PARAM_TRUNCATE" spirit:bitStringLength="39">&quot;000000000000000000000000000001100110011&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>PARAM_GAMA</spirit:name>
         <spirit:displayName>Param Gama</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PARAM_GAMA" spirit:bitStringLength="37">&quot;0000000000000000000000000000011110001&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PARAM_GAMA" spirit:bitStringLength="39">&quot;000000000000000000000000000001111000101&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>IMGX</spirit:name>
@@ -1653,6 +1638,56 @@
         <spirit:name>IMGY</spirit:name>
         <spirit:displayName>Imgy</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IMGY">136</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_X0</spirit:name>
+        <spirit:displayName>Bin Vec X0</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_X0" spirit:bitStringLength="39">&quot;000000000000000000000000001000000000000&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_X1</spirit:name>
+        <spirit:displayName>Bin Vec X1</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_X1" spirit:bitStringLength="39">&quot;000000000000000000000000000111100001000&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_X2</spirit:name>
+        <spirit:displayName>Bin Vec X2</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_X2" spirit:bitStringLength="39">&quot;000000000000000000000000000110001000001&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_X3</spirit:name>
+        <spirit:displayName>Bin Vec X3</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_X3" spirit:bitStringLength="39">&quot;000000000000000000000000000100000000000&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_X4</spirit:name>
+        <spirit:displayName>Bin Vec X4</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_X4" spirit:bitStringLength="39">&quot;000000000000000000000000000001011000111&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_Y0</spirit:name>
+        <spirit:displayName>Bin Vec Y0</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_Y0" spirit:bitStringLength="39">&quot;000000000000000000000000000000000000000&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_Y1</spirit:name>
+        <spirit:displayName>Bin Vec Y1</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_Y1" spirit:bitStringLength="39">&quot;000000000000000000000000000010101111000&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_Y2</spirit:name>
+        <spirit:displayName>Bin Vec Y2</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_Y2" spirit:bitStringLength="39">&quot;000000000000000000000000000101001001000&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_Y3</spirit:name>
+        <spirit:displayName>Bin Vec Y3</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_Y3" spirit:bitStringLength="39">&quot;000000000000000000000000000110111011011&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>BIN_VEC_Y4</spirit:name>
+        <spirit:displayName>Bin Vec Y4</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIN_VEC_Y4" spirit:bitStringLength="39">&quot;000000000000000000000000000111111000001&quot;</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -1665,17 +1700,17 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/bram_w8_d8192/bram_w8_d8192.xci</spirit:name>
+        <spirit:name>src/bram_d81920/bram_d81920.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/mult_8_8/mult_8_8.xci</spirit:name>
+        <spirit:name>src/float32_to_point/float32_to_point.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/disrom_hamming/disrom_hamming.xci</spirit:name>
+        <spirit:name>src/cell_bram_d5202/cell_bram_d5202.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1685,7 +1720,7 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/float32_to_point27_8/float32_to_point27_8.xci</spirit:name>
+        <spirit:name>src/dist_ram_d32/dist_ram_d32.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1695,17 +1730,17 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/dist_ram_w35_r35_d32/dist_ram_w35_r35_d32.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bram_w35_r35_d5202/bram_w35_r35_d5202.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/dist_ram_w8_r8_d144/dist_ram_w8_r8_d144.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/mult_gen_1/mult_gen_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/disrom_hamming/disrom_hamming.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1807,32 +1842,8 @@
       <spirit:file>
         <spirit:name>src/hog_mdl_top.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_0f34321a</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_b762825b</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/mult_10_10/mult_10_10.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/disrom_hamming_10bit/disrom_hamming_10bit.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/float32_to_point27_10_1/float32_to_point27_10.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/dist_ram_w37_r37_d32/dist_ram_w37_r37_d32.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bram_w37_r37_d5202/bram_w37_r37_d5202.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/hamming_param_10bit.coe</spirit:name>
-        <spirit:userFileType>coe</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1840,6 +1851,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1866,16 +1887,6 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>src/hamming_param.coe</spirit:name>
@@ -1883,17 +1894,17 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/bram_w8_d8192/bram_w8_d8192.xci</spirit:name>
+        <spirit:name>src/bram_d81920/bram_d81920.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/mult_8_8/mult_8_8.xci</spirit:name>
+        <spirit:name>src/float32_to_point/float32_to_point.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/disrom_hamming/disrom_hamming.xci</spirit:name>
+        <spirit:name>src/cell_bram_d5202/cell_bram_d5202.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1903,7 +1914,7 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/float32_to_point27_8/float32_to_point27_8.xci</spirit:name>
+        <spirit:name>src/dist_ram_d32/dist_ram_d32.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1913,17 +1924,17 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/dist_ram_w35_r35_d32/dist_ram_w35_r35_d32.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bram_w35_r35_d5202/bram_w35_r35_d5202.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/dist_ram_w8_r8_d144/dist_ram_w8_r8_d144.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/mult_gen_1/mult_gen_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/disrom_hamming/disrom_hamming.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -2027,36 +2038,22 @@
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
-      <spirit:file>
-        <spirit:name>src/mult_10_10/mult_10_10.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/disrom_hamming_10bit/disrom_hamming_10bit.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/float32_to_point27_10_1/float32_to_point27_10.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/dist_ram_w37_r37_d32/dist_ram_w37_r37_d32.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bram_w37_r37_d5202/bram_w37_r37_d5202.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/hamming_param_10bit.coe</spirit:name>
-        <spirit:userFileType>coe</spirit:userFileType>
-      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -2083,31 +2080,11 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_floating_point_7_1__ref_view_fileset</spirit:name>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="floating_point" xilinx:version="7.1">
-            <xilinx:mode xilinx:name="create_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>src/hog_top_tb_behav.wcfg</spirit:name>
-        <spirit:fileType>unknown</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>xgui/hog_mdl_only_axi_lite_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e51ea8cc</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_8369d544</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2152,12 +2129,12 @@
     <spirit:parameter>
       <spirit:name>QN</spirit:name>
       <spirit:displayName>Qn</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.QN">10</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.QN">12</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TOTAL_BIT_WIDTH</spirit:name>
       <spirit:displayName>Total Bit Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TOTAL_BIT_WIDTH">37</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TOTAL_BIT_WIDTH">39</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>P_WIDTH</spirit:name>
@@ -2172,12 +2149,12 @@
     <spirit:parameter>
       <spirit:name>PARAM_TRUNCATE</spirit:name>
       <spirit:displayName>Param Truncate</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PARAM_TRUNCATE" spirit:bitStringLength="37">&quot;0000000000000000000000000000011001100&quot;</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PARAM_TRUNCATE" spirit:bitStringLength="39">&quot;000000000000000000000000000001100110011&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PARAM_GAMA</spirit:name>
       <spirit:displayName>Param Gama</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PARAM_GAMA" spirit:bitStringLength="37">&quot;0000000000000000000000000000011110001&quot;</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PARAM_GAMA" spirit:bitStringLength="39">&quot;000000000000000000000000000001111000101&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>IMGX</spirit:name>
@@ -2188,6 +2165,56 @@
       <spirit:name>IMGY</spirit:name>
       <spirit:displayName>Imgy</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.IMGY">136</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_X0</spirit:name>
+      <spirit:displayName>Bin Vec X0</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_X0" spirit:bitStringLength="39">&quot;000000000000000000000000001000000000000&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_X1</spirit:name>
+      <spirit:displayName>Bin Vec X1</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_X1" spirit:bitStringLength="39">&quot;000000000000000000000000000111100001000&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_X2</spirit:name>
+      <spirit:displayName>Bin Vec X2</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_X2" spirit:bitStringLength="39">&quot;000000000000000000000000000110001000001&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_X3</spirit:name>
+      <spirit:displayName>Bin Vec X3</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_X3" spirit:bitStringLength="39">&quot;000000000000000000000000000100000000000&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_X4</spirit:name>
+      <spirit:displayName>Bin Vec X4</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_X4" spirit:bitStringLength="39">&quot;000000000000000000000000000001011000111&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_Y0</spirit:name>
+      <spirit:displayName>Bin Vec Y0</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_Y0" spirit:bitStringLength="39">&quot;000000000000000000000000000000000000000&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_Y1</spirit:name>
+      <spirit:displayName>Bin Vec Y1</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_Y1" spirit:bitStringLength="39">&quot;000000000000000000000000000010101111000&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_Y2</spirit:name>
+      <spirit:displayName>Bin Vec Y2</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_Y2" spirit:bitStringLength="39">&quot;000000000000000000000000000101001001000&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_Y3</spirit:name>
+      <spirit:displayName>Bin Vec Y3</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_Y3" spirit:bitStringLength="39">&quot;000000000000000000000000000110111011011&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BIN_VEC_Y4</spirit:name>
+      <spirit:displayName>Bin Vec Y4</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BIN_VEC_Y4" spirit:bitStringLength="39">&quot;000000000000000000000000000111111000001&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -2207,226 +2234,25 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:hog_mdl_top:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2023-04-25T07:59:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2023-06-21T14:09:13Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39f0833f_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@23432ccc_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4777a349_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@461134ac_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1986d93a_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a3bd0d_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c483a35_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@528c489b_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c65d456_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6686f346_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@50cb21fc_ARCHIVE_LOCATION">d:/Q/HOG/ip/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e0bcc8b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e4440d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59c5b90e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2d2b30_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@58fb39b0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7448445e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@299341fd_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4131de8d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@45e23289_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@132ce118_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d18904d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70fec6f9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@683eb814_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@145f4362_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a9ef566_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d8701da_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22ff0ae8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dbac7a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c691891_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@413e111b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ecba56_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b51c082_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b283a5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f438095_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76fc238d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d5a42ff_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@65c2df7c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b13dda3_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@30ae1588_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fb3daad_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e377a79_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5df9b9a9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d1ddd0b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba5da42_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@29dfd8a9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f4bfd97_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b39bf7a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@13bef3bf_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5255739_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@35ad341a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aab7bd4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a837ef6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17a168fe_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d4ea17a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@241ccb04_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@78564668_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ce3f919_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ab9f180_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cd5ba62_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cb6be7e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@172d7bb8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a6fde7a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4317de1b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@431e8d2c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e89e421_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ee43b3d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aaf0c48_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@448e07db_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@105ce946_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@29346f7c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@71a7b05d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6d72b6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@199c0227_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6de2552e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@75885744_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@20edbf00_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d6fc06e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ec40bc1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@335a7888_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eb60c5d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d6e7a04_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bc3ebe4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b60c6c1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@f41acc6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@51ae2e2c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39f2526b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d1d6c9e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f0e16e6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32edf8d9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c34c475_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@713cb8a4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@345ebf78_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a2e295c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@519eb3fe_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b8ce945_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@72528c7c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c2bd4df_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@612ed3fd_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a151df6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@18a40f35_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce3d1bf_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fefd390_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@163b1fda_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@58727cfd_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c2e6275_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7625c535_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@69ecf327_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5866a888_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7059b485_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a43f20c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b1dfae_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d984f9e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@45becd96_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ae53e65_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aa98827_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f2ee181_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b5a6e1a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@38b6608f_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@622b8a6c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c0bbe7a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@372c1f36_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a1304_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e126f33_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59946e64_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d1e9053_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@24526afd_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@9795bf4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c935242_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@116a1e0a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6128ebef_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@33029cd4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17962a06_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4047b5c4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4675e090_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d74eca9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c4c7858_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7d13b0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2416029a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@543c4d2b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b260cac_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b4e0516_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b08072b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ad4f3f4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4aeb4a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1de18844_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@31998653_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41059bf0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@69ba7984_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e771c7a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d29e289_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b44c3a5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d25ea5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f7810ba_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfb7ca4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39d9f572_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6925cc18_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@541b24c1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c06c2cb_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@34d0cf1c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a4dd9d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@25fd7489_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32984b4d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@8b9bccf_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@57e49059_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@421e973_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@72f1a850_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@67bc8c26_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@36a77213_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@8a110ea_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4793bee5_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c99a98_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a9299e6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17c48a46_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b8eba2f_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@553f12d0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@35bd8322_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b69bc9_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac965d7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@77538ef7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@146b869d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@71769ed2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1adcafe4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@460d340d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc2758_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@621e935b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@255559d8_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c2e1d07_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b30d500_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@670d469_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f340f99_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@12e073fe_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d6f4b6e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@761136b4_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2697ecac_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b2cedaa_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e4469e_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7872b6e7_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@383e3950_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d71f6d3_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d899989_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@48f4c06f_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@328efc51_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc97439_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d710c3d_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41a7f6e1_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6983e0e2_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ff9c0ea_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@708ce6af_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@67efe52b_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59b7e620_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@fe780fe_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@16905eed_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@37530755_ARCHIVE_LOCATION">d:/gp-sup/Logic/ip_repo/hog_mdl_only_axi_lite</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fcc1fff_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb31ba0_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22e21f0c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2196ba8a_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31849b10_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4290aa5b_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44cf7b18_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f8072f6_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d641476_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e899145_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@419cda18_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d75c65c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62980c1c_ARCHIVE_LOCATION">d:/code/vivado_prj/211222_AXI_arc_test/ip_package/hog_only_axi_lite_12bit</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
@@ -2434,10 +2260,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="15ecd21f"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="e08d91e5"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="d49099d9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9255fb3d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="79930568"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="e445d3de"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="66eb7e2d"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="aa0a03bb"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d331f0d9"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="917f89ce"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

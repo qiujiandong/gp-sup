@@ -7,6 +7,16 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "AXIL_DW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXI_AW" -parent ${Page_0}
   ipgui::add_param $IPINST -name "AXI_DW" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_X0" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_X1" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_X2" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_X3" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_X4" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_Y0" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_Y1" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_Y2" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_Y3" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "BIN_VEC_Y4" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
   ipgui::add_param $IPINST -name "IMAGE_SIZE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "IMAGE_WIDTH" -parent ${Page_0}
@@ -55,6 +65,96 @@ proc update_PARAM_VALUE.AXI_DW { PARAM_VALUE.AXI_DW } {
 
 proc validate_PARAM_VALUE.AXI_DW { PARAM_VALUE.AXI_DW } {
 	# Procedure called to validate AXI_DW
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_X0 { PARAM_VALUE.BIN_VEC_X0 } {
+	# Procedure called to update BIN_VEC_X0 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_X0 { PARAM_VALUE.BIN_VEC_X0 } {
+	# Procedure called to validate BIN_VEC_X0
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_X1 { PARAM_VALUE.BIN_VEC_X1 } {
+	# Procedure called to update BIN_VEC_X1 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_X1 { PARAM_VALUE.BIN_VEC_X1 } {
+	# Procedure called to validate BIN_VEC_X1
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_X2 { PARAM_VALUE.BIN_VEC_X2 } {
+	# Procedure called to update BIN_VEC_X2 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_X2 { PARAM_VALUE.BIN_VEC_X2 } {
+	# Procedure called to validate BIN_VEC_X2
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_X3 { PARAM_VALUE.BIN_VEC_X3 } {
+	# Procedure called to update BIN_VEC_X3 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_X3 { PARAM_VALUE.BIN_VEC_X3 } {
+	# Procedure called to validate BIN_VEC_X3
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_X4 { PARAM_VALUE.BIN_VEC_X4 } {
+	# Procedure called to update BIN_VEC_X4 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_X4 { PARAM_VALUE.BIN_VEC_X4 } {
+	# Procedure called to validate BIN_VEC_X4
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_Y0 { PARAM_VALUE.BIN_VEC_Y0 } {
+	# Procedure called to update BIN_VEC_Y0 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_Y0 { PARAM_VALUE.BIN_VEC_Y0 } {
+	# Procedure called to validate BIN_VEC_Y0
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_Y1 { PARAM_VALUE.BIN_VEC_Y1 } {
+	# Procedure called to update BIN_VEC_Y1 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_Y1 { PARAM_VALUE.BIN_VEC_Y1 } {
+	# Procedure called to validate BIN_VEC_Y1
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_Y2 { PARAM_VALUE.BIN_VEC_Y2 } {
+	# Procedure called to update BIN_VEC_Y2 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_Y2 { PARAM_VALUE.BIN_VEC_Y2 } {
+	# Procedure called to validate BIN_VEC_Y2
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_Y3 { PARAM_VALUE.BIN_VEC_Y3 } {
+	# Procedure called to update BIN_VEC_Y3 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_Y3 { PARAM_VALUE.BIN_VEC_Y3 } {
+	# Procedure called to validate BIN_VEC_Y3
+	return true
+}
+
+proc update_PARAM_VALUE.BIN_VEC_Y4 { PARAM_VALUE.BIN_VEC_Y4 } {
+	# Procedure called to update BIN_VEC_Y4 when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.BIN_VEC_Y4 { PARAM_VALUE.BIN_VEC_Y4 } {
+	# Procedure called to validate BIN_VEC_Y4
 	return true
 }
 
@@ -231,5 +331,55 @@ proc update_MODELPARAM_VALUE.IMGX { MODELPARAM_VALUE.IMGX PARAM_VALUE.IMGX } {
 proc update_MODELPARAM_VALUE.IMGY { MODELPARAM_VALUE.IMGY PARAM_VALUE.IMGY } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.IMGY}] ${MODELPARAM_VALUE.IMGY}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_X0 { MODELPARAM_VALUE.BIN_VEC_X0 PARAM_VALUE.BIN_VEC_X0 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_X0}] ${MODELPARAM_VALUE.BIN_VEC_X0}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_X1 { MODELPARAM_VALUE.BIN_VEC_X1 PARAM_VALUE.BIN_VEC_X1 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_X1}] ${MODELPARAM_VALUE.BIN_VEC_X1}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_X2 { MODELPARAM_VALUE.BIN_VEC_X2 PARAM_VALUE.BIN_VEC_X2 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_X2}] ${MODELPARAM_VALUE.BIN_VEC_X2}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_X3 { MODELPARAM_VALUE.BIN_VEC_X3 PARAM_VALUE.BIN_VEC_X3 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_X3}] ${MODELPARAM_VALUE.BIN_VEC_X3}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_X4 { MODELPARAM_VALUE.BIN_VEC_X4 PARAM_VALUE.BIN_VEC_X4 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_X4}] ${MODELPARAM_VALUE.BIN_VEC_X4}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_Y0 { MODELPARAM_VALUE.BIN_VEC_Y0 PARAM_VALUE.BIN_VEC_Y0 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_Y0}] ${MODELPARAM_VALUE.BIN_VEC_Y0}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_Y1 { MODELPARAM_VALUE.BIN_VEC_Y1 PARAM_VALUE.BIN_VEC_Y1 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_Y1}] ${MODELPARAM_VALUE.BIN_VEC_Y1}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_Y2 { MODELPARAM_VALUE.BIN_VEC_Y2 PARAM_VALUE.BIN_VEC_Y2 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_Y2}] ${MODELPARAM_VALUE.BIN_VEC_Y2}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_Y3 { MODELPARAM_VALUE.BIN_VEC_Y3 PARAM_VALUE.BIN_VEC_Y3 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_Y3}] ${MODELPARAM_VALUE.BIN_VEC_Y3}
+}
+
+proc update_MODELPARAM_VALUE.BIN_VEC_Y4 { MODELPARAM_VALUE.BIN_VEC_Y4 PARAM_VALUE.BIN_VEC_Y4 } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.BIN_VEC_Y4}] ${MODELPARAM_VALUE.BIN_VEC_Y4}
 }
 

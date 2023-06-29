@@ -18,8 +18,17 @@
 module calculate_bin #(
 	parameter TOTAL_BIT_WIDTH = 35,
 	parameter QN = 8,
-	parameter DELAY = 1
-
+	parameter DELAY = 1,
+	parameter BIN_VEC_X0 = 39'd4096,//int(cos(0)<<QN)
+	parameter BIN_VEC_X1 = 39'd3848,//int(cos(20)<<QN)
+	parameter BIN_VEC_X2 = 39'd3137,//int(cos(40)<<QN)
+	parameter BIN_VEC_X3 = 39'd2048,//int(cos(60)<<QN)
+	parameter BIN_VEC_X4 = 39'd711,//int(cos(80)<<QN)
+	parameter BIN_VEC_Y0 = 39'd0,//int(sin(0)<<QN)
+	parameter BIN_VEC_Y1 = 39'd1400,//int(sin(20)<<QN)
+	parameter BIN_VEC_Y2 = 39'd2632,//int(sin(40)<<QN)
+	parameter BIN_VEC_Y3 = 39'd3547,//int(sin(60)<<QN)
+	parameter BIN_VEC_Y4 = 39'd4033//int(sin(80)<<QN)
 	)(
 	input aclk,    // Clock
 	input arest_n,  // Asynchronous reset active low
@@ -33,16 +42,16 @@ module calculate_bin #(
 	
 );
 
-localparam BIN_VEC_X0 = 37'd1024;//int(cos(0)<<QN)
-localparam BIN_VEC_X1 = 37'd962;//int(cos(20)<<QN)
-localparam BIN_VEC_X2 = 37'd784;//int(cos(40)<<QN)
-localparam BIN_VEC_X3 = 37'd512;//int(cos(60)<<QN)
-localparam BIN_VEC_X4 = 37'd177;//int(cos(80)<<QN)
-localparam BIN_VEC_Y0 = 37'd0;//int(sin(0)<<QN)
-localparam BIN_VEC_Y1 = 37'd350;//int(sin(20)<<QN)
-localparam BIN_VEC_Y2 = 37'd658;//int(sin(40)<<QN)
-localparam BIN_VEC_Y3 = 37'd886;//int(sin(60)<<QN)
-localparam BIN_VEC_Y4 = 37'd1008;//int(sin(80)<<QN)
+//localparam BIN_VEC_X0 = 39'd4096;//int(cos(0)<<QN)
+//localparam BIN_VEC_X1 = 39'd3848;//int(cos(20)<<QN)
+//localparam BIN_VEC_X2 = 39'd3137;//int(cos(40)<<QN)
+//localparam BIN_VEC_X3 = 39'd2048;//int(cos(60)<<QN)
+//localparam BIN_VEC_X4 = 39'd711;//int(cos(80)<<QN)
+//localparam BIN_VEC_Y0 = 39'd0;//int(sin(0)<<QN)
+//localparam BIN_VEC_Y1 = 39'd1400;//int(sin(20)<<QN)
+//localparam BIN_VEC_Y2 = 39'd2632;//int(sin(40)<<QN)
+//localparam BIN_VEC_Y3 = 39'd3547;//int(sin(60)<<QN)
+//localparam BIN_VEC_Y4 = 39'd4033;//int(sin(80)<<QN)
 
 
 wire [TOTAL_BIT_WIDTH*2-1:0] dx_vecx_0;//dx*vec_x

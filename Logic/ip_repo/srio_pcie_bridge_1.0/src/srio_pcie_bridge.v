@@ -145,11 +145,11 @@ module srio_pcie_bridge#(
     output m_axi_bready,
     output [3:0] m_axi_awid,
     output [3:0] m_axi_arid,
-    input [1 : 0] m_axi_rresp,
-    input [1 : 0] m_axi_bresp,
-    input m_axi_bvalid,
-    input [3:0] m_axi_bid,
-    input [3:0] m_axi_rid,
+    (* mark_debug = "true" *) input [1 : 0] m_axi_rresp,
+    (* mark_debug = "true" *) input [1 : 0] m_axi_bresp,
+    (* mark_debug = "true" *) input m_axi_bvalid,
+    (* mark_debug = "true" *) input [3:0] m_axi_bid,
+    (* mark_debug = "true" *) input [3:0] m_axi_rid,
     // aw
     (* mark_debug = "true" *) output [31 : 0] m_axi_awaddr,
     (* mark_debug = "true" *) output [7 : 0] m_axi_awlen,
@@ -275,18 +275,18 @@ module srio_pcie_bridge#(
     assign m_axi_awburst = 2'b01; // INCR
     assign m_axi_awlock = 1'b0;
     assign m_axi_awcache = 4'b0011; // Normal Non-cacheable Bufferable
-    assign m_axi_awprot = 3'b000;
+    assign m_axi_awprot = 3'b010;
     assign m_axi_awqos = 4'b0;
     assign m_axi_wstrb = 8'hFF;
     assign m_axi_arsize = 3'b011;
     assign m_axi_arburst = 2'b01;
     assign m_axi_arlock = 1'b0;
     assign m_axi_arcache = 4'b0011; // Normal Non-cacheable Bufferable
-    assign m_axi_arprot = 3'b000;
+    assign m_axi_arprot = 3'b010;
     assign m_axi_arqos = 4'b0;
     assign m_axi_bready = 1'b1;
-    assign m_axi_awid = 4'b0;
-    assign m_axi_arid = 4'b0;
+    assign m_axi_awid = 4'd1;
+    assign m_axi_arid = 4'd1;
 // end of axi master assignments
 
     assign msi_irq_busy = msi_irq[1];
